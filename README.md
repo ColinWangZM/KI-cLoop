@@ -15,11 +15,6 @@ imports. Within KI-cLoop, it implements the graph-retrieval and structured
 question-answering layer rather than the entire experimental and reactor
 simulation stack.
 
-> 中文说明：KI-cLoop 对应论文中的“知识强化闭环”，连接 KI-CPG、可追溯
-> Graph-based RAG、自动流动实验、物理约束动力学推断与反应器尺度分析。
-> 本仓库只保留最新版代码与小型评测集。模型权重、向量库、
-> Pistachio/完整反应数据、实验动力学原始数据、论文草稿、PPT、日志和可由脚本
-> 重建的大型结果均未上传。
 
 ## Main components
 
