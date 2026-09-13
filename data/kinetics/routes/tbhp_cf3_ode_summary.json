@@ -1,0 +1,59 @@
+{
+  "route": "tbhp_cf3",
+  "trainer": "ode_inverse",
+  "model_type": "two_step_tbhp_dtbp",
+  "species": [
+    "H2O2",
+    "TBA",
+    "Catalyst",
+    "TBHP",
+    "DTBP",
+    "T"
+  ],
+  "fitted_species": [
+    "H2O2",
+    "TBA",
+    "TBHP",
+    "DTBP"
+  ],
+  "initial_params": {
+    "lnA1": 20.0,
+    "cat_order_1": 1.0,
+    "Ea1_over_R": 10000.0,
+    "lnA2": 20.0,
+    "cat_order_2": 1.0,
+    "Ea2_over_R": 10000.0,
+    "order_H2O2": 1.0,
+    "order_TBA_main": 1.0,
+    "order_TBA_side": 1.0,
+    "order_TBHP_side": 1.0
+  },
+  "initialization": "neutral",
+  "learned_params": {
+    "lnA1": 28.631790161132812,
+    "cat_order_1": 1.4709042310714722,
+    "Ea1_over_R": 14164.0,
+    "lnA2": 29.11166763305664,
+    "cat_order_2": 1.8118538856506348,
+    "Ea2_over_R": 13573.7333984375,
+    "order_H2O2": 2.8209614753723145,
+    "order_TBA_main": 0.5848332643508911,
+    "order_TBA_side": 0.21107512712478638,
+    "order_TBHP_side": 0.3174945116043091,
+    "Ea1_kJ_mol": 117.759496,
+    "Ea2_kJ_mol": 112.85201947460938
+  },
+  "metrics": {
+    "R2_H2O2": 0.9886419876278745,
+    "RMSE_H2O2": 0.11541839939988514,
+    "R2_TBA": 0.9923533892315547,
+    "RMSE_TBA": 0.10980143356508029,
+    "R2_TBHP": 0.9797742664545921,
+    "RMSE_TBHP": 0.13065218646564253,
+    "R2_DTBP": 0.9059266645515788,
+    "RMSE_DTBP": 0.03596094068202601
+  },
+  "epochs": 2000,
+  "ode_lr": 0.08,
+  "max_step": 10.0
+}

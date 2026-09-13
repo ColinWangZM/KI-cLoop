@@ -1,0 +1,48 @@
+{
+  "route": "tbpb_benzaldehyde",
+  "trainer": "ode_inverse",
+  "model_type": "single_tbpb_from_benzaldehyde",
+  "species": [
+    "Benzaldehyde",
+    "TBHP",
+    "Catalyst",
+    "TBPB",
+    "TBA",
+    "Benzoic_acid",
+    "T"
+  ],
+  "fitted_species": [
+    "Benzaldehyde",
+    "TBHP",
+    "TBPB"
+  ],
+  "initial_params": {
+    "lnA1": 8.0,
+    "cat_order_1": 1.0,
+    "Ea1_over_R": 5000.0,
+    "order_benzaldehyde": 1.0,
+    "order_TBHP": 1.0
+  },
+  "initialization": "neutral",
+  "learned_params": {
+    "lnA1": 3.132338047027588,
+    "cat_order_1": 2.95847225189209,
+    "Ea1_over_R": 2847.281005859375,
+    "order_benzaldehyde": 2.772296190261841,
+    "order_TBHP": 2.0206711292266846,
+    "Ea1_kJ_mol": 23.672294282714844
+  },
+  "metrics": {
+    "R2_Benzaldehyde": 0.971192290331979,
+    "RMSE_Benzaldehyde": 0.07151032095158052,
+    "R2_TBHP": 0.9679598366308707,
+    "RMSE_TBHP": 0.14302053276063978,
+    "R2_TBPB": 0.9521120046107276,
+    "RMSE_TBPB": 0.07151025238847404
+  },
+  "epochs": 2000,
+  "ode_lr": 0.08,
+  "max_step": 10.0,
+  "constrain_params": true,
+  "param_prior_weight": 0.05
+}

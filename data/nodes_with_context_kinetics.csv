@@ -1,0 +1,492 @@
+node_name,node_context
+kinetics::TBHP-BZCL,"Kinetic route name: TBHP-BZCL
+Route key: tbhp_bzcl
+Model type: single_tbhp_from_bzcl
+Trainer: ode_inverse
+PINN initialization: neutral
+Epochs: 2000
+Constrained parameters: False
+Optimization objective: 0.75 yield(TBHP/limiting reactant) + 0.20 selectivity + 0.05 TBCL conversion
+Reaction rate equations:
+r1 = k1 * [H2O2]^order_H2O2 * [TBCL]^order_TBCL
+k1 = exp(lnA1 - Ea1_over_R / T)
+PINN learned kinetic parameters:
+lnA1: -10.0427
+Ea1_over_R: 1126.38
+order_H2O2: 2.22219
+order_TBCL: 1.09855
+Ea1_kJ_mol: 9.36472
+PINN fit quality metrics:
+R2_H2O2: 0.999464
+RMSE_H2O2: 0.0391101
+R2_TBCL: 0.99847
+RMSE_TBCL: 0.0391092
+R2_TBHP: 0.987542
+RMSE_TBHP: 0.0391093
+PINN recommended optimum condition:
+candidate_id: 1332
+H2O2: 13.1063
+TBCL: 2.18439
+TBHP: 0
+T: 60
+time: 1731.81
+score: 0.612704
+yield: 0.51588
+selectivity: 1
+conversion: 0.51588
+impurity: 0
+product: 1.12688
+limiting_initial: 2.18439
+H2O2_final: 11.9795
+TBCL_final: 1.05751
+TBHP_final: 1.12688
+T_final: 60
+basis: PINN combinatorial optimum inside the discrete experimental-factor space
+PINN combinatorial best model condition:
+candidate_id: 1332
+H2O2: 13.1063
+TBCL: 2.18439
+TBHP: 0
+T: 60
+time: 1731.81
+score: 0.612704
+yield: 0.51588
+selectivity: 1
+conversion: 0.51588
+impurity: 0
+product: 1.12688
+limiting_initial: 2.18439
+H2O2_final: 11.9795
+TBCL_final: 1.05751
+TBHP_final: 1.12688
+T_final: 60
+Best measured experimental condition:
+experiment_id: 5
+point_id: 7
+time: 1731.81
+score: 0.551366
+yield: 0.439207
+selectivity: 1
+conversion: 0.439207
+impurity: 0
+product: 0.9594
+limiting_initial: 2.18439
+H2O2_0: 13.1063
+H2O2: 12.1469
+TBCL_0: 2.18439
+TBCL: 1.22499
+TBHP_0: 0
+TBHP: 0.9594
+T_0: 40
+T: 40
+Nearest measured support condition:
+experiment_id: 5
+point_id: 7
+time: 1731.81
+score: 0.551366
+yield: 0.439207
+selectivity: 1
+conversion: 0.439207
+impurity: 0
+product: 0.9594
+limiting_initial: 2.18439
+H2O2_0: 13.1063
+H2O2: 12.1469
+TBCL_0: 2.18439
+TBCL: 1.22499
+TBHP_0: 0
+TBHP: 0.9594
+T_0: 40
+T: 40
+time_distance: 0
+Interpretation note: These kinetic parameters were learned by ODE-inverse PINN from small experimental datasets.
+Interpretation note: Conventional curve-fit values are reference only; PINN initial values were neutral, not initialized from curve_fit.
+Use case: compare synthesis paths by activation energy, predicted yield, selectivity, conversion, side-product penalty, and measured support."
+kinetics::TBHP-CF3,"Kinetic route name: TBHP-CF3
+Route key: tbhp_cf3
+Model type: two_step_tbhp_dtbp
+Trainer: ode_inverse
+PINN initialization: neutral
+Epochs: 2000
+Constrained parameters: False
+Optimization objective: 0.65 yield(TBHP/limiting reactant) + 0.25 selectivity(TBHP/(TBHP+DTBP)) + 0.10 H2O2 conversion
+Reaction rate equations:
+r1 = k1 * [H2O2]^order_H2O2 * [TBA]^order_TBA_main
+k1 = exp(lnA1 + cat_order_1 * ln(Ccat) - Ea1_over_R / T)
+r2 = k2 * [TBA]^order_TBA_side * [TBHP]^order_TBHP_side
+k2 = exp(lnA2 + cat_order_2 * ln(Ccat) - Ea2_over_R / T)
+PINN learned kinetic parameters:
+lnA1: 28.6318
+cat_order_1: 1.4709
+Ea1_over_R: 14164
+lnA2: 29.1117
+cat_order_2: 1.81185
+Ea2_over_R: 13573.7
+order_H2O2: 2.82096
+order_TBA_main: 0.584833
+order_TBA_side: 0.211075
+order_TBHP_side: 0.317495
+Ea1_kJ_mol: 117.759
+Ea2_kJ_mol: 112.852
+PINN fit quality metrics:
+R2_H2O2: 0.988642
+RMSE_H2O2: 0.115418
+R2_TBA: 0.992353
+RMSE_TBA: 0.109801
+R2_TBHP: 0.979774
+RMSE_TBHP: 0.130652
+R2_DTBP: 0.905927
+RMSE_DTBP: 0.0359609
+PINN recommended optimum condition:
+candidate_id: 24049
+H2O2: 7.32381
+TBA: 3.66191
+Catalyst: 1.42376
+TBHP: 0
+DTBP: 0
+T: 85
+time: 1051.72
+score: 0.784825
+yield: 0.795473
+selectivity: 0.892891
+conversion: 0.445448
+impurity: 0.107109
+product: 2.91295
+limiting_initial: 3.66191
+H2O2_final: 4.06143
+TBA_final: 0.0500932
+Catalyst_final: 1.42376
+TBHP_final: 2.91295
+DTBP_final: 0.349432
+T_final: 85
+basis: PINN combinatorial optimum inside the discrete experimental-factor space
+PINN combinatorial best model condition:
+candidate_id: 24049
+H2O2: 7.32381
+TBA: 3.66191
+Catalyst: 1.42376
+TBHP: 0
+DTBP: 0
+T: 85
+time: 1051.72
+score: 0.784825
+yield: 0.795473
+selectivity: 0.892891
+conversion: 0.445448
+impurity: 0.107109
+product: 2.91295
+limiting_initial: 3.66191
+H2O2_final: 4.06143
+TBA_final: 0.0500932
+Catalyst_final: 1.42376
+TBHP_final: 2.91295
+DTBP_final: 0.349432
+T_final: 85
+Best measured experimental condition:
+experiment_id: 16
+point_id: 7
+time: 1717.09
+score: 0.781818
+yield: 0.786997
+selectivity: 0.896209
+conversion: 0.462179
+impurity: 0.103791
+product: 2.95982
+limiting_initial: 3.7609
+H2O2_0: 7.14571
+H2O2: 3.84312
+TBA_0: 3.7609
+TBA: 0.115524
+Catalyst_0: 2.72058
+Catalyst: 2.72058
+TBHP_0: 0
+TBHP: 2.95982
+DTBP_0: 0
+DTBP: 0.34278
+T_0: 85
+T: 85
+Nearest measured support condition:
+experiment_id: 10
+point_id: 7
+time: 1717.09
+score: 0.749758
+yield: 0.743887
+selectivity: 0.899532
+conversion: 0.413486
+impurity: 0.100468
+product: 2.72405
+limiting_initial: 3.66191
+H2O2_0: 7.32381
+H2O2: 4.29552
+TBA_0: 3.66191
+TBA: 0.329366
+Catalyst_0: 2.72058
+Catalyst: 2.72058
+TBHP_0: 0
+TBHP: 2.72405
+DTBP_0: 0
+DTBP: 0.304247
+T_0: 70
+T: 70
+time_distance: 0
+Interpretation note: These kinetic parameters were learned by ODE-inverse PINN from small experimental datasets.
+Interpretation note: Conventional curve-fit values are reference only; PINN initial values were neutral, not initialized from curve_fit.
+Use case: compare synthesis paths by activation energy, predicted yield, selectivity, conversion, side-product penalty, and measured support."
+kinetics::TBHP-TBA-WPO4,"Kinetic route name: TBHP-TBA-WPO4
+Route key: tbhp_wpo4
+Model type: two_step_tbhp_dtbp
+Trainer: ode_inverse
+PINN initialization: neutral
+Epochs: 2000
+Constrained parameters: True
+Optimization objective: 0.65 yield(TBHP/limiting reactant) + 0.25 selectivity(TBHP/(TBHP+DTBP)) + 0.10 H2O2 conversion
+Reaction rate equations:
+r1 = k1 * [H2O2]^order_H2O2 * [TBA]^order_TBA_main
+k1 = exp(lnA1 + cat_order_1 * ln(Ccat) - Ea1_over_R / T)
+r2 = k2 * [TBA]^order_TBA_side * [TBHP]^order_TBHP_side
+k2 = exp(lnA2 + cat_order_2 * ln(Ccat) - Ea2_over_R / T)
+PINN learned kinetic parameters:
+lnA1: 24.89
+cat_order_1: 0.931468
+Ea1_over_R: 11740.4
+lnA2: 23.9664
+cat_order_2: 0.51229
+Ea2_over_R: 11002
+order_H2O2: 2.897
+order_TBA_main: 0.112309
+order_TBA_side: 0.172376
+order_TBHP_side: 1.2822
+Ea1_kJ_mol: 97.6094
+Ea2_kJ_mol: 91.4709
+PINN fit quality metrics:
+R2_H2O2: 0.987572
+RMSE_H2O2: 0.113374
+R2_TBA: 0.988798
+RMSE_TBA: 0.105939
+R2_TBHP: 0.967972
+RMSE_TBHP: 0.119616
+R2_DTBP: 0.92306
+RMSE_DTBP: 0.023087
+PINN recommended optimum condition:
+candidate_id: 16316
+H2O2: 7.25048
+TBA: 3.29568
+Catalyst: 0.165257
+TBHP: 0
+DTBP: 0
+T: 80
+time: 1717.09
+score: 0.843163
+yield: 0.882921
+selectivity: 0.898364
+conversion: 0.446732
+impurity: 0.101636
+product: 2.90982
+limiting_initial: 3.29568
+H2O2_final: 4.01146
+TBA_final: 0
+Catalyst_final: 0.165257
+TBHP_final: 2.90982
+DTBP_final: 0.329201
+T_final: 80
+basis: PINN combinatorial optimum inside the discrete experimental-factor space
+PINN combinatorial best model condition:
+candidate_id: 16316
+H2O2: 7.25048
+TBA: 3.29568
+Catalyst: 0.165257
+TBHP: 0
+DTBP: 0
+T: 80
+time: 1717.09
+score: 0.843163
+yield: 0.882921
+selectivity: 0.898364
+conversion: 0.446732
+impurity: 0.101636
+product: 2.90982
+limiting_initial: 3.29568
+H2O2_final: 4.01146
+TBA_final: 0
+Catalyst_final: 0.165257
+TBHP_final: 2.90982
+DTBP_final: 0.329201
+T_final: 80
+Best measured experimental condition:
+experiment_id: 13
+point_id: 7
+time: 1717.09
+score: 0.772943
+yield: 0.783693
+selectivity: 0.894956
+conversion: 0.398035
+impurity: 0.105044
+product: 2.5828
+limiting_initial: 3.29567
+H2O2_0: 7.25048
+H2O2: 4.36454
+TBA_0: 3.29567
+TBA: 0.106576
+Catalyst_0: 0.108864
+Catalyst: 0.108864
+TBHP_0: 0
+TBHP: 2.5828
+DTBP_0: 0
+DTBP: 0.30315
+T_0: 75
+T: 75
+Nearest measured support condition:
+experiment_id: 14
+point_id: 7
+time: 1717.09
+score: 0.764694
+yield: 0.776173
+selectivity: 0.88044
+conversion: 0.400715
+impurity: 0.11956
+product: 2.55801
+limiting_initial: 3.29567
+H2O2_0: 7.25048
+H2O2: 4.3451
+TBA_0: 3.29567
+TBA: 0.0429281
+Catalyst_0: 0.108864
+Catalyst: 0.108864
+TBHP_0: 0
+TBHP: 2.55801
+DTBP_0: 0
+DTBP: 0.347366
+T_0: 80
+T: 80
+time_distance: 0
+Interpretation note: These kinetic parameters were learned by ODE-inverse PINN from small experimental datasets.
+Interpretation note: Conventional curve-fit values are reference only; PINN initial values were neutral, not initialized from curve_fit.
+Use case: compare synthesis paths by activation energy, predicted yield, selectivity, conversion, side-product penalty, and measured support."
+kinetics::TBPB-benzaldehyde,"Kinetic route name: TBPB-benzaldehyde
+Route key: tbpb_benzaldehyde
+Model type: single_tbpb_from_benzaldehyde
+Trainer: ode_inverse
+PINN initialization: neutral
+Epochs: 2000
+Constrained parameters: True
+Optimization objective: 0.70 yield(TBPB/limiting reactant) + 0.20 selectivity + 0.10 benzaldehyde conversion - 0.05 residual TBHP fraction
+Reaction rate equations:
+r1 = k1 * [Benzaldehyde]^order_benzaldehyde * [TBHP]^order_TBHP
+k1 = exp(lnA1 + cat_order_1 * ln(Ccat) - Ea1_over_R / T)
+PINN learned kinetic parameters:
+lnA1: 3.13234
+cat_order_1: 2.95847
+Ea1_over_R: 2847.28
+order_benzaldehyde: 2.7723
+order_TBHP: 2.02067
+Ea1_kJ_mol: 23.6723
+PINN fit quality metrics:
+R2_Benzaldehyde: 0.971192
+RMSE_Benzaldehyde: 0.0715103
+R2_TBHP: 0.96796
+RMSE_TBHP: 0.143021
+R2_TBPB: 0.952112
+RMSE_TBPB: 0.0715103
+PINN recommended optimum condition:
+candidate_id: 16463
+Benzaldehyde: 2.70917
+TBHP: 2.84439
+Catalyst: 0.43096
+TBPB: 0
+TBA: 0
+Benzoic_acid: 0
+T: 65
+time: 1484.41
+score: 0.888913
+yield: 0.920769
+selectivity: 1
+conversion: 0.483364
+impurity: 0
+product: 1.30951
+limiting_initial: 1.42219
+Benzaldehyde_final: 1.39965
+TBHP_final: 0.225363
+Catalyst_final: 0.43096
+TBPB_final: 1.30951
+TBA_final: 0
+Benzoic_acid_final: 0
+T_final: 65
+basis: PINN combinatorial optimum inside the discrete experimental-factor space
+PINN combinatorial best model condition:
+candidate_id: 16463
+Benzaldehyde: 2.70917
+TBHP: 2.84439
+Catalyst: 0.43096
+TBPB: 0
+TBA: 0
+Benzoic_acid: 0
+T: 65
+time: 1484.41
+score: 0.888913
+yield: 0.920769
+selectivity: 1
+conversion: 0.483364
+impurity: 0
+product: 1.30951
+limiting_initial: 1.42219
+Benzaldehyde_final: 1.39965
+TBHP_final: 0.225363
+Catalyst_final: 0.43096
+TBPB_final: 1.30951
+TBA_final: 0
+Benzoic_acid_final: 0
+T_final: 65
+Best measured experimental condition:
+experiment_id: 5
+point_id: 7
+time: 1484.41
+score: 0.836041
+yield: 0.852219
+selectivity: 1
+conversion: 0.46877
+impurity: 0
+product: 1.21414
+limiting_initial: 1.42468
+Benzaldehyde_0: 2.59006
+Benzaldehyde: 1.37592
+TBHP_0: 2.84937
+TBHP: 0.421083
+Catalyst_0: 0.311468
+Catalyst: 0.311468
+TBPB_0: 0
+TBPB: 1.21414
+TBA_0: 0
+TBA: 1.21414
+Benzoic_acid_0: 0
+Benzoic_acid: 0
+T_0: 60
+T: 60
+Nearest measured support condition:
+experiment_id: 5
+point_id: 7
+time: 1484.41
+score: 0.836041
+yield: 0.852219
+selectivity: 1
+conversion: 0.46877
+impurity: 0
+product: 1.21414
+limiting_initial: 1.42468
+Benzaldehyde_0: 2.59006
+Benzaldehyde: 1.37592
+TBHP_0: 2.84937
+TBHP: 0.421083
+Catalyst_0: 0.311468
+Catalyst: 0.311468
+TBPB_0: 0
+TBPB: 1.21414
+TBA_0: 0
+TBA: 1.21414
+Benzoic_acid_0: 0
+Benzoic_acid: 0
+T_0: 60
+T: 60
+time_distance: 0
+Interpretation note: These kinetic parameters were learned by ODE-inverse PINN from small experimental datasets.
+Interpretation note: Conventional curve-fit values are reference only; PINN initial values were neutral, not initialized from curve_fit.
+Use case: compare synthesis paths by activation energy, predicted yield, selectivity, conversion, side-product penalty, and measured support."

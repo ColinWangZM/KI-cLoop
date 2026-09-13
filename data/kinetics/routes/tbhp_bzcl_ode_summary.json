@@ -1,0 +1,41 @@
+{
+  "route": "tbhp_bzcl",
+  "trainer": "ode_inverse",
+  "model_type": "single_tbhp_from_bzcl",
+  "species": [
+    "H2O2",
+    "TBCL",
+    "TBHP",
+    "T"
+  ],
+  "fitted_species": [
+    "H2O2",
+    "TBCL",
+    "TBHP"
+  ],
+  "initial_params": {
+    "lnA1": 0.0,
+    "Ea1_over_R": 3000.0,
+    "order_H2O2": 1.0,
+    "order_TBCL": 1.0
+  },
+  "initialization": "neutral",
+  "learned_params": {
+    "lnA1": -10.042662620544434,
+    "Ea1_over_R": 1126.3798828125,
+    "order_H2O2": 2.2221899032592773,
+    "order_TBCL": 1.0985488891601562,
+    "Ea1_kJ_mol": 9.364722345703125
+  },
+  "metrics": {
+    "R2_H2O2": 0.9994642243851168,
+    "RMSE_H2O2": 0.039110082319371804,
+    "R2_TBCL": 0.9984697400622798,
+    "RMSE_TBCL": 0.039109226915418044,
+    "R2_TBHP": 0.9875421925612539,
+    "RMSE_TBHP": 0.03910934769237715
+  },
+  "epochs": 2000,
+  "ode_lr": 0.08,
+  "max_step": 10.0
+}

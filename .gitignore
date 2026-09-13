@@ -39,6 +39,10 @@ cachegpt/
 # Large/private datasets. Keep only documentation and the curated benchmark.
 data/*
 !data/README.md
+!data/kinetics_route_knowledge.json
+!data/nodes_with_context_kinetics.csv
+!data/kinetics/
+!data/kinetics/**
 pistachio/
 KG_export/
 

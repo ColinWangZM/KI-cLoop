@@ -25,7 +25,7 @@ simulation stack.
 | `evaluation/` | Current Q1-Q6 benchmark, baseline collection, local KGRAG evaluation, and judging |
 | `scripts/` | Portable Qwen LoRA fine-tuning and inference entry points |
 | `figures/` | Latest compact raster figures and their regeneration scripts |
-| `data/README.md` | Expected private/generated inputs and data-handling policy |
+| `data/` | Compact processed PINN kinetics data plus the private-data policy |
 
 ## Installation
 
@@ -63,11 +63,17 @@ API keys must be supplied through environment variables or an untracked env
 file. See `.env.example`; never place credentials in committed YAML or source
 files.
 
-## Data generation
+## Data and regeneration
 
-Large data is intentionally absent. Put source data under `data/` (which is
-Git-ignored) or point the environment variables in `.env.example` to storage
-outside this repository.
+A compact processed ODE-inverse PINN dataset is included under
+`data/kinetics/`. It contains fitted kinetic parameters, model metrics,
+uncertainty outputs, condition recommendations, and experimental-versus-model
+prediction tables for the four routes. The graph-ready export is committed as
+`data/kinetics_route_knowledge.json`.
+
+Large, licensed, and sensitive source data remains absent. Put local source
+data under an ignored location in `data/`, or point the environment variables
+in `.env.example` to storage outside this repository.
 
 Build the organic-reaction context with application labels:
 
