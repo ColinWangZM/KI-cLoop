@@ -168,25 +168,3 @@ Private experimental records and proprietary reactor-model files are not part
 of this repository. The included builders describe the interfaces used to
 convert their outputs into retrievable knowledge.
 
-## Provenance and license
-
-The core began from
-[BaranziniLab/KG_RAG](https://github.com/BaranziniLab/KG_RAG) and retains its
-Apache-2.0 license. Later project work adds materials and organic-reaction
-retrieval, application-guided route discovery, Qwen LoRA integration,
-PINN/ODE kinetics knowledge, and the updated evaluation workflow. See
-`NOTICE` for attribution.
-
-The upstream KG-RAG work can be cited as:
-
-```bibtex
-@article{soman2023biomedical,
-  title={Biomedical knowledge graph-enhanced prompt generation for large language models},
-  author={Soman, Karthik and Rose, Peter W and Morris, John H and others},
-  journal={arXiv preprint arXiv:2311.17330},
-  year={2023}
-}
-```
-
-This is research software. Verify retrieved evidence and model-generated
-content before using it for experimental decisions.
