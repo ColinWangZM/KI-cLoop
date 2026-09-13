@@ -1,13 +1,23 @@
-# KGRAG
+# KI-cLoop
 
-KGRAG is a research codebase for knowledge-graph retrieval-augmented
-generation across materials, organic-reaction routes, and thermo-kinetic
-reasoning. This repository is a cleaned snapshot of the latest project code:
-it keeps the 2026 retrieval, application-index, kinetics, evaluation, and
-figure-generation workflows while removing superseded copies and local-only
-artifacts.
+**Closing the reaction-to-process loop with knowledge-intensified AI**
 
-> 中文说明：本仓库只保留最新版代码与小型评测集。模型权重、向量库、
+KI-cLoop is a knowledge-intensified closed-loop framework that connects a
+provenance-aware chemical process knowledge graph (KI-CPG), traceable
+graph-based retrieval, automated flow experimentation, physics-informed
+kinetic inference, and reactor-scale analysis. This repository contains the
+latest knowledge-graph/RAG, application-index, kinetics write-back,
+evaluation, and figure-generation code used by the project, with superseded
+copies and local-only artifacts removed.
+
+The Python package remains named `kg_rag` for compatibility with existing
+imports. Within KI-cLoop, it implements the graph-retrieval and structured
+question-answering layer rather than the entire experimental and reactor
+simulation stack.
+
+> 中文说明：KI-cLoop 对应论文中的“知识强化闭环”，连接 KI-CPG、可追溯
+> Graph-based RAG、自动流动实验、物理约束动力学推断与反应器尺度分析。
+> 本仓库只保留最新版代码与小型评测集。模型权重、向量库、
 > Pistachio/完整反应数据、实验动力学原始数据、论文草稿、PPT、日志和可由脚本
 > 重建的大型结果均未上传。
 
@@ -138,6 +148,25 @@ large generated point tables are excluded.
 The scripts beside the images regenerate them when the private/source data is
 available. Paths are configured through environment variables rather than
 hard-coded workstation locations.
+
+## Paper scope
+
+The full paper workflow follows this sequence:
+
+1. KI-CPG organizes material entities, physical quantities, process evidence,
+   provenance, and confidence.
+2. Graph-based RAG retrieves executable organic-peroxide route candidates.
+3. Automated flow experiments produce time-resolved concentration data.
+4. ODE-inverse physics-informed models infer route-specific kinetics and
+   support condition selection.
+5. Reactor-scale analysis converts kinetic knowledge into thermal and scale-up
+   constraints.
+6. Experimental and model-derived knowledge is written back into KI-CPG for
+   subsequent retrieval and engineering decisions.
+
+Private experimental records and proprietary reactor-model files are not part
+of this repository. The included builders describe the interfaces used to
+convert their outputs into retrievable knowledge.
 
 ## Provenance and license
 

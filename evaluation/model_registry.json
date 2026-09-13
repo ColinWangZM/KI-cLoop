@@ -1,5 +1,5 @@
 {
-  "purpose": "Updated LLM and KGRAG comparison set for the current KGRAG paper workflow.",
+  "purpose": "Updated LLM and KGRAG comparison set for the graph-retrieval component of the KI-cLoop paper workflow.",
   "api_llm_baselines": [
     {
       "descriptor": "openai:gpt-5.5",
