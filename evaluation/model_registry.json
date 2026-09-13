@@ -1,0 +1,29 @@
+{
+  "purpose": "Updated LLM and KGRAG comparison set for the current KGRAG paper workflow.",
+  "api_llm_baselines": [
+    {
+      "descriptor": "openai:gpt-5.5",
+      "role": "strong OpenAI general LLM baseline"
+    },
+    {
+      "descriptor": "qwen:qwen3.7-plus",
+      "role": "Chinese/chemistry-capable general LLM baseline through DashScope-compatible API"
+    },
+    {
+      "descriptor": "deepseek:deepseek-v4-pro",
+      "role": "reasoning-oriented general LLM baseline through DashScope-compatible API"
+    }
+  ],
+  "local_kgrag_workflows": [
+    {
+      "descriptor": "kgrag:qwen_lora_kg_rag_current",
+      "role": "current local KGRAG workflow using updated MOF rules, OR application labels, reaction-path retrieval, and PINN kinetics knowledge",
+      "lora_checkpoint": "checkpoints/or_lora",
+      "config": "kg_rag/config.yaml",
+      "or_qa": "kg_rag/rag_based_generation/Llama/run_mcq_qa_or.py",
+      "mof_qa": "kg_rag/rag_based_generation/Llama/run_mcq_qa_mof.py",
+      "kinetics_qa": "kg_rag/rag_based_generation/Llama/kinetics_qa.py",
+      "application_qa": "kg_rag/rag_based_generation/Llama/application_synthesis_qa.py"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Python, notebooks, IDEs, and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.idea/
+.vscode/
+.DS_Store
+
+# Models, checkpoints, training logs, and generated databases
+checkpoints/
+ckpt*/
+saves/
+wandb/
+logs/
+outputs/
+.cache/
+cachegpt/
+/data/vectorDB/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.pickle
+*.parquet
+*.sqlite3*
+
+# Large/private datasets. Keep only documentation and the curated benchmark.
+data/*
+!data/README.md
+pistachio/
+KG_export/
+
+# Manuscripts and editable drawing decks are intentionally private.
+paper/
+manuscript/
+*.ppt
+*.pptx
+*.doc
+*.docx
+~$*
+
+# Generated evaluation responses/scores
+evaluation/model_answers*/
+evaluation/llm_eval_results*/
+evaluation/kgrag_model_answers*/
+evaluation/*answers*.json
+evaluation/*evaluation*.json
+evaluation/*scores*.csv

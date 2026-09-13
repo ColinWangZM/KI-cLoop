@@ -1,0 +1,10 @@
+KGRAG
+
+This distribution contains code derived from BaranziniLab/KG_RAG,
+"Biomedical knowledge graph-enhanced prompt generation for large language
+models", licensed under the Apache License 2.0.
+
+The materials, organic-reaction, application-retrieval, kinetics, LoRA, and
+evaluation extensions in this repository are later project modifications.
+Machine-specific paths, credentials, model artifacts, licensed source data,
+and unpublished manuscript files have been removed from this distribution.

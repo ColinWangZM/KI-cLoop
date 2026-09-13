@@ -1,0 +1,51 @@
+---
+
+# Retrieval settings
+CONTEXT_VOLUME: 150
+QUESTION_VS_CONTEXT_SIMILARITY_PERCENTILE_THRESHOLD: 75
+QUESTION_VS_CONTEXT_MINIMUM_SIMILARITY: 0.5
+SENTENCE_EMBEDDING_MODEL_FOR_NODE_RETRIEVAL: sentence-transformers/all-MiniLM-L6-v2
+SENTENCE_EMBEDDING_MODEL_FOR_CONTEXT_RETRIEVAL: NeuML/pubmedbert-base-embeddings
+
+# Generated data and vector databases. Relative paths are resolved from the
+# repository root by kg_rag.config_loader.
+VECTOR_DB_DISEASE_ENTITY_PATH: data/node_identities_mof.pickle
+VECTOR_DB_ORGANIC_REACTION_PATH: data/node_identities_or.pickle
+VECTOR_DB_PATH: data/vectorDB/mof_nodes_db
+VECTOR_DB_PATH_OR: data/vectorDB/or_nodes_db
+VECTOR_DB_CHUNK_SIZE: 650
+VECTOR_DB_CHUNK_OVERLAP: 200
+VECTOR_DB_BATCH_SIZE: 200
+VECTOR_DB_SENTENCE_EMBEDDING_MODEL: sentence-transformers/all-MiniLM-L6-v2
+NODE_CONTEXT_PATH: data/nodes_with_context_mof.csv
+NODE_CONTEXT_PATH_OR: data/nodes_with_context_or_applications.csv
+
+# API credentials belong in this untracked file or in environment variables.
+GPT_CONFIG_FILE: $HOME/.gpt_config.env
+GPT_API_TYPE: open_ai
+
+# Model/checkpoint locations. Override these values in a private config file or
+# with BASE_QWEN_MODEL_PATH and KGRAG_OR_LORA_PATH.
+LLAMA_MODEL_NAME: Qwen/Qwen2-7B-Instruct
+BASE_QWEN_MODEL_PATH: Qwen/Qwen2-7B-Instruct
+OR_LORA_PATH: checkpoints/or_lora
+LLAMA_MODEL_BRANCH: main
+LLM_CACHE_DIR: .cache/models
+LLM_TEMPERATURE: 0
+
+# Outputs and benchmark inputs
+SAVE_RESULTS_PATH: outputs
+MCQ_PATH: evaluation/Q1-Q6/Q2_MC_questions_fixed2.csv
+MCQ_PATH_or: evaluation/Q1-Q6/Q4_chain_reasoning.csv
+
+# SPOKE API settings retained from the upstream KG-RAG workflow.
+BASE_URI: https://spoke.rbvi.ucsf.edu
+cutoff_Compound_max_phase: 3
+cutoff_Protein_source: [SwissProt]
+cutoff_DaG_diseases_sources: [knowledge, experiments]
+cutoff_DaG_textmining: 3
+cutoff_CtD_phase: 3
+cutoff_PiP_confidence: 0.7
+cutoff_ACTeG_level: [Low, Medium, High]
+depth: 1
+cutoff_DpL_average_prevalence: 0.001

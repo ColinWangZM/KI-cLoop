@@ -1,0 +1,163 @@
+# KGRAG
+
+KGRAG is a research codebase for knowledge-graph retrieval-augmented
+generation across materials, organic-reaction routes, and thermo-kinetic
+reasoning. This repository is a cleaned snapshot of the latest project code:
+it keeps the 2026 retrieval, application-index, kinetics, evaluation, and
+figure-generation workflows while removing superseded copies and local-only
+artifacts.
+
+> 中文说明：本仓库只保留最新版代码与小型评测集。模型权重、向量库、
+> Pistachio/完整反应数据、实验动力学原始数据、论文草稿、PPT、日志和可由脚本
+> 重建的大型结果均未上传。
+
+## Main components
+
+| Path | Purpose |
+|---|---|
+| `kg_rag/` | Core KG retrieval, hosted/local LLM workflows, materials and organic-reaction QA |
+| `kg_rag/vectorDB/` | Vector-store, application-index, and kinetics-knowledge builders |
+| `evaluation/` | Current Q1-Q6 benchmark, baseline collection, local KGRAG evaluation, and judging |
+| `scripts/` | Portable Qwen LoRA fine-tuning and inference entry points |
+| `figures/` | Latest compact raster figures and their regeneration scripts |
+| `data/README.md` | Expected private/generated inputs and data-handling policy |
+
+## Installation
+
+Python 3.10 is recommended. The legacy KG-RAG runtime and the modern
+OpenAI-compatible evaluation client require different OpenAI package versions,
+so use separate environments.
+
+Core retrieval and local-model workflow:
+
+```bash
+python -m venv .venv-core
+source .venv-core/bin/activate
+pip install -r requirements-core.txt
+```
+
+Hosted-model evaluation:
+
+```bash
+python -m venv .venv-eval
+source .venv-eval/bin/activate
+pip install -r requirements-evaluation.txt
+```
+
+## Configuration
+
+Portable defaults are in `kg_rag/config.yaml`. Relative paths are resolved
+from the repository root. For a private machine-specific configuration, copy
+the file outside the repository and set:
+
+```bash
+export KGRAG_CONFIG=/secure/path/config.yaml
+```
+
+API keys must be supplied through environment variables or an untracked env
+file. See `.env.example`; never place credentials in committed YAML or source
+files.
+
+## Data generation
+
+Large data is intentionally absent. Put source data under `data/` (which is
+Git-ignored) or point the environment variables in `.env.example` to storage
+outside this repository.
+
+Build the organic-reaction context with application labels:
+
+```bash
+python -m kg_rag.vectorDB.augment_or_applications
+```
+
+Export compact kinetics knowledge from pipeline outputs:
+
+```bash
+KGRAG_KINETICS_OUTPUTS=/path/to/kinetics/outputs \
+python -m kg_rag.vectorDB.export_kinetics_context
+```
+
+Build MOF and organic-reaction Chroma stores:
+
+```bash
+python -m kg_rag.vectorDB.create_vectordb
+python -m kg_rag.vectorDB.create_vectordb_or
+```
+
+The exact expected files and their producers are listed in
+[`data/README.md`](data/README.md).
+
+## Evaluation
+
+The small Q1-Q6 benchmark is versioned because it is needed to describe and
+test the current workflow. Generated answers and judge outputs are ignored.
+
+```bash
+cd evaluation
+
+# Rebuild Q1-Q6 after regenerating the private local context files.
+python build_updated_q1_q6.py
+
+# Evaluate the local structured KGRAG workflow.
+python evaluate_kgrag_pipeline.py --dataset-dir Q1-Q6
+
+# Evaluate hosted baselines (requires provider API keys).
+python evaluate_llms.py \
+  --dataset-dir Q1-Q6 \
+  --models "openai:gpt-5.5,qwen:qwen3.7-plus,deepseek:deepseek-v4-pro" \
+  --output model_answers_updated.json
+```
+
+See [`evaluation/README.md`](evaluation/README.md) for judging and aggregation.
+
+## LoRA fine-tuning
+
+Model weights and training datasets are not tracked. The cleaned latest
+training entry point accepts explicit paths:
+
+```bash
+python scripts/finetune_qwen_lora.py \
+  --dataset /path/to/organic_synthesis_qa.json \
+  --base-model Qwen/Qwen2-7B-Instruct \
+  --output-dir checkpoints/or_lora
+
+python scripts/infer_qwen_lora.py \
+  "What are the operational steps for synthesizing ...?" \
+  --adapter checkpoints/or_lora
+```
+
+## Figures
+
+Only two compact, latest PNG outputs are kept; editable PowerPoint decks and
+large generated point tables are excluded.
+
+![Reaction-space sparse map](figures/reaction_space/reaction_space_sparse_map.png)
+
+![Kinetic route evaluation](figures/route_evaluation/Fig4_revised_0727_composite.png)
+
+The scripts beside the images regenerate them when the private/source data is
+available. Paths are configured through environment variables rather than
+hard-coded workstation locations.
+
+## Provenance and license
+
+The core began from
+[BaranziniLab/KG_RAG](https://github.com/BaranziniLab/KG_RAG) and retains its
+Apache-2.0 license. Later project work adds materials and organic-reaction
+retrieval, application-guided route discovery, Qwen LoRA integration,
+PINN/ODE kinetics knowledge, and the updated evaluation workflow. See
+`NOTICE` for attribution.
+
+The upstream KG-RAG work can be cited as:
+
+```bibtex
+@article{soman2023biomedical,
+  title={Biomedical knowledge graph-enhanced prompt generation for large language models},
+  author={Soman, Karthik and Rose, Peter W and Morris, John H and others},
+  journal={arXiv preprint arXiv:2311.17330},
+  year={2023}
+}
+```
+
+This is research software. Verify retrieved evidence and model-generated
+content before using it for experimental decisions.
