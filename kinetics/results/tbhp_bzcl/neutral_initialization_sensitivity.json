@@ -1,0 +1,282 @@
+{
+  "purpose": "Independent sensitivity only; no sensitivity result replaces or selects the reported primary fit.",
+  "source_of_initial_values": "Generic neutral values and fixed-seed neutral-centered perturbations only.",
+  "primary_sse": 0.43622402979536373,
+  "best_neutral_sse": 0.43622402979526037,
+  "sse_difference": -1.0336176359260207e-13,
+  "max_scaled_free_parameter_difference": 3.5124421060572786e-07,
+  "starts": [
+    {
+      "start": 0,
+      "initialization": "neutral",
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "calls": 72,
+        "sse": 0.43622402979526037,
+        "optimality": 3.46270407799089e-07,
+        "jac_singular_values": [
+          6.604469327934117,
+          5.843212152530756,
+          1.659564693002535,
+          0.39375109632600785
+        ]
+      },
+      "parameters": {
+        "lnA1": -10.248574570567893,
+        "Ea1_over_R": 1091.2570733921348,
+        "Ea1_kJ_mol": 9.072711308182207,
+        "log_rate_ref_1": -7.043562942677996,
+        "order_H2O2": 2.2614412809781883,
+        "order_TBCL": 1.1146417460922218
+      },
+      "q": [
+        -7.043562942677996,
+        0.09072711308182208,
+        0.0,
+        2.2614412809781883,
+        1.1146417460922218
+      ]
+    },
+    {
+      "start": 1,
+      "initialization": "neutral-centered random",
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "calls": 72,
+        "sse": 0.4362240297953031,
+        "optimality": 3.710434364525725e-06,
+        "jac_singular_values": [
+          6.60446952392225,
+          5.843212297063837,
+          1.6595647013611612,
+          0.39375110047066325
+        ]
+      },
+      "parameters": {
+        "lnA1": -10.248574273812846,
+        "Ea1_over_R": 1091.2570490565688,
+        "Ea1_kJ_mol": 9.072711105856314,
+        "log_rate_ref_1": -7.043562966888248,
+        "order_H2O2": 2.2614411983259344,
+        "order_TBCL": 1.1146415615064003
+      },
+      "q": [
+        -7.043562966888248,
+        0.09072711105856314,
+        1e-05,
+        2.2614411983259344,
+        1.1146415615064003
+      ]
+    },
+    {
+      "start": 2,
+      "initialization": "neutral-centered random",
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "calls": 81,
+        "sse": 0.43622402979538605,
+        "optimality": 7.325254015663799e-06,
+        "jac_singular_values": [
+          6.60446965326087,
+          5.843212443326645,
+          1.6595647290381605,
+          0.39375110551184794
+        ]
+      },
+      "parameters": {
+        "lnA1": -10.248574281679378,
+        "Ea1_over_R": 1091.256909072619,
+        "Ea1_kJ_mol": 9.072709942029755,
+        "log_rate_ref_1": -7.043562990436776,
+        "order_H2O2": 2.2614410745049147,
+        "order_TBCL": 1.1146414126433062
+      },
+      "q": [
+        -7.043562990436776,
+        0.09072709942029755,
+        1e-05,
+        2.2614410745049147,
+        1.1146414126433062
+      ]
+    },
+    {
+      "start": 3,
+      "initialization": "neutral-centered random",
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "calls": 63,
+        "sse": 0.4362240297953016,
+        "optimality": 8.258544023697427e-06,
+        "jac_singular_values": [
+          6.604469070447521,
+          5.843211883017922,
+          1.6595646350808873,
+          0.3937510855932763
+        ]
+      },
+      "parameters": {
+        "lnA1": -10.24857475122154,
+        "Ea1_over_R": 1091.2572892974315,
+        "Ea1_kJ_mol": 9.072713103218847,
+        "log_rate_ref_1": -7.043562897317137,
+        "order_H2O2": 2.2614415352373616,
+        "order_TBCL": 1.1146420212137962
+      },
+      "q": [
+        -7.043562897317137,
+        0.09072713103218846,
+        1e-05,
+        2.2614415352373616,
+        1.1146420212137962
+      ]
+    },
+    {
+      "start": 4,
+      "initialization": "neutral-centered random",
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "calls": 72,
+        "sse": 0.43622402979534713,
+        "optimality": 5.532542891178353e-06,
+        "jac_singular_values": [
+          6.60446957042211,
+          5.843212359612897,
+          1.659564708239749,
+          0.3937511016600916
+        ]
+      },
+      "parameters": {
+        "lnA1": -10.248574374382713,
+        "Ea1_over_R": 1091.2569701725806,
+        "Ea1_kJ_mol": 9.072710450014835,
+        "log_rate_ref_1": -7.043562976178179,
+        "order_H2O2": 2.2614411614953767,
+        "order_TBCL": 1.1146414967063438
+      },
+      "q": [
+        -7.043562976178179,
+        0.09072710450014836,
+        1e-05,
+        2.2614411614953767,
+        1.1146414967063438
+      ]
+    },
+    {
+      "start": 5,
+      "initialization": "neutral-centered random",
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "calls": 63,
+        "sse": 0.4362240297953761,
+        "optimality": 6.174716436520364e-06,
+        "jac_singular_values": [
+          6.6044696602376485,
+          5.843212412938695,
+          1.659564714613943,
+          0.3937511042716702
+        ]
+      },
+      "parameters": {
+        "lnA1": -10.248574119969309,
+        "Ea1_over_R": 1091.2569975491867,
+        "Ea1_kJ_mol": 9.072710677623938,
+        "log_rate_ref_1": -7.043562985485442,
+        "order_H2O2": 2.261441119193623,
+        "order_TBCL": 1.1146414271174434
+      },
+      "q": [
+        -7.043562985485442,
+        0.09072710677623938,
+        1e-05,
+        2.261441119193623,
+        1.1146414271174434
+      ]
+    },
+    {
+      "start": 6,
+      "initialization": "neutral-centered random",
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "calls": 63,
+        "sse": 0.4362240297954184,
+        "optimality": 1.4708129341378454e-05,
+        "jac_singular_values": [
+          6.604468932573894,
+          5.84321169756498,
+          1.6595645779863288,
+          0.39375107700576817
+        ]
+      },
+      "parameters": {
+        "lnA1": -10.24857474490519,
+        "Ea1_over_R": 1091.257503292573,
+        "Ea1_kJ_mol": 9.072714882374452,
+        "log_rate_ref_1": -7.043562865203412,
+        "order_H2O2": 2.2614417533702875,
+        "order_TBCL": 1.1146421856133462
+      },
+      "q": [
+        -7.043562865203412,
+        0.09072714882374452,
+        1e-05,
+        2.2614417533702875,
+        1.1146421856133462
+      ]
+    },
+    {
+      "start": 7,
+      "initialization": "neutral-centered random",
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "calls": 81,
+        "sse": 0.4362240297953222,
+        "optimality": 5.3497757039221195e-06,
+        "jac_singular_values": [
+          6.604469553930172,
+          5.84321236561097,
+          1.659564729201837,
+          0.39375110406018754
+        ]
+      },
+      "parameters": {
+        "lnA1": -10.248574362030919,
+        "Ea1_over_R": 1091.2569366831087,
+        "Ea1_kJ_mol": 9.072710171583367,
+        "log_rate_ref_1": -7.0435629781707165,
+        "order_H2O2": 2.2614411039711673,
+        "order_TBCL": 1.11464151397727
+      },
+      "q": [
+        -7.0435629781707165,
+        0.09072710171583367,
+        1e-05,
+        2.2614411039711673,
+        1.11464151397727
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "estimator": "ODE refinement, whole-condition wild residual bootstrap",
+  "replicates": 200,
+  "converged": 200,
+  "not_full_neural_bootstrap": true,
+  "excludes": "Measurement error in residence times, fixed initial states and solvent conditions; model misspecification.",
+  "intervals": {
+    "lnA1": {
+      "estimate": 0.37665080885362845,
+      "low": -0.24264391651348372,
+      "high": 1.2628606723141353
+    },
+    "Ea1_over_R": {
+      "estimate": 1482.6916227383153,
+      "low": 1320.9228216122365,
+      "high": 1705.58640020573
+    },
+    "Ea1_kJ_mol": {
+      "estimate": 12.327098151446354,
+      "low": 10.982152338884134,
+      "high": 14.18024533131044
+    },
+    "log_rate_ref_1": {
+      "estimate": -5.780813989505974,
+      "low": -5.856195291995096,
+      "high": -5.688589922373844
+    },
+    "order_HXD": {
+      "estimate": 1.1408460435152277,
+      "low": 1.0217113247937484,
+      "high": 1.2949036992785934
+    },
+    "order_EA": {
+      "estimate": 1.2698855949511618,
+      "low": 1.1570376292273263,
+      "high": 1.4138531685707632
+    }
+  }
+}

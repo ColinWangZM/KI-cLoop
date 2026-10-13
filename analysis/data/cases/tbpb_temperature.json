@@ -1,0 +1,282 @@
+{
+  "number": 3,
+  "case": "tbpb_temperature",
+  "question": "For Route 4 at 55 °C versus 65 °C, how do temperature and concentration changes affect the predicted response? Use the apparent Ea and reaction orders to identify validation priorities.",
+  "scientific_facts": [
+    {
+      "id": "F1",
+      "text": "At the same feed composition, catalyst concentration and 1484.41 s, predicted yield/selectivity is 54.29%/100.00% at 55 °C and 54.80%/100.00% at 65 °C. Yield and selectivity must be compared separately.",
+      "role": "comparison",
+      "required": true,
+      "evidence_ids": [
+        "kinetics:tbpb_benzaldehyde",
+        "experiment:tbpb_benzaldehyde:1.6-2.0-55",
+        "experiment:tbpb_benzaldehyde:1.6-2.0-65"
+      ]
+    },
+    {
+      "id": "F2",
+      "text": "Main reaction: apparent Ea = 4.495 kJ/mol, ln A = -4.1700, orders catalyst 3.942, benzaldehyde 3.947, TBHP 2.530. These parameters describe the calibrated system and do not establish an elementary mechanism.",
+      "role": "parameters",
+      "required": true,
+      "evidence_ids": [
+        "kinetics:tbpb_benzaldehyde",
+        "experiment:tbpb_benzaldehyde:1.6-2.0-55",
+        "experiment:tbpb_benzaldehyde:1.6-2.0-65"
+      ]
+    },
+    {
+      "id": "F3",
+      "text": "At fixed instantaneous concentrations, heating from the lower to the higher temperature multiplies the main rate by 1.050. These are rate multipliers, not final-yield multipliers.",
+      "role": "explanation",
+      "required": true,
+      "evidence_ids": [
+        "kinetics:tbpb_benzaldehyde",
+        "experiment:tbpb_benzaldehyde:1.6-2.0-55",
+        "experiment:tbpb_benzaldehyde:1.6-2.0-65"
+      ]
+    },
+    {
+      "id": "F4",
+      "text": "The fitted network contains only the target-product channel. Its approximately 100% predicted selectivity is a model assumption and does not establish absence of by-products. An isolated 10% concentration increase multiplies the rate by 1.456 for catalyst, 1.457 for benzaldehyde, 1.273 for TBHP. Check feed and catalyst metering and residence time, then validate within the measured temperature range.",
+      "role": "decision",
+      "required": true,
+      "evidence_ids": [
+        "kinetics:tbpb_benzaldehyde",
+        "experiment:tbpb_benzaldehyde:1.6-2.0-55",
+        "experiment:tbpb_benzaldehyde:1.6-2.0-65"
+      ]
+    },
+    {
+      "id": "F5",
+      "text": "Across 200 converged parameter-bootstrap draws, the conditional 95% interval for lower-minus-higher-temperature yield is [-1.84, -0.00] percentage points. The interval excludes zero, but the comparison remains conditional on the fitted model. Model-form and data-processing uncertainty are not included.",
+      "role": "uncertainty",
+      "required": true,
+      "evidence_ids": [
+        "kinetics:tbpb_benzaldehyde",
+        "experiment:tbpb_benzaldehyde:1.6-2.0-55",
+        "experiment:tbpb_benzaldehyde:1.6-2.0-65"
+      ]
+    },
+    {
+      "id": "F6",
+      "text": "For paired processed experimental observations, the higher-minus-lower-temperature yield difference is -5.15 percentage points, versus 0.50 percentage points predicted. These observations participated in fitting; this is a residual check, not held-out validation. The discrepancy requires checking the condition-specific time series; parameter intervals do not represent model discrepancy.",
+      "role": "measured_check",
+      "required": true,
+      "evidence_ids": [
+        "kinetics:tbpb_benzaldehyde",
+        "experiment:tbpb_benzaldehyde:1.6-2.0-55",
+        "experiment:tbpb_benzaldehyde:1.6-2.0-65"
+      ]
+    }
+  ],
+  "raw_llm_output": "{\"groups\":[[\"F1\",\"F2\"],[\"F3\"],[\"F4\",\"F5\",\"F6\"]]}",
+  "generation_attempts": [
+    {
+      "raw_output": "{\"groups\":[[\"F1\",\"F2\"],[\"F3\"],[\"F4\",\"F5\",\"F6\"]]}",
+      "accepted": true
+    }
+  ],
+  "calculations": [
+    {
+      "tool": "temperature_comparison",
+      "route": "tbpb_benzaldehyde",
+      "temperatures_C": [
+        55.0,
+        65.0
+      ],
+      "time_s": 1484.409866160893,
+      "anchor_condition": "1.6-2.0-55",
+      "initial_mol_L": {
+        "Benzaldehyde": 2.16017770223375,
+        "TBHP": 3.456284323574001,
+        "TBPB": 0.0
+      },
+      "catalyst_mol_L": 0.2708419097739925,
+      "domain": {
+        "within_marginal_bounds": true,
+        "violations": [],
+        "qualification": "Within bounds does not establish support for every combination; catalyst/solvent/chemistry must also match"
+      },
+      "evidence_ids": [
+        "kinetics:tbpb_benzaldehyde",
+        "experiment:tbpb_benzaldehyde:1.6-2.0-55",
+        "experiment:tbpb_benzaldehyde:1.6-2.0-65"
+      ],
+      "uncertainty_scope": "Paired whole-condition wild-residual parameter bootstrap, conditional on fitted model and observed design; no model-form, structural-transfer or measurement-noise coverage",
+      "status": "conditional_model_comparison",
+      "predictions": [
+        {
+          "temperature_C": 55.0,
+          "yield_fraction": 0.5429273121882892,
+          "selectivity_fraction": 0.9999999999999868,
+          "conversion_fraction": 0.4343418497506373,
+          "conversion_species": "Benzaldehyde",
+          "product_mol_L": 0.9382555789782758,
+          "screening_score": 0.600629669116278,
+          "final_mol_L": {
+            "Benzaldehyde": 1.2219221232554616,
+            "TBHP": 1.5797731656174425,
+            "TBPB": 0.9382555789782758
+          },
+          "peak_product_mol_L": 0.9382555789782758,
+          "peak_time_s": 1484.409866160893,
+          "peak_resolution_s": 7.422049330804465,
+          "integrated_main_extent_mol_L": 0.9382555789782883,
+          "integrated_side_extent_mol_L": null
+        },
+        {
+          "temperature_C": 65.0,
+          "yield_fraction": 0.5479762261267289,
+          "selectivity_fraction": 0.9999999999999942,
+          "conversion_fraction": 0.43838098090138583,
+          "conversion_species": "Benzaldehyde",
+          "product_mol_L": 0.9469808200265276,
+          "screening_score": 0.604820267685184,
+          "final_mol_L": {
+            "Benzaldehyde": 1.2131968822072168,
+            "TBHP": 1.5623226835209507,
+            "TBPB": 0.9469808200265276
+          },
+          "peak_product_mol_L": 0.9469808200265276,
+          "peak_time_s": 1484.409866160893,
+          "peak_resolution_s": 7.422049330804465,
+          "integrated_main_extent_mol_L": 0.946980820026533,
+          "integrated_side_extent_mol_L": null
+        }
+      ],
+      "matched_observations": [
+        {
+          "condition": "1.6-2.0-55",
+          "temperature_C": 55.0,
+          "time_s": 1484.409866160893,
+          "yield_fraction": 0.5323020972222691,
+          "selectivity_fraction": 1.0000000000000004,
+          "conversion_fraction": 0.42584167777781523,
+          "conversion_species": "Benzaldehyde",
+          "product_mol_L": 0.9198936970174462,
+          "screening_score": 0.5918107406944834
+        },
+        {
+          "condition": "1.6-2.0-65",
+          "temperature_C": 65.0,
+          "time_s": 1484.409866160893,
+          "yield_fraction": 0.48076556339108834,
+          "selectivity_fraction": 0.9999999999999998,
+          "conversion_fraction": 0.3846124507128709,
+          "conversion_species": "Benzaldehyde",
+          "product_mol_L": 0.8308312400314206,
+          "screening_score": 0.5490354176146033
+        }
+      ],
+      "delta_yield_low_minus_high": -0.0050489139384397586,
+      "metric_specific_point_preferences": {
+        "yield_fraction": 65.0,
+        "selectivity_fraction": 65.0,
+        "screening_score": 65.0
+      },
+      "rate_interpretation": {
+        "fixed_composition_Arrhenius_factors": {
+          "reaction_1_high_over_low": 1.0499286398979017
+        },
+        "apparent_orders": {
+          "cat_order_1": 3.9420830308854633,
+          "order_benzaldehyde": 3.9474663180293232,
+          "order_TBHP": 2.52964458431447
+        }
+      },
+      "bootstrap": {
+        "performed": true,
+        "n": 200,
+        "delta_yield_low_minus_high_95pct": {
+          "low": -0.018394193832046928,
+          "median": -0.003951436711270573,
+          "high": -1.0022554620642276e-05
+        },
+        "low_temperature_yield_95pct": {
+          "low": 0.5222413492600798,
+          "median": 0.5407203629468602,
+          "high": 0.5637735324991611
+        },
+        "high_temperature_yield_95pct": {
+          "low": 0.5241239449922164,
+          "median": 0.5470483066703784,
+          "high": 0.5750319014576216
+        },
+        "fraction_resamples_low_yield_larger": 0.0,
+        "delta_selectivity_low_minus_high_95pct": {
+          "low": -1.6775469902086115e-14,
+          "median": -6.661338147750939e-16,
+          "high": 1.522948434029559e-14
+        },
+        "delta_screening_score_low_minus_high_95pct": {
+          "low": -0.015267180880600051,
+          "median": -0.003279692470355977,
+          "high": -8.318720336594754e-06
+        },
+        "fraction_is_not_probability_of_truth": true
+      },
+      "integration_half_step_max_gap_mol_L": 2.1538326677728037e-14,
+      "verified_interpretation_notes": [],
+      "parameter_insights": {
+        "route": "tbpb_benzaldehyde",
+        "reactions": [
+          {
+            "reaction": 1,
+            "Ea_kJ_mol": 4.49488628849488,
+            "lnA": -4.170026011595212,
+            "orders": {
+              "catalyst": 3.9420830308854633,
+              "benzaldehyde": 3.9474663180293232,
+              "TBHP": 2.52964458431447
+            },
+            "ten_percent_increase_fixed_others": {
+              "catalyst": 1.456040321133542,
+              "benzaldehyde": 1.4567875809955582,
+              "TBHP": 1.2726494139245266
+            },
+            "uniform_ten_percent_dilution_rate_multiplier": 0.3336136655212144,
+            "total_order": 10.419193933229256,
+            "domain_temperature_rate_multiplier": 1.1057316519015077
+          }
+        ],
+        "temperature_range_C": [
+          45.0,
+          65.0
+        ],
+        "scope": "Local apparent-rate sensitivities at fixed other variables; not a new-substrate rate law or final-yield ratio"
+      },
+      "measured_model_comparison": {
+        "predicted_high_minus_low_yield_pp": 0.5048913938439759,
+        "observed_high_minus_low_yield_pp": -5.153653383118073,
+        "yield_residual_pp": [
+          1.0625214966020091,
+          6.721066273564058
+        ],
+        "interpretation": "These observations participated in fitting; this is a residual check, not held-out validation"
+      }
+    }
+  ],
+  "llm_role": "Actual local Qwen selected paragraph groups and order; scientific wording and numerical values are fixed by deterministic English templates. This is not free-form model-authored science.",
+  "model": {
+    "name": "Qwen2-7B",
+    "adapter": null,
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "role": "Group and order immutable scientific statements"
+  },
+  "groups": [
+    [
+      "F1",
+      "F2"
+    ],
+    [
+      "F3"
+    ],
+    [
+      "F4",
+      "F5",
+      "F6"
+    ]
+  ]
+}

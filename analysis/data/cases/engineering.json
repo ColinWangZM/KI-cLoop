@@ -1,0 +1,177 @@
+{
+  "number": 4,
+  "case": "engineering",
+  "question": "Using Route 2 kinetics, reaction enthalpy and a cylindrical heat balance, explain how a preliminary tube size is estimated and interpret the result and its limitations.",
+  "calculations": [
+    {
+      "tool": "thermal_scale_analysis",
+      "route": "tbhp_wpo4",
+      "method": "Steady cylindrical heat balance",
+      "equations": {
+        "rate_constant": "k_j(T) = A_j exp(-E_a,j / (R_g T))",
+        "reaction_rate": "r_j = k_j(T) C_cat^m_j product_i(C_i^alpha_ij)",
+        "heat_source": "q_v = sum_j((-Delta_H_j) r_j)",
+        "temperature_margin": "Delta_T = T_limit - T_coolant",
+        "thermal_resistance": "Delta_T = q_peak (R_t / (2 h) + R_t^2 / (4 k_th))",
+        "radius": "R_t = sqrt((k_th / h)^2 + 4 k_th Delta_T / q_peak) - k_th / h",
+        "diameter": "D_t = 2 R_t",
+        "volumetric_flow": "Q = pi R_t^2 u_mean",
+        "diameter_ratio": "D_t / D_ref = R_t / R_ref",
+        "flow_ratio": "Q / Q_ref = (R_t / R_ref)^2 at equal mean velocity",
+        "product_mass_flow": "m_dot_product = M_product C_product,out Q",
+        "concentration_dynamics": "dC/dt = S r(T_limit, C(t)); C(0) = C_0",
+        "peak_heat_source": "q_peak = max_t sum_j((-Delta_H_j) r_j(T_limit, C(t)))"
+      },
+      "symbols": {
+        "k_j": "Rate coefficient for reaction j, with units consistent with the reaction orders.",
+        "A_j": "Arrhenius prefactor for reaction j.",
+        "E_a,j": "Apparent activation energy for reaction j.",
+        "R_g": "Gas constant.",
+        "T": "Reaction temperature.",
+        "C_cat": "Catalyst concentration.",
+        "C_i": "Concentration of species i.",
+        "m_j": "Catalyst order for reaction j.",
+        "alpha_ij": "Order of species i in reaction j.",
+        "r_j": "Volumetric reaction rate, expressed in mol m^-3 s^-1.",
+        "Delta_H_j": "Reaction enthalpy, expressed in J mol^-1.",
+        "q_v": "Instantaneous volumetric heat-release rate, expressed in W m^-3.",
+        "T_limit": "Temperature ceiling used in the analytical thermal estimate.",
+        "T_coolant": "Coolant temperature.",
+        "Delta_T": "Temperature difference between the ceiling and coolant.",
+        "h": "Exterior heat-transfer coefficient.",
+        "k_th": "Mixture thermal conductivity.",
+        "R_t": "Estimated tube radius from the analytical heat balance.",
+        "D_t": "Estimated tube diameter from the analytical heat balance.",
+        "R_ref": "Reference tube radius.",
+        "D_ref": "Reference tube diameter.",
+        "u_mean": "Mean axial velocity.",
+        "Q": "Volumetric flow rate.",
+        "Q_ref": "Reference volumetric flow rate.",
+        "M_product": "Product molar mass.",
+        "C_product,out": "Product concentration at the outlet.",
+        "m_dot_product": "Product mass flow rate.",
+        "q_peak": "Maximum volumetric heat-release rate along the isothermal concentration trajectory at T_limit, expressed in W m^-3.",
+        "C": "Vector of species concentrations along the isothermal reaction trajectory.",
+        "C_0": "Initial concentration vector for the isothermal reaction trajectory.",
+        "S": "Stoichiometric matrix linking reaction rates to species formation and consumption.",
+        "r": "Vector of volumetric reaction rates.",
+        "t": "Time along the isothermal concentration trajectory."
+      },
+      "assumptions": [
+        "Constant mixture properties, an isothermal heat-source envelope evaluated at the temperature ceiling, steady cylindrical conduction and exterior film resistance.",
+        "Axial convection, temperature-dependent depletion, changing mixture properties and peroxide decomposition are not solved by the analytical heat balance.",
+        "The analytical size estimate is distinct from a coupled COMSOL solution of flow, heat transfer and species transport.",
+        "Diameter, volumetric-flow and product-mass-flow gains are distinct; an estimated size is not a validated operating limit.",
+        "The temperature ceiling lies outside the Route 2 experimental calibration range, so kinetic extrapolation contributes uncertainty."
+      ],
+      "evidence_ids": [
+        "engineering:comsol",
+        "kinetics:tbhp_wpo4"
+      ],
+      "results": {
+        "estimated_radius_mm": 6.990538331430653,
+        "estimated_diameter_mm": 13.981076662861305,
+        "sensitivity_estimates": [
+          {
+            "scenario": "Higher volumetric heat load",
+            "estimated_radius_mm": 4.32
+          },
+          {
+            "scenario": "Weaker exterior heat transfer",
+            "estimated_radius_mm": 5.11
+          },
+          {
+            "scenario": "Stronger exterior heat transfer",
+            "estimated_radius_mm": 8.3
+          }
+        ],
+        "sensitivity_source": "Supplementary Fig. 48a",
+        "diameter_gain": 6.99,
+        "equal_mean_velocity_flow_gain": 48.87,
+        "source": "Supplementary Information, section S8.3"
+      },
+      "sensitivity": [
+        "Increasing the volumetric heat load decreases the radius allowed by the temperature margin.",
+        "Reducing exterior heat transfer decreases the estimated radius; stronger exterior heat transfer increases it.",
+        "The radial-conduction contribution grows quadratically with radius, whereas the exterior-film contribution grows linearly."
+      ]
+    }
+  ],
+  "groups": [
+    [
+      "F1",
+      "F2"
+    ],
+    [
+      "F3",
+      "F4"
+    ],
+    [
+      "F5",
+      "F6"
+    ]
+  ],
+  "answer_method": "Deterministic rendering of scientific statements, formulas and reported results.",
+  "scientific_facts": [
+    {
+      "id": "F1",
+      "text": "Evaluate the reaction-rate law k_j(T) = A_j exp(-E_a,j/(R_g T)) and r_j = k_j(T) C_cat^m_j product_i(C_i^alpha_ij). The instantaneous heat source is q_v = sum_j((-Delta_H_j) r_j), using consistent SI units. Integrate dC/dt = S r(T_limit, C(t)) from C(0) = C_0 and use q_peak = max_t sum_j((-Delta_H_j) r_j(T_limit, C(t))) as the heat-source envelope. Reaction enthalpy and mixture properties must match the reaction system.",
+      "role": "method",
+      "required": true,
+      "evidence_ids": [
+        "engineering:comsol",
+        "kinetics:tbhp_wpo4"
+      ]
+    },
+    {
+      "id": "F2",
+      "text": "For a cylindrical tube, Delta_T = T_limit - T_coolant = q_peak [R_t/(2h) + R_t^2/(4k_th)]. Solving for the positive radius gives R_t = sqrt[(k_th/h)^2 + 4k_th Delta_T/q_peak] - k_th/h, and D_t = 2R_t. The exterior-film and radial-conduction terms scale linearly and quadratically with radius, respectively.",
+      "role": "formula",
+      "required": true,
+      "evidence_ids": [
+        "engineering:comsol",
+        "kinetics:tbhp_wpo4"
+      ]
+    },
+    {
+      "id": "F3",
+      "text": "The analytical Route 2 estimate gives a candidate radius of 6.99 mm and diameter of 13.98 mm. These are results of the cylindrical heat-balance estimate, not a prescribed geometry for a coupled COMSOL calculation.",
+      "role": "result",
+      "required": true,
+      "evidence_ids": [
+        "engineering:comsol",
+        "kinetics:tbhp_wpo4"
+      ]
+    },
+    {
+      "id": "F4",
+      "text": "A larger heat load or weaker exterior heat transfer reduces the candidate size. Stronger exterior heat transfer increases it, but radial conduction continues to constrain the temperature rise. Confirm reaction heat and heat-transfer conditions before evaluating a candidate geometry with coupled transport equations.",
+      "role": "decision",
+      "required": true,
+      "evidence_ids": [
+        "engineering:comsol",
+        "kinetics:tbhp_wpo4"
+      ]
+    },
+    {
+      "id": "F5",
+      "text": "At unchanged mean velocity, Q/Q_ref = (R_t/R_ref)^2 and D_t/D_ref = R_t/R_ref. Product mass flow is m_dot_product = M_product C_product,out Q. A diameter ratio or volumetric-flow ratio does not by itself determine product throughput, since outlet concentration can depend on reaction and transport.",
+      "role": "interpretation",
+      "required": true,
+      "evidence_ids": [
+        "engineering:comsol",
+        "kinetics:tbhp_wpo4"
+      ]
+    },
+    {
+      "id": "F6",
+      "text": "Constant mixture properties, an isothermal heat-source envelope evaluated at the temperature ceiling, steady cylindrical conduction and exterior film resistance. Axial convection, temperature-dependent depletion, changing mixture properties and peroxide decomposition are not solved by the analytical heat balance. The analytical size estimate is distinct from a coupled COMSOL solution of flow, heat transfer and species transport. Diameter, volumetric-flow and product-mass-flow gains are distinct; an estimated size is not a validated operating limit. The temperature ceiling lies outside the Route 2 experimental calibration range, so kinetic extrapolation contributes uncertainty.",
+      "role": "boundary",
+      "required": true,
+      "evidence_ids": [
+        "engineering:comsol",
+        "kinetics:tbhp_wpo4"
+      ]
+    }
+  ]
+}

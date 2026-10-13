@@ -1,0 +1,100 @@
+{
+  "method": "whole-condition wild residual bootstrap",
+  "estimator": "final conservative ODE refinement, conditional on model and observed conditions",
+  "not_full_neural_network_bootstrap": true,
+  "requested": 200,
+  "converged": 200,
+  "sufficient_replicate_count": true,
+  "seed": 20261617,
+  "intervals": {
+    "lnA1": {
+      "estimate": 31.428250539792824,
+      "low": 29.20468847094379,
+      "high": 33.48352494550656,
+      "sd": 1.1493661232738532
+    },
+    "Ea1_over_R": {
+      "estimate": 14846.607857321811,
+      "low": 14133.201296336063,
+      "high": 15606.315119572155,
+      "sd": 404.06557959669163
+    },
+    "Ea1_kJ_mol": {
+      "estimate": 123.43469772577353,
+      "low": 117.50343557773803,
+      "high": 129.7509039041229,
+      "sd": 3.3594012287668953
+    },
+    "log_rate_ref_1": {
+      "estimate": -4.949910190281353,
+      "low": -5.0055669768392645,
+      "high": -4.896557843765843,
+      "sd": 0.028792941848588258
+    },
+    "cat_order_1": {
+      "estimate": 1.496083419407978,
+      "low": 1.3989474483523447,
+      "high": 1.5989747207170304,
+      "sd": 0.05405367292636759
+    },
+    "order_H2O2": {
+      "estimate": 2.305937332439175,
+      "low": 2.0849095195761107,
+      "high": 2.5234181084180363,
+      "sd": 0.1183270450514414
+    },
+    "order_TBA_main": {
+      "estimate": 0.7488674749622037,
+      "low": 0.6444928522168365,
+      "high": 0.8413551940986985,
+      "sd": 0.05165866820764519
+    },
+    "lnA2": {
+      "estimate": 31.516137808970246,
+      "low": 27.334438029659644,
+      "high": 36.954539533552214,
+      "sd": 2.6233354162372318
+    },
+    "Ea2_over_R": {
+      "estimate": 14288.990859661264,
+      "low": 12896.21948786765,
+      "high": 16115.21043452147,
+      "sd": 906.6540007831521
+    },
+    "Ea2_kJ_mol": {
+      "estimate": 118.79867000722375,
+      "low": 107.21916882213164,
+      "high": 133.9818595526115,
+      "sd": 7.5379213625111285
+    },
+    "log_rate_ref_2": {
+      "estimate": -8.418739929675521,
+      "low": -8.509443323457917,
+      "high": -8.193544219150152,
+      "sd": 0.08219613810772122
+    },
+    "cat_order_2": {
+      "estimate": 1.5172450380331848,
+      "low": 1.1100325780275349,
+      "high": 1.9097009954144555,
+      "sd": 0.21793826434740857
+    },
+    "order_TBA_side": {
+      "estimate": 0.050000000000001724,
+      "low": 0.05000000000000001,
+      "high": 0.30562844374386927,
+      "sd": 0.07292249827999328
+    },
+    "order_TBHP_side": {
+      "estimate": 0.07935701839736783,
+      "low": 0.05000029379174671,
+      "high": 0.2734491302402101,
+      "sd": 0.06480146317540718
+    }
+  },
+  "notes": [
+    "No independent-error assumption across derived species or times in one condition.",
+    "Intervals do not cover model-form error, initial-concentration error or extrapolation.",
+    "Reported percentiles are conditional estimates; bound contacts must be inspected."
+  ]
+}

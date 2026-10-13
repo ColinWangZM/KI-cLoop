@@ -1,0 +1,77 @@
+{
+  "method": "hybrid_PINN_with_conservative_ODE_likelihood_refinement",
+  "q": [
+    -5.8183209070453765,
+    0.044948862884948794,
+    3.9420830308854633,
+    3.9474663180293232,
+    2.52964458431447
+  ],
+  "parameters": {
+    "lnA1": -4.170026011595212,
+    "Ea1_over_R": 540.6406409062881,
+    "Ea1_kJ_mol": 4.49488628849488,
+    "log_rate_ref_1": -5.8183209070453765,
+    "cat_order_1": 3.9420830308854633,
+    "order_benzaldehyde": 3.9474663180293232,
+    "order_TBHP": 2.52964458431447
+  },
+  "step": 2.0,
+  "optimizer": {
+    "success": true,
+    "status": 2,
+    "message": "`ftol` termination condition is satisfied.",
+    "nfev": 6,
+    "calls": 66,
+    "sse": 2.049393697248815,
+    "optimality": 6.721308811406149e-05,
+    "jac_singular_values": [
+      4.4937229258390134,
+      2.404683946398099,
+      1.4396756177458159,
+      0.6822180183756563,
+      0.5568751276706669
+    ]
+  },
+  "metrics": {
+    "Benzaldehyde_all": {
+      "rmse": 0.05703512837408986,
+      "r2": 0.9797490137868988,
+      "bias": 0.0031387689421598585
+    },
+    "Benzaldehyde_noninitial": {
+      "rmse": 0.06160497961548018,
+      "r2": 0.9696215330630806,
+      "bias": 0.0036618970991865027
+    },
+    "TBHP_all": {
+      "rmse": 0.11407025674817978,
+      "r2": 0.9764868736040525,
+      "bias": 0.006277537884320632
+    },
+    "TBHP_noninitial": {
+      "rmse": 0.12320995923096043,
+      "r2": 0.9645930679832923,
+      "bias": 0.007323794198374069
+    },
+    "TBPB_all": {
+      "rmse": 0.05703512837408982,
+      "r2": 0.962519107061597,
+      "bias": -0.003138768942160188
+    },
+    "TBPB_noninitial": {
+      "rmse": 0.06160497961548013,
+      "r2": 0.9279091027827078,
+      "bias": -0.003661897099186885
+    },
+    "physical_checks": {
+      "min_concentration": 0.0,
+      "max_invariant_error": 4.3436682490573295e-15,
+      "observed_max_invariant_error": 1.235951139131735e-15
+    }
+  },
+  "half_step_max_gap": 1.5245233964122917e-08,
+  "same_data_ODE_baseline_used_for_warmup": true,
+  "parameter_prior_weight": 0.0,
+  "raw_PINN_parameters_file": "pinn_summary.json"
+}

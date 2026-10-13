@@ -1,0 +1,5 @@
+numpy==1.26.4
+pyarrow>=14,<18
+duckdb==1.5.5
+rdkit>=2024.9
+pymatgen==2024.10.22

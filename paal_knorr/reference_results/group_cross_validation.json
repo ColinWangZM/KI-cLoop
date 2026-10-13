@@ -1,0 +1,748 @@
+{
+  "folds": [
+    {
+      "group_type": "temperature",
+      "value": 307.65,
+      "held_out_conditions": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05"
+      ],
+      "parameters": {
+        "lnA1": 0.5307258793688701,
+        "Ea1_over_R": 1488.6857032766131,
+        "Ea1_kJ_mol": 12.376932937041762,
+        "log_rate_ref_1": -5.7378493354858415,
+        "order_HXD": 1.217109677012266,
+        "order_EA": 1.327753565017013
+      },
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "calls": 72,
+        "sse": 0.05658848473991406,
+        "optimality": 1.2642870306751296e-06,
+        "jac_singular_values": [
+          2.4173438616175416,
+          1.367412012013487,
+          0.7308687842378587,
+          0.23644018863438493
+        ]
+      },
+      "metrics": {
+        "HXD_all": {
+          "rmse": 0.014474655300431212,
+          "r2": 0.992208302164282,
+          "bias": -0.0024046056097014237
+        },
+        "HXD_noninitial": {
+          "rmse": 0.0156344146168216,
+          "r2": 0.9906272485229014,
+          "bias": -0.0028053732113183277
+        },
+        "EA_derived_all": {
+          "rmse": 0.014474655300431249,
+          "r2": 0.9909546619254069,
+          "bias": -0.0024046056097015707
+        },
+        "EA_derived_noninitial": {
+          "rmse": 0.01563441461682164,
+          "r2": 0.9887520020978189,
+          "bias": -0.002805373211318499
+        },
+        "physical_checks": {
+          "min_concentration": 0.10970301350460834,
+          "max_invariant_error": 7.46594800084137e-16,
+          "observed_max_invariant_error": 9.242965211156412e-17
+        }
+      },
+      "estimator": "ODE only, neutral initialization, no PINN fold training"
+    },
+    {
+      "group_type": "temperature",
+      "value": 316.65,
+      "held_out_conditions": [
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10"
+      ],
+      "parameters": {
+        "lnA1": 0.6525335472482305,
+        "Ea1_over_R": 1546.4757947554294,
+        "Ea1_kJ_mol": 12.85739975759664,
+        "log_rate_ref_1": -5.760414249954246,
+        "order_HXD": 1.191106203078399,
+        "order_EA": 1.3097630429098648
+      },
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "calls": 72,
+        "sse": 0.06036730206835384,
+        "optimality": 1.3692050891277613e-06,
+        "jac_singular_values": [
+          2.681776237966594,
+          1.4949208807100864,
+          0.7293660924451497,
+          0.2354615886909951
+        ]
+      },
+      "metrics": {
+        "HXD_all": {
+          "rmse": 0.012269437368227219,
+          "r2": 0.9944064972733987,
+          "bias": 0.0019756175549181486
+        },
+        "HXD_noninitial": {
+          "rmse": 0.01325250701647273,
+          "r2": 0.9931408669879778,
+          "bias": 0.0023048871474045064
+        },
+        "EA_derived_all": {
+          "rmse": 0.012269437368227255,
+          "r2": 0.9937231159130024,
+          "bias": 0.001975617554918287
+        },
+        "EA_derived_noninitial": {
+          "rmse": 0.013252507016472768,
+          "r2": 0.9920840285230885,
+          "bias": 0.002304887147404668
+        },
+        "physical_checks": {
+          "min_concentration": 0.09861122696994915,
+          "max_invariant_error": 5.216613434357901e-16,
+          "observed_max_invariant_error": 7.942602130895557e-17
+        }
+      },
+      "estimator": "ODE only, neutral initialization, no PINN fold training"
+    },
+    {
+      "group_type": "temperature",
+      "value": 326.54999999999995,
+      "held_out_conditions": [
+        "P11",
+        "P12",
+        "P13",
+        "P14",
+        "P15"
+      ],
+      "parameters": {
+        "lnA1": 0.6425945801637725,
+        "Ea1_over_R": 1538.6247718475379,
+        "Ea1_kJ_mol": 12.792126353140429,
+        "log_rate_ref_1": -5.760836965772335,
+        "order_HXD": 1.1953998659106926,
+        "order_EA": 1.3260135591140982
+      },
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "calls": 72,
+        "sse": 0.05945304892340637,
+        "optimality": 1.2308340182152602e-06,
+        "jac_singular_values": [
+          2.797889153722231,
+          1.537171962729791,
+          0.7184301350025571,
+          0.22925080522218702
+        ]
+      },
+      "metrics": {
+        "HXD_all": {
+          "rmse": 0.012982113688354413,
+          "r2": 0.9938406076190367,
+          "bias": 0.004916637420130134
+        },
+        "HXD_noninitial": {
+          "rmse": 0.014022285421912705,
+          "r2": 0.9923028238816752,
+          "bias": 0.005736076990151824
+        },
+        "EA_derived_all": {
+          "rmse": 0.01298211368835435,
+          "r2": 0.9932784178939049,
+          "bias": 0.004916637420130099
+        },
+        "EA_derived_noninitial": {
+          "rmse": 0.014022285421912637,
+          "r2": 0.9914044003288401,
+          "bias": 0.005736076990151782
+        },
+        "physical_checks": {
+          "min_concentration": 0.08686907099637145,
+          "max_invariant_error": 1.286417185416861e-15,
+          "observed_max_invariant_error": 7.392335496529156e-17
+        }
+      },
+      "estimator": "ODE only, neutral initialization, no PINN fold training"
+    },
+    {
+      "group_type": "temperature",
+      "value": 336.04999999999995,
+      "held_out_conditions": [
+        "P16",
+        "P17",
+        "P18",
+        "P19",
+        "P20"
+      ],
+      "parameters": {
+        "lnA1": 0.46623686650840246,
+        "Ea1_over_R": 1512.4527841818776,
+        "Ea1_kJ_mol": 12.57453244768813,
+        "log_rate_ref_1": -5.768556764063894,
+        "order_HXD": 1.1169661254905587,
+        "order_EA": 1.2754066508601494
+      },
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "calls": 72,
+        "sse": 0.05844631314044176,
+        "optimality": 1.126035731764148e-06,
+        "jac_singular_values": [
+          2.849607594751379,
+          1.6000173913256392,
+          0.7377638251153956,
+          0.23798351959426592
+        ]
+      },
+      "metrics": {
+        "HXD_all": {
+          "rmse": 0.013724543237353374,
+          "r2": 0.9925852400627032,
+          "bias": -0.006917041724985711
+        },
+        "HXD_noninitial": {
+          "rmse": 0.014824200987562396,
+          "r2": 0.9905591020394183,
+          "bias": -0.008069882012483329
+        },
+        "EA_derived_all": {
+          "rmse": 0.013724543237353323,
+          "r2": 0.9925573044302786,
+          "bias": -0.006917041724985598
+        },
+        "EA_derived_noninitial": {
+          "rmse": 0.014824200987562342,
+          "r2": 0.9905137665540962,
+          "bias": -0.008069882012483199
+        },
+        "physical_checks": {
+          "min_concentration": 0.0697746129944834,
+          "max_invariant_error": 5.265445577419196e-16,
+          "observed_max_invariant_error": 1.2012982639016118e-16
+        }
+      },
+      "estimator": "ODE only, neutral initialization, no PINN fold training"
+    },
+    {
+      "group_type": "temperature",
+      "value": 345.65,
+      "held_out_conditions": [
+        "P21",
+        "P22",
+        "P23",
+        "P24",
+        "P25"
+      ],
+      "parameters": {
+        "lnA1": 0.6294190310073244,
+        "Ea1_over_R": 1572.5575187046002,
+        "Ea1_kJ_mol": 13.074243210510044,
+        "log_rate_ref_1": -5.775016183675601,
+        "order_HXD": 1.1213955433726444,
+        "order_EA": 1.2533342480088956
+      },
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "calls": 72,
+        "sse": 0.06075298334158576,
+        "optimality": 1.0966548635729935e-06,
+        "jac_singular_values": [
+          2.669116269436101,
+          1.5892990667443228,
+          0.7338633673833863,
+          0.2343975846892392
+        ]
+      },
+      "metrics": {
+        "HXD_all": {
+          "rmse": 0.012556290244660704,
+          "r2": 0.9941544195039176,
+          "bias": -0.006625655931742449
+        },
+        "HXD_noninitial": {
+          "rmse": 0.013562343534932369,
+          "r2": 0.9925226010270769,
+          "bias": -0.007729931920366191
+        },
+        "EA_derived_all": {
+          "rmse": 0.012556290244660673,
+          "r2": 0.9936977733456169,
+          "bias": -0.006625655931742414
+        },
+        "EA_derived_noninitial": {
+          "rmse": 0.013562343534932336,
+          "r2": 0.9917587633354247,
+          "bias": -0.00772993192036615
+        },
+        "physical_checks": {
+          "min_concentration": 0.0608575824416291,
+          "max_invariant_error": 7.196832617181234e-16,
+          "observed_max_invariant_error": 5.903709104187044e-17
+        }
+      },
+      "estimator": "ODE only, neutral initialization, no PINN fold training"
+    },
+    {
+      "group_type": "temperature",
+      "value": 355.15,
+      "held_out_conditions": [
+        "P26",
+        "P27",
+        "P28",
+        "P29",
+        "P30"
+      ],
+      "parameters": {
+        "lnA1": -0.9550136556075186,
+        "Ea1_over_R": 1150.8812987170418,
+        "Ea1_kJ_mol": 9.568427117533487,
+        "log_rate_ref_1": -5.8971784306792525,
+        "order_HXD": 0.9911669183238139,
+        "order_EA": 1.1147579198888193
+      },
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 7,
+        "calls": 63,
+        "sse": 0.04640344807160825,
+        "optimality": 1.7641459879915518e-07,
+        "jac_singular_values": [
+          2.4569215996425293,
+          1.5684553054256882,
+          0.7627985682526716,
+          0.24296928940636803
+        ]
+      },
+      "metrics": {
+        "HXD_all": {
+          "rmse": 0.021960750269277046,
+          "r2": 0.9823314934778729,
+          "bias": 0.013622665720484753
+        },
+        "HXD_noninitial": {
+          "rmse": 0.023720321339612525,
+          "r2": 0.9764045178516815,
+          "bias": 0.015893110007232213
+        },
+        "EA_derived_all": {
+          "rmse": 0.021960750269277043,
+          "r2": 0.9809412080174771,
+          "bias": 0.013622665720484657
+        },
+        "EA_derived_noninitial": {
+          "rmse": 0.023720321339612518,
+          "r2": 0.9738578069761962,
+          "bias": 0.0158931100072321
+        },
+        "physical_checks": {
+          "min_concentration": 0.05434597555498474,
+          "max_invariant_error": 6.959057610746438e-16,
+          "observed_max_invariant_error": 8.653143889982847e-17
+        }
+      },
+      "estimator": "ODE only, neutral initialization, no PINN fold training"
+    },
+    {
+      "group_type": "ratio",
+      "value": 0.3,
+      "held_out_conditions": [
+        "P02",
+        "P07",
+        "P12",
+        "P17",
+        "P22",
+        "P27"
+      ],
+      "parameters": {
+        "lnA1": 0.3397217170552409,
+        "Ea1_over_R": 1495.042936342849,
+        "Ea1_kJ_mol": 12.429786972754448,
+        "log_rate_ref_1": -5.802162942350694,
+        "order_HXD": 1.0972731596249505,
+        "order_EA": 1.2370620797660403
+      },
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "calls": 72,
+        "sse": 0.05821652435637539,
+        "optimality": 8.345659590089324e-07,
+        "jac_singular_values": [
+          2.662335086827115,
+          1.6134170997562767,
+          0.5998850394349966,
+          0.23568616905854134
+        ]
+      },
+      "metrics": {
+        "HXD_all": {
+          "rmse": 0.01220463105804046,
+          "r2": 0.9675344114397484,
+          "bias": -0.00036190865652300434
+        },
+        "HXD_noninitial": {
+          "rmse": 0.013182508201149233,
+          "r2": 0.9355555098072672,
+          "bias": -0.00042222676594350507
+        },
+        "EA_derived_all": {
+          "rmse": 0.012204631058040398,
+          "r2": 0.9675344114397486,
+          "bias": -0.0003619086565227998
+        },
+        "EA_derived_noninitial": {
+          "rmse": 0.013182508201149166,
+          "r2": 0.9355555098072679,
+          "bias": -0.00042222676594326643
+        },
+        "physical_checks": {
+          "min_concentration": 0.052882051328484406,
+          "max_invariant_error": 1.0709473393642673e-15,
+          "observed_max_invariant_error": 7.395017816120545e-17
+        }
+      },
+      "estimator": "ODE only, neutral initialization, no PINN fold training"
+    },
+    {
+      "group_type": "ratio",
+      "value": 0.4,
+      "held_out_conditions": [
+        "P03",
+        "P08",
+        "P13",
+        "P18",
+        "P23",
+        "P28"
+      ],
+      "parameters": {
+        "lnA1": 0.362979931242986,
+        "Ea1_over_R": 1501.9481875558208,
+        "Ea1_kJ_mol": 12.487197231339096,
+        "log_rate_ref_1": -5.802560145431297,
+        "order_HXD": 1.1042295519931036,
+        "order_EA": 1.2340887296219978
+      },
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "calls": 72,
+        "sse": 0.05513057239970193,
+        "optimality": 6.115457661654473e-07,
+        "jac_singular_values": [
+          2.5528450901425646,
+          1.552623625816301,
+          0.7487196005526117,
+          0.23220321294253113
+        ]
+      },
+      "metrics": {
+        "HXD_all": {
+          "rmse": 0.01359797695554876,
+          "r2": 0.970677768417044,
+          "bias": 0.0006387725356113969
+        },
+        "HXD_noninitial": {
+          "rmse": 0.01468749377863951,
+          "r2": 0.9435068645774584,
+          "bias": 0.0007452346248799631
+        },
+        "EA_derived_all": {
+          "rmse": 0.013597976955548726,
+          "r2": 0.9706777684170442,
+          "bias": 0.0006387725356114815
+        },
+        "EA_derived_noninitial": {
+          "rmse": 0.014687493778639475,
+          "r2": 0.9435068645774586,
+          "bias": 0.0007452346248800618
+        },
+        "physical_checks": {
+          "min_concentration": 0.10917499046369827,
+          "max_invariant_error": 3.470476930610173e-16,
+          "observed_max_invariant_error": 9.242965211156412e-17
+        }
+      },
+      "estimator": "ODE only, neutral initialization, no PINN fold training"
+    },
+    {
+      "group_type": "ratio",
+      "value": 0.5,
+      "held_out_conditions": [
+        "P01",
+        "P06",
+        "P11",
+        "P16",
+        "P21",
+        "P26"
+      ],
+      "parameters": {
+        "lnA1": 0.3863553377618143,
+        "Ea1_over_R": 1481.1853837610213,
+        "Ea1_kJ_mol": 12.314575280589132,
+        "log_rate_ref_1": -5.778165088882459,
+        "order_HXD": 1.1488185394370376,
+        "order_EA": 1.2786676259943168
+      },
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "calls": 72,
+        "sse": 0.053647671152776306,
+        "optimality": 9.600278673474818e-07,
+        "jac_singular_values": [
+          2.4771529669446557,
+          1.5089678269646378,
+          0.8013128845671045,
+          0.2208506314604541
+        ]
+      },
+      "metrics": {
+        "HXD_all": {
+          "rmse": 0.014121608427422482,
+          "r2": 0.9724908066216867,
+          "bias": 0.0010338656001747989
+        },
+        "HXD_noninitial": {
+          "rmse": 0.015253080410429382,
+          "r2": 0.9502274441054559,
+          "bias": 0.0012061765335372654
+        },
+        "EA_derived_all": {
+          "rmse": 0.014121608427422482,
+          "r2": 0.9724908066216867,
+          "bias": 0.0010338656001747989
+        },
+        "EA_derived_noninitial": {
+          "rmse": 0.015253080410429382,
+          "r2": 0.9502274441054559,
+          "bias": 0.0012061765335372654
+        },
+        "physical_checks": {
+          "min_concentration": 0.20009793282101337,
+          "max_invariant_error": 3.6937939258938954e-17,
+          "observed_max_invariant_error": 4.459409550304524e-17
+        }
+      },
+      "estimator": "ODE only, neutral initialization, no PINN fold training"
+    },
+    {
+      "group_type": "ratio",
+      "value": 0.6,
+      "held_out_conditions": [
+        "P04",
+        "P09",
+        "P14",
+        "P19",
+        "P24",
+        "P29"
+      ],
+      "parameters": {
+        "lnA1": 0.4310322803347997,
+        "Ea1_over_R": 1477.1696982006092,
+        "Ea1_kJ_mol": 12.281188870839866,
+        "log_rate_ref_1": -5.762218880917275,
+        "order_HXD": 1.1715703442648921,
+        "order_EA": 1.3148957735981062
+      },
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "calls": 72,
+        "sse": 0.054636557015986326,
+        "optimality": 7.765931446700976e-07,
+        "jac_singular_values": [
+          2.5058692744060607,
+          1.5348669710949858,
+          0.7129312430320661,
+          0.22589468617934985
+        ]
+      },
+      "metrics": {
+        "HXD_all": {
+          "rmse": 0.013828579132428083,
+          "r2": 0.9711065911218888,
+          "bias": 0.0011130712578604604
+        },
+        "HXD_noninitial": {
+          "rmse": 0.014936572597446723,
+          "r2": 0.9497045995320391,
+          "bias": 0.0012985831341705372
+        },
+        "EA_derived_all": {
+          "rmse": 0.013828579132428026,
+          "r2": 0.9711065911218891,
+          "bias": 0.0011130712578604227
+        },
+        "EA_derived_noninitial": {
+          "rmse": 0.01493657259744666,
+          "r2": 0.9497045995320395,
+          "bias": 0.0012985831341704931
+        },
+        "physical_checks": {
+          "min_concentration": 0.1231284531054011,
+          "max_invariant_error": 3.629648927075533e-16,
+          "observed_max_invariant_error": 1.2012982639016118e-16
+        }
+      },
+      "estimator": "ODE only, neutral initialization, no PINN fold training"
+    },
+    {
+      "group_type": "ratio",
+      "value": 0.7,
+      "held_out_conditions": [
+        "P05",
+        "P10",
+        "P15",
+        "P20",
+        "P25",
+        "P30"
+      ],
+      "parameters": {
+        "lnA1": 0.3207468071050634,
+        "Ea1_over_R": 1451.4040089096022,
+        "Ea1_kJ_mol": 12.066972930074432,
+        "log_rate_ref_1": -5.7633044557854936,
+        "order_HXD": 1.170388833828699,
+        "order_EA": 1.2710138935461466
+      },
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "calls": 72,
+        "sse": 0.05876475973139425,
+        "optimality": 1.1132725938242221e-06,
+        "jac_singular_values": [
+          2.6369326742144863,
+          1.61032798084664,
+          0.5987157110605258,
+          0.23227410865696752
+        ]
+      },
+      "metrics": {
+        "HXD_all": {
+          "rmse": 0.012034974547337244,
+          "r2": 0.968178830073969,
+          "bias": -0.0033627510971234085
+        },
+        "HXD_noninitial": {
+          "rmse": 0.012999258225538532,
+          "r2": 0.9460760973279516,
+          "bias": -0.003923209613310643
+        },
+        "EA_derived_all": {
+          "rmse": 0.01203497454733728,
+          "r2": 0.9681788300739688,
+          "bias": -0.0033627510971236028
+        },
+        "EA_derived_noninitial": {
+          "rmse": 0.012999258225538568,
+          "r2": 0.9460760973279513,
+          "bias": -0.0039232096133108695
+        },
+        "physical_checks": {
+          "min_concentration": 0.06827451757203909,
+          "max_invariant_error": 1.9441981530018515e-15,
+          "observed_max_invariant_error": 6.261957210869669e-17
+        }
+      },
+      "estimator": "ODE only, neutral initialization, no PINN fold training"
+    }
+  ],
+  "pooled_metrics": {
+    "temperature": {
+      "HXD_all": {
+        "rmse": 0.015038218419459392,
+        "r2": 0.9916544773475291,
+        "bias": 0.0007612695715172424
+      },
+      "HXD_noninitial": {
+        "rmse": 0.016243132357089535,
+        "r2": 0.9895397187115437,
+        "bias": 0.0008881478334367827
+      },
+      "EA_derived_all": {
+        "rmse": 0.015038218419459381,
+        "r2": 0.9909300467517702,
+        "bias": 0.0007612695715172438
+      },
+      "EA_derived_noninitial": {
+        "rmse": 0.016243132357089525,
+        "r2": 0.9883760323293403,
+        "bias": 0.0008881478334367844
+      },
+      "physical_checks": {
+        "min_concentration": 0.05434597555498474,
+        "max_invariant_error": 1.286417185416861e-15,
+        "observed_max_invariant_error": 1.2012982639016118e-16
+      }
+    },
+    "ratio": {
+      "HXD_all": {
+        "rmse": 0.0131859624927485,
+        "r2": 0.9935837033370564,
+        "bias": -0.0001877900719999513
+      },
+      "HXD_noninitial": {
+        "rmse": 0.014242467295739128,
+        "r2": 0.9919578113055983,
+        "bias": -0.0002190884173332765
+      },
+      "EA_derived_all": {
+        "rmse": 0.013185962492748476,
+        "r2": 0.9930267386258377,
+        "bias": -0.00018779007199993985
+      },
+      "EA_derived_noninitial": {
+        "rmse": 0.014242467295739102,
+        "r2": 0.9910631331216462,
+        "bias": -0.00021908841733326315
+      },
+      "physical_checks": {
+        "min_concentration": 0.052882051328484406,
+        "max_invariant_error": 1.9441981530018515e-15,
+        "observed_max_invariant_error": 1.2012982639016118e-16
+      }
+    }
+  },
+  "scope": "ODE estimator cross-validation with complete held-out temperature or feed-ratio groups."
+}

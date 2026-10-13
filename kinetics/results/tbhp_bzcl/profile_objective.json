@@ -1,0 +1,197 @@
+{
+  "interpretation": "reoptimized SSE sensitivity; not a likelihood-ratio CI",
+  "profiles": [
+    {
+      "index": 1,
+      "fixed_scaled_value": 0.00010010000000000001,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 4,
+      "calls": 28,
+      "sse": 0.7386221112135797,
+      "optimality": 2.4322879906378034e-05,
+      "jac_singular_values": [
+        6.209669767200081,
+        1.659223229728511,
+        0.3873230719504051
+      ],
+      "parameters": {
+        "lnA1": -14.060079497588845,
+        "Ea1_over_R": 1.2039932643733464,
+        "Ea1_kJ_mol": 0.010010000000000002,
+        "log_rate_ref_1": -7.0254846480611635,
+        "order_H2O2": 2.388928580182147,
+        "order_TBCL": 1.1781414422832566
+      }
+    },
+    {
+      "index": 1,
+      "fixed_scaled_value": 0.04020460542400661,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 4,
+      "calls": 28,
+      "sse": 0.5318605177963691,
+      "optimality": 1.26511663370114e-05,
+      "jac_singular_values": [
+        6.2790177898408555,
+        1.6718840781612516,
+        0.3912498527508497
+      ],
+      "parameters": {
+        "lnA1": -12.265478442945074,
+        "Ea1_over_R": 483.5771641088118,
+        "Ea1_kJ_mol": 4.020460542400661,
+        "log_rate_ref_1": -7.036124456399178,
+        "order_H2O2": 2.2972420887419354,
+        "order_TBCL": 1.1264607723913505
+      }
+    },
+    {
+      "index": 1,
+      "fixed_scaled_value": 0.08030911084801323,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 4,
+      "calls": 28,
+      "sse": 0.4403281571305043,
+      "optimality": 2.0725131848309643e-06,
+      "jac_singular_values": [
+        6.29838247166065,
+        1.667475088623712,
+        0.39364444109605334
+      ],
+      "parameters": {
+        "lnA1": -10.640852723268923,
+        "Ea1_over_R": 965.9503349532504,
+        "Ea1_kJ_mol": 8.030911084801323,
+        "log_rate_ref_1": -7.042631514169166,
+        "order_H2O2": 2.261102194548436,
+        "order_TBCL": 1.1119019787629338
+      }
+    },
+    {
+      "index": 1,
+      "fixed_scaled_value": 0.09072713254403965,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 2,
+      "calls": 14,
+      "sse": 0.43622402979527225,
+      "optimality": 2.823644537673802e-07,
+      "jac_singular_values": [
+        6.294429510486542,
+        1.6633915549058813,
+        0.3940036868313606
+      ],
+      "parameters": {
+        "lnA1": -10.248573873515916,
+        "Ea1_over_R": 1091.2573074818335,
+        "Ea1_kJ_mol": 9.072713254403965,
+        "log_rate_ref_1": -7.043562943280964,
+        "order_H2O2": 2.2614412953472023,
+        "order_TBCL": 1.114641754675502
+      }
+    },
+    {
+      "index": 1,
+      "fixed_scaled_value": 0.12041361627201984,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 4,
+      "calls": 28,
+      "sse": 0.46955516300129646,
+      "optimality": 5.279772502557548e-06,
+      "jac_singular_values": [
+        6.262648144663487,
+        1.645374961169267,
+        0.3944222131746899
+      ],
+      "parameters": {
+        "lnA1": -9.198903651451591,
+        "Ea1_over_R": 1448.3235057976888,
+        "Ea1_kJ_mol": 12.041361627201983,
+        "log_rate_ref_1": -7.044441677317999,
+        "order_H2O2": 2.2846594675840763,
+        "order_TBCL": 1.1374768544257745
+      }
+    },
+    {
+      "index": 1,
+      "fixed_scaled_value": 0.16051812169602644,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 5,
+      "calls": 35,
+      "sse": 0.6188393273582249,
+      "optimality": 1.4798800501869642e-06,
+      "jac_singular_values": [
+        6.174767236181785,
+        1.6079048358781272,
+        0.3935460633417298
+      ],
+      "parameters": {
+        "lnA1": -7.934694769088681,
+        "Ea1_over_R": 1930.6966766421272,
+        "Ea1_kJ_mol": 16.051812169602645,
+        "log_rate_ref_1": -7.0416279082425355,
+        "order_H2O2": 2.3661200826586715,
+        "order_TBCL": 1.2025572786757817
+      }
+    },
+    {
+      "index": 1,
+      "fixed_scaled_value": 0.20062262712003306,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 5,
+      "calls": 35,
+      "sse": 0.8815129054620878,
+      "optimality": 1.0806479167246144e-05,
+      "jac_singular_values": [
+        6.044930133072975,
+        1.5594329882029212,
+        0.3909690222579406
+      ],
+      "parameters": {
+        "lnA1": -6.826655605658206,
+        "Ea1_over_R": 2413.069847486566,
+        "Ea1_kJ_mol": 20.062262712003307,
+        "log_rate_ref_1": -7.034903929710171,
+        "order_H2O2": 2.4981227389685428,
+        "order_TBCL": 1.3029583614823943
+      }
+    },
+    {
+      "index": 1,
+      "fixed_scaled_value": 0.24072713254403966,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 6,
+      "calls": 42,
+      "sse": 1.2467701689793924,
+      "optimality": 2.0995947482591207e-06,
+      "jac_singular_values": [
+        5.886342256000643,
+        1.504611670127489,
+        0.38664771252649116
+      ],
+      "parameters": {
+        "lnA1": -5.845407929774734,
+        "Ea1_over_R": 2895.4430183310037,
+        "Ea1_kJ_mol": 24.072713254403965,
+        "log_rate_ref_1": -7.025310931471441,
+        "order_H2O2": 2.670736159523561,
+        "order_TBCL": 1.432703463563783
+      }
+    }
+  ]
+}

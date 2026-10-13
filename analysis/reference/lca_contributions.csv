@@ -1,0 +1,21 @@
+route,item,amount,factor,contribution,component
+Route 1,"Hydrogen peroxide (H2O2, pure equivalent)",0.577329722630862,2.152228,1.242545194278375,background estimate
+Route 1,tert-Butyl chloride (TBCL),1.0750545372176865,3.553676,3.820395507601599,positive supplement
+Route 1,Reaction waste treatment,0.24784586659508853,0.046976,0.011642807429170877,background estimate
+Route 2,tert-Butanol (TBA),1.07760097470465,2.896479,3.1212485936115497,positive supplement
+Route 2,"Hydrogen peroxide (H2O2, pure equivalent)",0.4689551743454008,2.152228,1.0092984569710532,background estimate
+Route 2,Phosphotungstic acid hydrate catalyst,0.07251286536112377,6.0006,0.4351206998859593,positive supplement
+Route 2,Reaction waste treatment,0.03378168555864712,0.046976,0.0015869284608030071,background estimate
+Route 2,Di-tert-butyl peroxide (DTBP) byproduct credit,0.2510542227730502,5.174243,-1.2990155548038953,negative contribution
+Route 3,tert-Butanol (TBA),1.0220253137525241,2.896479,2.960274858752597,positive supplement
+Route 3,"Hydrogen peroxide (H2O2, pure equivalent)",0.45040861993723025,2.152228,0.9693820432702652,background estimate
+Route 3,Trifluoroacetic acid catalyst,1.2181134428688245,8.920466241434154,10.86613984534848,background estimate
+Route 3,Trifluoroacetic acid catalyst 95% recycle credit,1.1572077707253832,8.920466241434154,-10.322832853081055,negative contribution
+Route 3,Reaction waste treatment,0.030078218918779022,0.046976,0.0014129544119285632,background estimate
+Route 3,Di-tert-butyl peroxide (DTBP) byproduct credit,0.19455536132273513,5.174243,-1.0066767164366328,negative contribution
+Route 4,Benzaldehyde,0.5869791881869454,4.350186,2.553468646742215,background estimate
+Route 4,tert-Butyl hydroperoxide (TBHP),0.9450472904453462,5.079284,4.8001635816024,positive supplement
+Route 4,Tetrabutylammonium iodide (TBAI),0.0290596553499118,12.750663,0.37052987226287243,positive supplement
+Route 4,Acetonitrile,0.9136451311659514,6.218099,5.681135876457871,background estimate
+Route 4,Reaction waste treatment,0.057669913559757896,0.046976,0.002709101859383187,background estimate
+Route 4,tert-Butanol (TBA) byproduct credit,0.38162542714173253,2.896479,-1.1053700355820582,negative contribution

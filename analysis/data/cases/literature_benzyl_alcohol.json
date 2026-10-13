@@ -1,0 +1,188 @@
+{
+  "number": 12,
+  "case": "literature_benzyl_alcohol",
+  "question": "For perester synthesis from benzyl alcohol and TBHP, how should literature conditions and closed-loop evidence guide an initial screen? Which parameters require new calibration?",
+  "scientific_facts": [
+    {
+      "id": "F1",
+      "text": "The literature record (DOI: 10.1039/C5RA27500H) reports benzyl alcohol/TBHP/TBAI in water at room temperature: alcohol 0.5 mmol, TBHP 2.5 mmol (5 equivalents), TBAI 20 mol%, water 2 mL and air. The complete reaction duration was not verified in the cited source.",
+      "role": "literature",
+      "required": true,
+      "evidence_ids": [
+        "literature:benzyl_alcohol_peresters_2016",
+        "kinetics:tbpb_benzaldehyde",
+        "kinetics:tbhp_cf3"
+      ]
+    },
+    {
+      "id": "F2",
+      "text": "Changing aldehyde to benzyl alcohol introduces an additional oxidation step and changes the medium. Begin by checking the literature room-temperature conditions. Route 4 apparent parameters and minute-scale residence times cannot be assigned to this alcohol reaction.",
+      "role": "explanation",
+      "required": true,
+      "evidence_ids": [
+        "literature:benzyl_alcohol_peresters_2016",
+        "kinetics:tbpb_benzaldehyde",
+        "kinetics:tbhp_cf3"
+      ]
+    },
+    {
+      "id": "F3",
+      "text": "A proposed initial screen is 20/25/30 °C, starting at 25 °C, with samples at 1/3/6/12/24 h. These sampling times are proposals, not observations. Follow benzyl alcohol, benzaldehyde, TBPB and TBHP to check for a lag between alcohol loss and perester formation.",
+      "role": "decision",
+      "required": true,
+      "evidence_ids": [
+        "literature:benzyl_alcohol_peresters_2016",
+        "kinetics:tbpb_benzaldehyde",
+        "kinetics:tbhp_cf3"
+      ]
+    },
+    {
+      "id": "F4",
+      "text": "Route 4 contributes a decision sequence, not transferable parameters: its current apparent Ea is 4.495 kJ/mol and main total order is 10.419. Routes 2 and 3 show why reaction competition should be checked over time. Measure time profiles and selectivity before choosing heating, feed adjustment or shorter residence in the new chemistry.",
+      "role": "parameters",
+      "required": true,
+      "evidence_ids": [
+        "literature:benzyl_alcohol_peresters_2016",
+        "kinetics:tbpb_benzaldehyde",
+        "kinetics:tbhp_cf3"
+      ]
+    },
+    {
+      "id": "F5",
+      "text": "These are literature baselines combined with conditional planning rules. New-system kinetics, thermal properties and side-reaction networks remain uncalibrated; no borrowed-parameter yield or validated tube dimension is claimed.",
+      "role": "boundary",
+      "required": true,
+      "evidence_ids": [
+        "literature:benzyl_alcohol_peresters_2016",
+        "kinetics:tbpb_benzaldehyde",
+        "kinetics:tbhp_cf3"
+      ]
+    }
+  ],
+  "raw_llm_output": "{\"groups\":[[\"F1\",\"F2\"],[\"F3\"],[\"F4\",\"F5\"]]}",
+  "generation_attempts": [
+    {
+      "raw_output": "{\"groups\":[[\"F1\",\"F2\"],[\"F3\"],[\"F4\",\"F5\"]]}",
+      "accepted": true
+    }
+  ],
+  "calculations": [
+    {
+      "tool": "literature_condition_transfer",
+      "route": "tbpb_benzaldehyde",
+      "literature": {
+        "authors": "Hui Zhang; Dao-Qing Dong; Shuang-Hong Hao; Zu-Li Wang",
+        "conditions": {
+          "TBAI_mol_percent": 20.0,
+          "TBHP_equivalents": 5.0,
+          "alcohol_mmol": 0.5,
+          "atmosphere": "air",
+          "duration_h": null,
+          "temperature_description": "room temperature",
+          "water_mL": 2.0
+        },
+        "doi": "10.1039/C5RA27500H",
+        "facts": [
+          "Alcohols form tert-butyl peresters with Bu4NI in water at room temperature.",
+          "SI section 2 lists alcohol 0.5 mmol, TBHP 2.5 mmol, Bu4NI 20 mol%, water 2 mL, under air.",
+          "No target kinetic parameters or exact duration were available in the retrieved evidence."
+        ],
+        "id": "benzyl_alcohol_peresters_2016",
+        "journal": "RSC Advances 6 (2016), 8465–8468",
+        "proposed_calibration": {
+          "basis": "proposed sampling around reported room-temperature baseline; not reported optimum or kinetic prediction",
+          "sample_times_h": [
+            1,
+            3,
+            6,
+            12,
+            24
+          ],
+          "temperature_C": [
+            20,
+            25,
+            30
+          ]
+        },
+        "reference_route": "tbpb_benzaldehyde",
+        "supporting_information_url": "https://www.rsc.org/suppdata/c5/ra/c5ra27500h/c5ra27500h1.pdf",
+        "target_product_smiles": "CC(C)(C)OOC(=O)c1ccccc1",
+        "target_substrate_smiles": "OCc1ccccc1",
+        "title": "Bu4NI-catalyzed construction of tert-butyl peresters from alcohols",
+        "url": "https://pubs.rsc.org/en/content/articlelanding/2016/ra/c5ra27500h",
+        "verified_location": "Publisher abstract and indexed SI section 2; direct SI download unavailable; duration not asserted"
+      },
+      "parameter_insights": {
+        "route": "tbpb_benzaldehyde",
+        "reactions": [
+          {
+            "reaction": 1,
+            "Ea_kJ_mol": 4.49488628849488,
+            "lnA": -4.170026011595212,
+            "orders": {
+              "catalyst": 3.9420830308854633,
+              "benzaldehyde": 3.9474663180293232,
+              "TBHP": 2.52964458431447
+            },
+            "ten_percent_increase_fixed_others": {
+              "catalyst": 1.456040321133542,
+              "benzaldehyde": 1.4567875809955582,
+              "TBHP": 1.2726494139245266
+            },
+            "uniform_ten_percent_dilution_rate_multiplier": 0.3336136655212144,
+            "total_order": 10.419193933229256,
+            "domain_temperature_rate_multiplier": 1.1057316519015077
+          }
+        ],
+        "temperature_range_C": [
+          45.0,
+          65.0
+        ],
+        "scope": "Local apparent-rate sensitivities at fixed other variables; not a new-substrate rate law or final-yield ratio"
+      },
+      "proposed_calibration": {
+        "basis": "proposed sampling around reported room-temperature baseline; not reported optimum or kinetic prediction",
+        "sample_times_h": [
+          1,
+          3,
+          6,
+          12,
+          24
+        ],
+        "temperature_C": [
+          20,
+          25,
+          30
+        ]
+      },
+      "status": "literature_baseline_plus_cross_route_decision_rules",
+      "evidence_ids": [
+        "literature:benzyl_alcohol_peresters_2016",
+        "kinetics:tbpb_benzaldehyde",
+        "kinetics:tbhp_cf3"
+      ],
+      "limitation": "Literature conditions are reported baselines; proposed samples are new suggestions. No target Ea, order, yield or scale-up diameter is inferred from a different chemistry."
+    }
+  ],
+  "llm_role": "Actual local Qwen selected paragraph groups and order; scientific wording and numerical values are fixed by deterministic English templates. This is not free-form model-authored science.",
+  "model": {
+    "name": "Qwen2-7B",
+    "adapter": null,
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "role": "Group and order immutable scientific statements"
+  },
+  "groups": [
+    [
+      "F1",
+      "F2"
+    ],
+    [
+      "F3"
+    ],
+    [
+      "F4",
+      "F5"
+    ]
+  ]
+}

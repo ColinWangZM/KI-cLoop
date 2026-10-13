@@ -1,0 +1,97 @@
+{
+  "tbhp_bzcl": {
+    "label": "Path 1",
+    "title": "TBCl \u2192 TBHP",
+    "species": [
+      "H2O2",
+      "TBCL",
+      "TBHP"
+    ],
+    "catalyst": "none",
+    "solvent": "not separately recorded",
+    "substrate": "CC(C)(C)Cl",
+    "substrate_name": "tert-butyl chloride",
+    "product": "CC(C)(C)OO",
+    "partner": "OO",
+    "transformation": "tertiary_chloride_to_hydroperoxide",
+    "side": false,
+    "aliases": [
+      "path 1",
+      "route 1",
+      "tbcl",
+      "bzcl"
+    ]
+  },
+  "tbhp_wpo4": {
+    "label": "Path 2",
+    "title": "H3PW12O40: TBA \u2192 TBHP / DTBP",
+    "species": [
+      "H2O2",
+      "TBA",
+      "TBHP",
+      "DTBP"
+    ],
+    "catalyst": "H3PW12O40",
+    "solvent": "water",
+    "substrate": "CC(C)(C)O",
+    "substrate_name": "tert-butanol",
+    "product": "CC(C)(C)OO",
+    "partner": "OO",
+    "transformation": "tertiary_alcohol_to_hydroperoxide",
+    "side": true,
+    "aliases": [
+      "path 2",
+      "route 2",
+      "wpo4",
+      "h3pw12o40"
+    ]
+  },
+  "tbhp_cf3": {
+    "label": "Path 3",
+    "title": "CF3CO2H: TBA \u2192 TBHP / DTBP",
+    "species": [
+      "H2O2",
+      "TBA",
+      "TBHP",
+      "DTBP"
+    ],
+    "catalyst": "CF3CO2H",
+    "solvent": "not separately recorded",
+    "substrate": "CC(C)(C)O",
+    "substrate_name": "tert-butanol",
+    "product": "CC(C)(C)OO",
+    "partner": "OO",
+    "transformation": "tertiary_alcohol_to_hydroperoxide",
+    "side": true,
+    "aliases": [
+      "path 3",
+      "route 3",
+      "cf3",
+      "tfa"
+    ]
+  },
+  "tbpb_benzaldehyde": {
+    "label": "Path 4",
+    "title": "TBAI: benzaldehyde + 2 TBHP \u2192 TBPB",
+    "species": [
+      "Benzaldehyde",
+      "TBHP",
+      "TBPB"
+    ],
+    "catalyst": "TBAI",
+    "solvent": "MeCN",
+    "substrate": "O=Cc1ccccc1",
+    "substrate_name": "benzaldehyde",
+    "product": "CC(C)(C)OOC(=O)c1ccccc1",
+    "partner": "CC(C)(C)OO",
+    "transformation": "aromatic_aldehyde_to_peroxyester",
+    "side": false,
+    "aliases": [
+      "path 4",
+      "route 4",
+      "tbpb",
+      "benzaldehyde",
+      "tbai"
+    ]
+  }
+}

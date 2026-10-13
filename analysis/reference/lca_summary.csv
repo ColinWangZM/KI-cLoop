@@ -1,0 +1,5 @@
+Route,Background_GWP,Positive_supplement,Byproduct_and_recycle_credit,Net_supplement,Final_GWP,Unit,Status
+Route 1,1.2541880017075457,3.820395507601599,0.0,3.820395507601599,5.074583509309145,kg CO2-Eq/kg target product,inferred-factor estimate
+Route 2,1.0108853854318562,3.556369293497509,1.2990155548038953,2.257353738693614,3.2682391241254702,kg CO2-Eq/kg target product,inferred-factor estimate
+Route 3,11.836934843030674,2.960274858752597,11.329509569517688,-8.369234710765092,3.4677001322655823,kg CO2-Eq/kg target product,inferred-factor estimate
+Route 4,8.23731362505947,5.1706934538652725,1.1053700355820582,4.0653234182832145,12.302637043342683,kg CO2-Eq/kg target product,complete with EchoChemAI predicted supplementation

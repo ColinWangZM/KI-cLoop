@@ -1,0 +1,57 @@
+{
+  "q": [
+    -5.780813989505974,
+    0.12327098151446354,
+    0.0,
+    1.1408460435152277,
+    1.2698855949511618
+  ],
+  "parameters": {
+    "lnA1": 0.37665080885362845,
+    "Ea1_over_R": 1482.6916227383153,
+    "Ea1_kJ_mol": 12.327098151446354,
+    "log_rate_ref_1": -5.780813989505974,
+    "order_HXD": 1.1408460435152277,
+    "order_EA": 1.2698855949511618
+  },
+  "metrics": {
+    "HXD_all": {
+      "rmse": 0.01294419615003636,
+      "r2": 0.9938168335985652,
+      "bias": 0.00011011702577789276
+    },
+    "HXD_noninitial": {
+      "rmse": 0.01398132979961916,
+      "r2": 0.9922500168646489,
+      "bias": 0.00012846986340754157
+    },
+    "EA_derived_all": {
+      "rmse": 0.012944196150036344,
+      "r2": 0.9932801056899133,
+      "bias": 0.00011011702577788577
+    },
+    "EA_derived_noninitial": {
+      "rmse": 0.013981329799619148,
+      "r2": 0.991387845992928,
+      "bias": 0.00012846986340753338
+    },
+    "physical_checks": {
+      "min_concentration": 0.05588812318787054,
+      "max_invariant_error": 7.806296929871862e-16,
+      "observed_max_invariant_error": 1.2012982639016118e-16
+    }
+  },
+  "method": "unregularized ODE SSE fit, 8 starts, no literature prior",
+  "max_half_step_gap_M": 9.273970480450089e-13,
+  "max_DOP853_gap_M": 1.3484768857097151e-12,
+  "effective_independent_noninitial_observations": 180,
+  "residual_note": "HXD and derived EA duplicate residuals; equivalent minimizer to HXD-only SSE.",
+  "all_multistart_converged": true,
+  "max_multistart_parameter_spread": [
+    5.85913324968601e-07,
+    1.2288114402403405e-07,
+    0.0,
+    8.312099941676365e-07,
+    1.034414195855149e-06
+  ]
+}

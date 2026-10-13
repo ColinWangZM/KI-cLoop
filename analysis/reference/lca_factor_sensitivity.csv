@@ -1,0 +1,10 @@
+benzaldehyde_factor_scale,acetonitrile_factor_scale,Path4_GWP,Path4_has_highest_GWP,interpretation
+0.5,0.5,8.18533478174264,True,Deterministic +/-50% scenario; not a confidence interval.
+0.5,1.0,11.025902719971576,True,Deterministic +/-50% scenario; not a confidence interval.
+0.5,1.5,13.866470658200512,True,Deterministic +/-50% scenario; not a confidence interval.
+1.0,0.5,9.462069105113748,True,Deterministic +/-50% scenario; not a confidence interval.
+1.0,1.0,12.302637043342683,True,Deterministic +/-50% scenario; not a confidence interval.
+1.0,1.5,15.143204981571618,True,Deterministic +/-50% scenario; not a confidence interval.
+1.5,0.5,10.738803428484854,True,Deterministic +/-50% scenario; not a confidence interval.
+1.5,1.0,13.57937136671379,True,Deterministic +/-50% scenario; not a confidence interval.
+1.5,1.5,16.419939304942726,True,Deterministic +/-50% scenario; not a confidence interval.

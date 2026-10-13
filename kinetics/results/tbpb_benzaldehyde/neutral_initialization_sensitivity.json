@@ -1,0 +1,298 @@
+{
+  "purpose": "Independent sensitivity only; no sensitivity result replaces or selects the reported primary fit.",
+  "source_of_initial_values": "Generic neutral values and fixed-seed neutral-centered perturbations only.",
+  "primary_sse": 2.049393697248815,
+  "best_neutral_sse": 2.0493936972456352,
+  "sse_difference": -3.1796787425264483e-12,
+  "max_scaled_free_parameter_difference": 4.808848319548531e-07,
+  "starts": [
+    {
+      "start": 0,
+      "initialization": "neutral",
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 10,
+        "calls": 110,
+        "sse": 2.04939369725283,
+        "optimality": 9.235709216565229e-05,
+        "jac_singular_values": [
+          4.493722589937667,
+          2.404683751340117,
+          1.4396755284915714,
+          0.6822179727805291,
+          0.5568750793902492
+        ]
+      },
+      "parameters": {
+        "lnA1": -4.170023018419827,
+        "Ea1_over_R": 540.6418810725836,
+        "Ea1_kJ_mol": 4.494896599237459,
+        "log_rate_ref_1": -5.8183207752535315,
+        "cat_order_1": 3.9420828276145774,
+        "order_benzaldehyde": 3.9474666856000638,
+        "order_TBHP": 2.5296449858264323
+      },
+      "q": [
+        -5.8183207752535315,
+        0.04494896599237459,
+        3.9420828276145774,
+        3.9474666856000638,
+        2.5296449858264323
+      ]
+    },
+    {
+      "start": 1,
+      "initialization": "neutral-centered random",
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 10,
+        "calls": 110,
+        "sse": 2.0493936972680786,
+        "optimality": 0.0001552978305877836,
+        "jac_singular_values": [
+          4.493721744787253,
+          2.404683262143591,
+          1.4396753036290226,
+          0.6822178580567045,
+          0.556874956574052
+        ]
+      },
+      "parameters": {
+        "lnA1": -4.170016054841741,
+        "Ea1_over_R": 540.6447943410335,
+        "Ea1_kJ_mol": 4.494920820151353,
+        "log_rate_ref_1": -5.818320438704989,
+        "cat_order_1": 3.9420823566785215,
+        "order_benzaldehyde": 3.9474676346918383,
+        "order_TBHP": 2.5296459740670176
+      },
+      "q": [
+        -5.818320438704989,
+        0.044949208201513526,
+        3.9420823566785215,
+        3.9474676346918383,
+        2.5296459740670176
+      ]
+    },
+    {
+      "start": 2,
+      "initialization": "neutral-centered random",
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "calls": 99,
+        "sse": 2.0493936972594327,
+        "optimality": 0.00012614282540174805,
+        "jac_singular_values": [
+          4.493722117045444,
+          2.4046834817636333,
+          1.4396753980864232,
+          0.6822179023967505,
+          0.5568750114967125
+        ]
+      },
+      "parameters": {
+        "lnA1": -4.170020230481726,
+        "Ea1_over_R": 540.6430908303745,
+        "Ea1_kJ_mol": 4.4949066571637335,
+        "log_rate_ref_1": -5.818320611052152,
+        "cat_order_1": 3.942082689854963,
+        "order_benzaldehyde": 3.947467158330196,
+        "order_TBHP": 2.5296455692945488
+      },
+      "q": [
+        -5.818320611052152,
+        0.04494906657163733,
+        3.942082689854963,
+        3.947467158330196,
+        2.5296455692945488
+      ]
+    },
+    {
+      "start": 3,
+      "initialization": "neutral-centered random",
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 9,
+        "calls": 99,
+        "sse": 2.0493936972707076,
+        "optimality": 0.0001616546197270359,
+        "jac_singular_values": [
+          4.493721665844292,
+          2.4046832135678375,
+          1.4396752840331064,
+          0.6822178487360399,
+          0.5568749464502591
+        ]
+      },
+      "parameters": {
+        "lnA1": -4.170014304051348,
+        "Ea1_over_R": 540.6454645694403,
+        "Ea1_kJ_mol": 4.494926392430327,
+        "log_rate_ref_1": -5.818320407971866,
+        "cat_order_1": 3.942082238718516,
+        "order_benzaldehyde": 3.9474677081286553,
+        "order_TBHP": 2.5296460848648032
+      },
+      "q": [
+        -5.818320407971866,
+        0.04494926392430327,
+        3.942082238718516,
+        3.9474677081286553,
+        2.5296460848648032
+      ]
+    },
+    {
+      "start": 4,
+      "initialization": "neutral-centered random",
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 10,
+        "calls": 110,
+        "sse": 2.0493936972471207,
+        "optimality": 5.299720379850068e-05,
+        "jac_singular_values": [
+          4.493723117093279,
+          2.4046840570005887,
+          1.439675668483054,
+          0.6822180440880912,
+          0.5568751556728494
+        ]
+      },
+      "parameters": {
+        "lnA1": -4.170027597916476,
+        "Ea1_over_R": 540.6399785626637,
+        "Ea1_kJ_mol": 4.494880781769986,
+        "log_rate_ref_1": -5.81832098475254,
+        "cat_order_1": 3.942083137109203,
+        "order_benzaldehyde": 3.9474660977770246,
+        "order_TBHP": 2.5296443647993314
+      },
+      "q": [
+        -5.81832098475254,
+        0.04494880781769986,
+        3.942083137109203,
+        3.9474660977770246,
+        2.5296443647993314
+      ]
+    },
+    {
+      "start": 5,
+      "initialization": "neutral-centered random",
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 10,
+        "calls": 110,
+        "sse": 2.0493936972456352,
+        "optimality": 3.649214266795524e-05,
+        "jac_singular_values": [
+          4.493723337926222,
+          2.404684185472138,
+          1.4396757270475888,
+          0.6822180739054029,
+          0.5568751875431154
+        ]
+      },
+      "parameters": {
+        "lnA1": -4.170029582062499,
+        "Ea1_over_R": 540.6391580854724,
+        "Ea1_kJ_mol": 4.494873960322618,
+        "log_rate_ref_1": -5.818321072357622,
+        "cat_order_1": 3.9420832704966426,
+        "order_benzaldehyde": 3.947465852691811,
+        "order_TBHP": 2.529644103429638
+      },
+      "q": [
+        -5.818321072357622,
+        0.04494873960322618,
+        3.9420832704966426,
+        3.947465852691811,
+        2.529644103429638
+      ]
+    },
+    {
+      "start": 6,
+      "initialization": "neutral-centered random",
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 8,
+        "calls": 88,
+        "sse": 2.049393697248843,
+        "optimality": 4.2235919632583584e-05,
+        "jac_singular_values": [
+          4.493724684628202,
+          2.4046849712291305,
+          1.4396760777277344,
+          0.6822182469473884,
+          0.55687538538062
+        ]
+      },
+      "parameters": {
+        "lnA1": -4.170043352155587,
+        "Ea1_over_R": 540.6335586368824,
+        "Ea1_kJ_mol": 4.4948274065070395,
+        "log_rate_ref_1": -5.818321647597101,
+        "cat_order_1": 3.9420841919714285,
+        "order_benzaldehyde": 3.947464234926389,
+        "order_TBHP": 2.5296425905495368
+      },
+      "q": [
+        -5.818321647597101,
+        0.0449482740650704,
+        3.9420841919714285,
+        3.947464234926389,
+        2.5296425905495368
+      ]
+    },
+    {
+      "start": 7,
+      "initialization": "neutral-centered random",
+      "optimizer": {
+        "success": true,
+        "status": 2,
+        "message": "`ftol` termination condition is satisfied.",
+        "nfev": 11,
+        "calls": 121,
+        "sse": 2.049393697246305,
+        "optimality": 4.4787318465922934e-05,
+        "jac_singular_values": [
+          4.493723226932675,
+          2.4046841208423912,
+          1.4396756976089797,
+          0.6822180589456296,
+          0.5568751714394081
+        ]
+      },
+      "parameters": {
+        "lnA1": -4.170028628843435,
+        "Ea1_over_R": 540.6395549175688,
+        "Ea1_kJ_mol": 4.494877259584667,
+        "log_rate_ref_1": -5.818321027894166,
+        "cat_order_1": 3.9420832054255284,
+        "order_benzaldehyde": 3.947465977646191,
+        "order_TBHP": 2.5296442332976166
+      },
+      "q": [
+        -5.818321027894166,
+        0.044948772595846676,
+        3.9420832054255284,
+        3.947465977646191,
+        2.5296442332976166
+      ]
+    }
+  ]
+}

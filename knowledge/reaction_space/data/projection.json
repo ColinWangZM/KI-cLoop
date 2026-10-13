@@ -1,0 +1,18 @@
+{
+  "method": "Unsupervised t-SNE of reaction-center fingerprints",
+  "parameters": {
+    "perplexity": 1000,
+    "early_exaggeration": 4,
+    "learning_rate": "auto",
+    "init": "pca",
+    "n_iter": 1000,
+    "n_components": 2,
+    "n_jobs": 1,
+    "verbose": 2
+  },
+  "seed": 42,
+  "records": 12188,
+  "labels_used_for_projection": false,
+  "curated_support_reference_records": 23542,
+  "scope": "Saved-coordinate rendering; original fingerprint-space support labels are supplied. Projection and support-estimation refits require the source fingerprints and reference corpus."
+}

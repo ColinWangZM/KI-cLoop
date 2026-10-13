@@ -1,0 +1,395 @@
+{
+  "number": 11,
+  "case": "recommend_tbpb_benzaldehyde",
+  "question": "What conditions are recommended for Route 4? Interpret the apparent activation energies and reaction orders, compare against the processed experimental point selected by the same objective, and specify validation needs.",
+  "scientific_facts": [
+    {
+      "id": "F1",
+      "text": "The finite-search recommendation for Path 4 is 65 °C, 1484.41 s, TBHP/benzaldehyde = 1.1, and catalyst 0.3160 mol/L. Predicted yield is 73.11% and selectivity is 100.00%.",
+      "role": "comparison",
+      "required": true,
+      "evidence_ids": [
+        "ScreenedCondition:tbpb_benzaldehyde",
+        "kinetics:tbpb_benzaldehyde",
+        "source:figure4/tbpb_benzaldehyde_optimum_bootstrap_predictions.csv",
+        "source:figure4/measured_candidate_pool.csv"
+      ]
+    },
+    {
+      "id": "F2",
+      "text": "Main reaction: apparent Ea = 4.495 kJ/mol, ln A = -4.1700, orders catalyst 3.942, benzaldehyde 3.947, TBHP 2.530. These parameters describe the calibrated system and do not establish an elementary mechanism.",
+      "role": "parameters",
+      "required": true,
+      "evidence_ids": [
+        "ScreenedCondition:tbpb_benzaldehyde",
+        "kinetics:tbpb_benzaldehyde",
+        "source:figure4/tbpb_benzaldehyde_optimum_bootstrap_predictions.csv",
+        "source:figure4/measured_candidate_pool.csv"
+      ]
+    },
+    {
+      "id": "F3",
+      "text": "The processed experimental point selected by the same objective is at 60 °C and 1484.41 s, with yield 72.46%. The condition-screening score is 0.7333 for that observation and 0.7386 for the recommended prediction; it differs from the five-index route score. The recommended-yield conditional 95% parameter interval is [68.78%, 77.88%] and excludes uncertainty from selecting the optimum.",
+      "role": "comparison",
+      "required": true,
+      "evidence_ids": [
+        "ScreenedCondition:tbpb_benzaldehyde",
+        "kinetics:tbpb_benzaldehyde",
+        "source:figure4/tbpb_benzaldehyde_optimum_bootstrap_predictions.csv",
+        "source:figure4/measured_candidate_pool.csv"
+      ]
+    },
+    {
+      "id": "F4",
+      "text": "At otherwise fixed conditions, a 10% concentration increase multiplies the main rate by 1.456 for catalyst, 1.457 for benzaldehyde, 1.273 for TBHP. Feed volumes and concentrations are coupled in practice; these local rate responses are not final-yield gains.",
+      "role": "explanation",
+      "required": true,
+      "evidence_ids": [
+        "ScreenedCondition:tbpb_benzaldehyde",
+        "kinetics:tbpb_benzaldehyde",
+        "source:figure4/tbpb_benzaldehyde_optimum_bootstrap_predictions.csv",
+        "source:figure4/measured_candidate_pool.csv"
+      ]
+    },
+    {
+      "id": "F5",
+      "text": "Verify metering of the most sensitive feeds and test nearby temperatures and residence times. A single-channel model's 100% selectivity is not measured purity. A recommendation at a domain boundary does not justify further extrapolation.",
+      "role": "decision",
+      "required": true,
+      "evidence_ids": [
+        "ScreenedCondition:tbpb_benzaldehyde",
+        "kinetics:tbpb_benzaldehyde",
+        "source:figure4/tbpb_benzaldehyde_optimum_bootstrap_predictions.csv",
+        "source:figure4/measured_candidate_pool.csv"
+      ]
+    }
+  ],
+  "raw_llm_output": "{\"groups\":[[\"F1\",\"F3\"],[\"F2\"],[\"F4\",\"F5\"]]}",
+  "generation_attempts": [
+    {
+      "raw_output": "{\"groups\":[[\"F1\",\"F3\"],[\"F2\"],[\"F4\",\"F5\"]]}",
+      "accepted": true
+    }
+  ],
+  "calculations": [
+    {
+      "tool": "recommend_conditions",
+      "route": "tbpb_benzaldehyde",
+      "recommendation": {
+        "Benzaldehyde_0": 2.5714148731054265,
+        "Benzaldehyde_final": 1.537256397676398,
+        "TBHP_0": 2.828855955962835,
+        "TBHP_final": 0.7605390051047708,
+        "TBPB_final": 1.0341584754290323,
+        "candidate_id": 41.0,
+        "catalyst": 0.3160499724501573,
+        "conversion": 0.4021748828807636,
+        "feed_ratio": 1.10011651,
+        "limiting_initial": 1.4144279779814175,
+        "product": 1.0341584754290323,
+        "productivity_mol_l_s": 0.0006966798719168182,
+        "route": "tbpb_benzaldehyde",
+        "route_label": "Path 4",
+        "score": 0.7385797015968725,
+        "selectivity": 1.0000000000000036,
+        "temperature_C": 65.0,
+        "time": 1484.409866160893,
+        "yield": 0.7311496177450605
+      },
+      "alternatives": [
+        {
+          "candidate_id": 41.0,
+          "feed_ratio": 1.10011651,
+          "catalyst": 0.3160499724501573,
+          "temperature_C": 65.0,
+          "Benzaldehyde_0": 2.5714148731054265,
+          "TBHP_0": 2.828855955962835,
+          "time": 1484.409866160893,
+          "score": 0.7385797015968725,
+          "yield": 0.7311496177450605,
+          "selectivity": 1.0000000000000036,
+          "conversion": 0.4021748828807636,
+          "product": 1.0341584754290323,
+          "limiting_initial": 1.4144279779814175,
+          "Benzaldehyde_final": 1.537256397676398,
+          "TBHP_final": 0.7605390051047708,
+          "TBPB_final": 1.0341584754290323
+        },
+        {
+          "candidate_id": 40.0,
+          "feed_ratio": 1.10011651,
+          "catalyst": 0.3160499724501573,
+          "temperature_C": 64.0,
+          "Benzaldehyde_0": 2.5714148731054265,
+          "TBHP_0": 2.828855955962835,
+          "time": 1484.409866160893,
+          "score": 0.7382148859469718,
+          "yield": 0.7306964338818576,
+          "selectivity": 1.0000000000000058,
+          "conversion": 0.40192560535577515,
+          "product": 1.0335174794937483,
+          "limiting_initial": 1.4144279779814175,
+          "Benzaldehyde_final": 1.5378973936116842,
+          "TBHP_final": 0.7618209969753366,
+          "TBPB_final": 1.0335174794937483
+        },
+        {
+          "candidate_id": 39.0,
+          "feed_ratio": 1.10011651,
+          "catalyst": 0.3160499724501573,
+          "temperature_C": 63.0,
+          "Benzaldehyde_0": 2.5714148731054265,
+          "TBHP_0": 2.828855955962835,
+          "time": 1484.409866160893,
+          "score": 0.7378474712491578,
+          "yield": 0.7302400214110726,
+          "selectivity": 0.9999999999999981,
+          "conversion": 0.40167455190853807,
+          "product": 1.0328719169255705,
+          "limiting_initial": 1.4144279779814175,
+          "Benzaldehyde_final": 1.538542956179854,
+          "TBHP_final": 0.7631121221116939,
+          "TBPB_final": 1.0328719169255705
+        },
+        {
+          "candidate_id": 38.0,
+          "feed_ratio": 1.10011651,
+          "catalyst": 0.3160499724501573,
+          "temperature_C": 62.0,
+          "Benzaldehyde_0": 2.5714148731054265,
+          "TBHP_0": 2.828855955962835,
+          "time": 1484.409866160893,
+          "score": 0.7374774302549436,
+          "yield": 0.7297803464838941,
+          "selectivity": 1.0000000000000016,
+          "conversion": 0.40142170392022564,
+          "product": 1.0322217398477926,
+          "limiting_initial": 1.4144279779814175,
+          "Benzaldehyde_final": 1.5391931332576354,
+          "TBHP_final": 0.7644124762672452,
+          "TBPB_final": 1.0322217398477926
+        },
+        {
+          "candidate_id": 20.0,
+          "feed_ratio": 1.10011651,
+          "catalyst": 0.3114681962400914,
+          "temperature_C": 65.0,
+          "Benzaldehyde_0": 2.5900597675518795,
+          "TBHP_0": 2.849367512170585,
+          "time": 1484.409866160893,
+          "score": 0.7371929850612998,
+          "yield": 0.7294270009742926,
+          "selectivity": 1.0000000000000002,
+          "conversion": 0.4012273433058026,
+          "product": 1.0392027995380855,
+          "limiting_initial": 1.4246837560852925,
+          "Benzaldehyde_final": 1.5508569680137942,
+          "TBHP_final": 0.7709619130944068,
+          "TBPB_final": 1.0392027995380855
+        }
+      ],
+      "conditional_parameter_intervals_95pct": {
+        "yield": {
+          "low": 0.6877894267448694,
+          "median": 0.7327006127973825,
+          "high": 0.7787962856141296
+        },
+        "selectivity": {
+          "low": 0.9999999999999888,
+          "median": 0.9999999999999998,
+          "high": 1.0000000000000098
+        },
+        "score": {
+          "low": 0.7036744952469243,
+          "median": 0.7398282616493133,
+          "high": 0.7769355467971363
+        },
+        "productivity_mol_l_s": {
+          "low": 0.0006553638791580899,
+          "median": 0.0006981577459499442,
+          "high": 0.0007420802573682411
+        }
+      },
+      "bootstrap_n": 200,
+      "design_audit": {
+        "mixing_species": [
+          "Benzaldehyde",
+          "TBHP",
+          "Catalyst"
+        ],
+        "mixing_weights_L_per_mol": [
+          0.10203846153846138,
+          0.14288885365466955,
+          1.0549116492078485
+        ],
+        "observed_max_mixing_closure_error": 4.440892098500626e-16,
+        "feed_ratio_levels": [
+          1.10011651,
+          1.39678259,
+          1.5,
+          1.6,
+          1.70050825,
+          1.99259925,
+          2.3
+        ],
+        "catalyst_levels": [
+          0.1354582857098947,
+          0.2370438319051507,
+          0.2708419097739925,
+          0.3114681962400914,
+          0.3160499724501573,
+          0.3792518360459788,
+          0.4309604360857736
+        ],
+        "temperature_grid_C": [
+          45.0,
+          46.0,
+          47.0,
+          48.0,
+          49.0,
+          50.0,
+          51.0,
+          52.0,
+          53.0,
+          54.0,
+          55.0,
+          56.0,
+          57.0,
+          58.0,
+          59.0,
+          60.0,
+          61.0,
+          62.0,
+          63.0,
+          64.0,
+          65.0
+        ],
+        "candidate_count_without_time": 630,
+        "scope": "observed feed-ratio and catalyst levels; 1 C temperature grid; coupled feed mixing; marginal concentrations remain inside measured ranges",
+        "not_experimentally_validated_combinations": true,
+        "time_grid_points": 241,
+        "time_refined_candidates": 40,
+        "integration_step": 0.5,
+        "refined_step": 0.25,
+        "independent_optimum_max_gap": 4.172995282658576e-12,
+        "selection_claim": "best found within the explicitly recorded finite design grid",
+        "uncertainty_scope": "200 parameter bootstrap predictions at the selected condition; not a bootstrap of the full optimization or a measurement-noise prediction interval",
+        "selected_condition_intervals": {
+          "yield": {
+            "low": 0.6877894267448694,
+            "high": 0.7787962856141296
+          },
+          "selectivity": {
+            "low": 0.9999999999999888,
+            "high": 1.0000000000000098
+          },
+          "product": {
+            "low": 0.972828608147744,
+            "high": 1.1015512555206317
+          },
+          "score": {
+            "low": 0.7036744952469243,
+            "high": 0.7769355467971363
+          },
+          "productivity_mol_l_s": {
+            "low": 0.0006553638791580899,
+            "high": 0.0007420802573682411
+          }
+        },
+        "measured_peak_product_condition": {
+          "condition": "1.1-2.3-60",
+          "time": 1484.409866160893,
+          "TBPB": 1.032339632230741
+        }
+      },
+      "validation": "Best found on the recorded feasible finite search; new combinations not experimentally validated; intervals do not account for selection of the optimum",
+      "model_reassessment_required": false,
+      "new_experiment_ids": [],
+      "best_observed_by_same_score": {
+        "experiment_id": 5.0,
+        "condition": "1.1-2.3-60",
+        "time": 1484.409866160893,
+        "temperature_C": 60.0,
+        "catalyst": 0.3114681962400914,
+        "TBHP": 0.7846882455252024,
+        "TBHP_pred": 0.7775402098942672,
+        "TBHP_0": 2.849367509986684,
+        "Catalyst_0": 0.3114681962400914,
+        "T_0": 60.0,
+        "point_id": 6.0,
+        "feed_ratio": 1.1001165078578525,
+        "score": 0.7333150092552203,
+        "yield": 0.7246096746822003,
+        "selectivity": 1.000000000000001,
+        "conversion": 0.39857753243569793,
+        "product": 1.032339632230741,
+        "limiting_initial": 1.424683754993342,
+        "route": "tbpb_benzaldehyde",
+        "route_label": "Path 4",
+        "Benzaldehyde": 1.557720138379351,
+        "Benzaldehyde_pred": 1.5541461205638778,
+        "TBPB": 1.032339632230741,
+        "TBPB_pred": 1.0359136500462078,
+        "Benzaldehyde_0": 2.590059770610091,
+        "TBPB_0": 0.0
+      },
+      "predicted_minus_observed_score": 0.005264692341652166,
+      "comparison_note": "Comparison of a model-selected new condition against an observed condition is not an experimentally verified improvement",
+      "evidence_ids": [
+        "ScreenedCondition:tbpb_benzaldehyde",
+        "kinetics:tbpb_benzaldehyde",
+        "source:figure4/tbpb_benzaldehyde_optimum_bootstrap_predictions.csv",
+        "source:figure4/measured_candidate_pool.csv"
+      ],
+      "parameter_insights": {
+        "route": "tbpb_benzaldehyde",
+        "reactions": [
+          {
+            "reaction": 1,
+            "Ea_kJ_mol": 4.49488628849488,
+            "lnA": -4.170026011595212,
+            "orders": {
+              "catalyst": 3.9420830308854633,
+              "benzaldehyde": 3.9474663180293232,
+              "TBHP": 2.52964458431447
+            },
+            "ten_percent_increase_fixed_others": {
+              "catalyst": 1.456040321133542,
+              "benzaldehyde": 1.4567875809955582,
+              "TBHP": 1.2726494139245266
+            },
+            "uniform_ten_percent_dilution_rate_multiplier": 0.3336136655212144,
+            "total_order": 10.419193933229256,
+            "domain_temperature_rate_multiplier": 1.1057316519015077
+          }
+        ],
+        "temperature_range_C": [
+          45.0,
+          65.0
+        ],
+        "scope": "Local apparent-rate sensitivities at fixed other variables; not a new-substrate rate law or final-yield ratio"
+      }
+    }
+  ],
+  "llm_role": "Actual local Qwen selected paragraph groups and order; scientific wording and numerical values are fixed by deterministic English templates. This is not free-form model-authored science.",
+  "model": {
+    "name": "Qwen2-7B",
+    "adapter": null,
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "role": "Group and order immutable scientific statements"
+  },
+  "groups": [
+    [
+      "F1",
+      "F3"
+    ],
+    [
+      "F2"
+    ],
+    [
+      "F4",
+      "F5"
+    ]
+  ]
+}

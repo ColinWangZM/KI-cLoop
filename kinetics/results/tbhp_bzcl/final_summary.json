@@ -1,0 +1,75 @@
+{
+  "method": "hybrid_PINN_with_conservative_ODE_likelihood_refinement",
+  "q": [
+    -7.04356288658095,
+    0.09072713254403965,
+    1e-05,
+    2.261441582664439,
+    1.1146420973364324
+  ],
+  "parameters": {
+    "lnA1": -10.248574879273582,
+    "Ea1_over_R": 1091.2573074818335,
+    "Ea1_kJ_mol": 9.072713254403965,
+    "log_rate_ref_1": -7.04356288658095,
+    "order_H2O2": 2.261441582664439,
+    "order_TBCL": 1.1146420973364324
+  },
+  "step": 2.0,
+  "optimizer": {
+    "success": true,
+    "status": 2,
+    "message": "`ftol` termination condition is satisfied.",
+    "nfev": 4,
+    "calls": 36,
+    "sse": 0.43622402979536373,
+    "optimality": 1.006417076188404e-05,
+    "jac_singular_values": [
+      6.6044689891937,
+      5.8432118190359015,
+      1.6595646270206483,
+      0.3937510832727799
+    ]
+  },
+  "metrics": {
+    "H2O2_all": {
+      "rmse": 0.039973619038445034,
+      "r2": 0.9994414407151753,
+      "bias": -0.00016851683887908353
+    },
+    "H2O2_noninitial": {
+      "rmse": 0.04317644329418367,
+      "r2": 0.9993433810916514,
+      "bias": -0.00019660297869226412
+    },
+    "TBCL_all": {
+      "rmse": 0.03997361903844294,
+      "r2": 0.9984300911092798,
+      "bias": -0.00016851683887918358
+    },
+    "TBCL_noninitial": {
+      "rmse": 0.0431764432941814,
+      "r2": 0.9981865659340108,
+      "bias": -0.00019660297869238084
+    },
+    "TBHP_all": {
+      "rmse": 0.039973619038443424,
+      "r2": 0.9883131829241428,
+      "bias": 0.00016851683887926866
+    },
+    "TBHP_noninitial": {
+      "rmse": 0.043176443294181924,
+      "r2": 0.9862739698755693,
+      "bias": 0.00019660297869248048
+    },
+    "physical_checks": {
+      "min_concentration": 0.0,
+      "max_invariant_error": 1.8500277286261032e-14,
+      "observed_max_invariant_error": 4.20257464619343e-15
+    }
+  },
+  "half_step_max_gap": 4.263256414560601e-14,
+  "same_data_ODE_baseline_used_for_warmup": true,
+  "parameter_prior_weight": 0.0,
+  "raw_PINN_parameters_file": "pinn_summary.json"
+}

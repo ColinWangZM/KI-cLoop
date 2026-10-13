@@ -1,0 +1,14 @@
+KI-cLoop: Closing the reaction-to-process loop with knowledge-intensified AI
+
+Parts of the knowledge-retrieval code derive from BaranziniLab/KG_RAG,
+"Biomedical knowledge graph-enhanced prompt generation for large language
+models", distributed under the Apache License 2.0.
+
+Project-specific components include reaction and material retrieval,
+hybrid PINN-ODE kinetic inference, experimental data processing, evaluation,
+screening, environmental accounting and knowledge-reuse analyses.
+
+Source-derived retrieval records are attributed in
+knowledge/data/application_route_sources.jsonl. External scientific databases,
+model weights and provider APIs retain their respective licenses and terms.
+Full source datasets and model weights are obtained separately.

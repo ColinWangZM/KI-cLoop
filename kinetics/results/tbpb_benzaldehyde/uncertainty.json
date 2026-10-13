@@ -1,0 +1,58 @@
+{
+  "method": "whole-condition wild residual bootstrap",
+  "estimator": "final conservative ODE refinement, conditional on model and observed conditions",
+  "not_full_neural_network_bootstrap": true,
+  "requested": 200,
+  "converged": 200,
+  "sufficient_replicate_count": true,
+  "seed": 20261617,
+  "intervals": {
+    "lnA1": {
+      "estimate": -4.170026011595212,
+      "low": -6.325090078191547,
+      "high": 0.1797568028348629,
+      "sd": 2.061126920112542
+    },
+    "Ea1_over_R": {
+      "estimate": 540.6406409062881,
+      "low": 1.2027904738994468,
+      "high": 1955.3630248237623,
+      "sd": 656.9488980197
+    },
+    "Ea1_kJ_mol": {
+      "estimate": 4.49488628849488,
+      "low": 0.010000000000000002,
+      "high": 16.25688818838476,
+      "sd": 5.461873138135785
+    },
+    "log_rate_ref_1": {
+      "estimate": -5.8183209070453765,
+      "low": -6.051690976435224,
+      "high": -5.521678960739966,
+      "sd": 0.15370049006439562
+    },
+    "cat_order_1": {
+      "estimate": 3.9420830308854633,
+      "low": 3.4222162665359597,
+      "high": 4.582324557542035,
+      "sd": 0.29160652751549093
+    },
+    "order_benzaldehyde": {
+      "estimate": 3.9474663180293232,
+      "low": 3.1098752849205735,
+      "high": 5.066859713493133,
+      "sd": 0.5570172073041192
+    },
+    "order_TBHP": {
+      "estimate": 2.52964458431447,
+      "low": 2.06659606347169,
+      "high": 3.012818245255939,
+      "sd": 0.25045018164044314
+    }
+  },
+  "notes": [
+    "No independent-error assumption across derived species or times in one condition.",
+    "Intervals do not cover model-form error, initial-concentration error or extrapolation.",
+    "Reported percentiles are conditional estimates; bound contacts must be inspected."
+  ]
+}

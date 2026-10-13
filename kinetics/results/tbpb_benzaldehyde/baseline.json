@@ -1,0 +1,81 @@
+{
+  "method": "conservative_ODE_same_model_baseline",
+  "q": [
+    -5.818321260481754,
+    0.044948587863182426,
+    3.942083567609142,
+    3.947465328236619,
+    2.529643538379365
+  ],
+  "step": 2.0,
+  "parameters": {
+    "lnA1": -4.170034017924993,
+    "Ea1_over_R": 540.6373329706811,
+    "Ea1_kJ_mol": 4.494858786318242,
+    "log_rate_ref_1": -5.818321260481754,
+    "cat_order_1": 3.942083567609142,
+    "order_benzaldehyde": 3.947465328236619,
+    "order_TBHP": 2.529643538379365
+  },
+  "optimizer": {
+    "success": true,
+    "status": 2,
+    "message": "`ftol` termination condition is satisfied.",
+    "nfev": 2,
+    "calls": 22,
+    "sse": 2.0493936972442706,
+    "optimality": 9.50366765244601e-07,
+    "jac_singular_values": [
+      4.493723812841102,
+      2.404684461382719,
+      1.4396758528320952,
+      0.682218137864172,
+      0.5568752558858279
+    ]
+  },
+  "second_refit_max_scaled_parameter_change": 8.228053038905614e-08,
+  "numerical_refinement": [
+    {
+      "step": 2.0,
+      "half_step_max_gap": 1.5245213091930054e-08
+    }
+  ],
+  "metrics": {
+    "Benzaldehyde_all": {
+      "rmse": 0.057035128374026835,
+      "r2": 0.9797490137869436,
+      "bias": 0.003138791506341521
+    },
+    "Benzaldehyde_noninitial": {
+      "rmse": 0.0616049796154121,
+      "r2": 0.9696215330631478,
+      "bias": 0.0036619234240651078
+    },
+    "TBHP_all": {
+      "rmse": 0.11407025674805325,
+      "r2": 0.9764868736041047,
+      "bias": 0.006277583012683292
+    },
+    "TBHP_noninitial": {
+      "rmse": 0.12320995923082376,
+      "r2": 0.9645930679833707,
+      "bias": 0.00732384684813051
+    },
+    "TBPB_all": {
+      "rmse": 0.057035128374026516,
+      "r2": 0.9625191070616802,
+      "bias": -0.003138791506341667
+    },
+    "TBPB_noninitial": {
+      "rmse": 0.06160497961541177,
+      "r2": 0.9279091027828679,
+      "bias": -0.0036619234240652786
+    },
+    "physical_checks": {
+      "min_concentration": 0.0,
+      "max_invariant_error": 3.1273284419676894e-15,
+      "observed_max_invariant_error": 1.235951139131735e-15
+    }
+  },
+  "loss": "unweighted concentration SSE, noninitial points; no parameter prior"
+}

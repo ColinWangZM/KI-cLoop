@@ -1,0 +1,79 @@
+{
+  "method": "conservative_ODE_same_model_baseline",
+  "q": [
+    -7.04356294651456,
+    0.09072711173908857,
+    1e-05,
+    2.261441261163835,
+    1.1146417213479383
+  ],
+  "step": 2.0,
+  "parameters": {
+    "lnA1": -10.24857455110182,
+    "Ea1_over_R": 1091.2570572418638,
+    "Ea1_kJ_mol": 9.072711173908857,
+    "log_rate_ref_1": -7.04356294651456,
+    "order_H2O2": 2.261441261163835,
+    "order_TBCL": 1.1146417213479383
+  },
+  "optimizer": {
+    "success": true,
+    "status": 3,
+    "message": "`xtol` termination condition is satisfied.",
+    "nfev": 4,
+    "calls": 12,
+    "sse": 0.4362240297952414,
+    "optimality": 8.82685054189436e-07,
+    "jac_singular_values": [
+      6.6044693516010735,
+      5.8432121759471,
+      1.6595646972155154,
+      0.3937510971587861
+    ]
+  },
+  "second_refit_max_scaled_parameter_change": 0.0,
+  "numerical_refinement": [
+    {
+      "step": 2.0,
+      "half_step_max_gap": 3.375077994860476e-14
+    }
+  ],
+  "metrics": {
+    "H2O2_all": {
+      "rmse": 0.03997361903843677,
+      "r2": 0.9994414407151755,
+      "bias": -0.00016850918949193786
+    },
+    "H2O2_noninitial": {
+      "rmse": 0.04317644329417474,
+      "r2": 0.9993433810916517,
+      "bias": -0.00019659405440726084
+    },
+    "TBCL_all": {
+      "rmse": 0.03997361903843892,
+      "r2": 0.99843009110928,
+      "bias": -0.00016850918949430958
+    },
+    "TBCL_noninitial": {
+      "rmse": 0.043176443294177067,
+      "r2": 0.9981865659340112,
+      "bias": -0.00019659405441002786
+    },
+    "TBHP_all": {
+      "rmse": 0.03997361903843888,
+      "r2": 0.9883131829241455,
+      "bias": 0.00016850918949422265
+    },
+    "TBHP_noninitial": {
+      "rmse": 0.043176443294177025,
+      "r2": 0.9862739698755724,
+      "bias": 0.00019659405440992678
+    },
+    "physical_checks": {
+      "min_concentration": 0.0,
+      "max_invariant_error": 2.084579096540306e-14,
+      "observed_max_invariant_error": 4.20257464619343e-15
+    }
+  },
+  "loss": "unweighted concentration SSE, noninitial points; no parameter prior"
+}

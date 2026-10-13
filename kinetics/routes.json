@@ -1,0 +1,302 @@
+{
+  "tbhp_bzcl": {
+    "key": "tbhp_bzcl",
+    "fitted_species": [
+      "H2O2",
+      "TBCL",
+      "TBHP"
+    ],
+    "sheet_list": [
+      "1-40",
+      "2-40",
+      "3-40",
+      "4-40",
+      "5-40",
+      "6-40",
+      "3.5-30",
+      "3.5-35",
+      "3.5-40",
+      "3.5-45",
+      "3.5-50",
+      "3.5-55",
+      "3.5-60"
+    ],
+    "model_type": "single_tbhp_from_bzcl",
+    "param_names": [
+      "lnA1",
+      "Ea1_over_R",
+      "order_H2O2",
+      "order_TBCL"
+    ],
+    "initial_params": [
+      0.0,
+      3000.0,
+      1.0,
+      1.0
+    ],
+    "route_number": 1,
+    "data_file": "data/tbhp_bzcl_measurements.csv",
+    "fitted_initializations": [
+      {
+        "lnA1": -10.252741,
+        "Ea1_over_R": 1090.514233,
+        "order_H2O2": 2.261232,
+        "order_TBCL": 1.11717
+      },
+      {
+        "lnA1": -10.042662620544434,
+        "Ea1_over_R": 1126.3798828125,
+        "order_H2O2": 2.2221899032592773,
+        "order_TBCL": 1.0985488891601562,
+        "Ea1_kJ_mol": 9.364722345703125
+      }
+    ],
+    "reference_start": {
+      "lnA1": -10.252741,
+      "Ea1_over_R": 1090.514233,
+      "order_H2O2": 2.261232,
+      "order_TBCL": 1.11717
+    }
+  },
+  "tbhp_wpo4": {
+    "key": "tbhp_wpo4",
+    "fitted_species": [
+      "H2O2",
+      "TBA",
+      "TBHP",
+      "DTBP"
+    ],
+    "sheet_list": [
+      "1.5-0.01-70",
+      "1.5-0.02-70",
+      "1.5-0.03-70",
+      "1.5-0.04-70",
+      "1.5-0.05-70",
+      "1.2-1.6-70",
+      "1.4-1.6-70",
+      "1.6-1.6-70",
+      "1.8-1.6-70",
+      "2.0-1.6-70",
+      "2.2-1.5-60",
+      "2.2-1.5-65",
+      "2.2-1.5-70",
+      "2.2-1.5-75",
+      "2.2-1.5-80"
+    ],
+    "model_type": "two_step_tbhp_dtbp",
+    "param_names": [
+      "lnA1",
+      "cat_order_1",
+      "Ea1_over_R",
+      "lnA2",
+      "cat_order_2",
+      "Ea2_over_R",
+      "order_H2O2",
+      "order_TBA_main",
+      "order_TBA_side",
+      "order_TBHP_side"
+    ],
+    "initial_params": [
+      20.0,
+      1.0,
+      10000.0,
+      20.0,
+      1.0,
+      10000.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "route_number": 2,
+    "data_file": "data/tbhp_wpo4_measurements.csv",
+    "fitted_initializations": [
+      {
+        "lnA1": 26.687262,
+        "cat_order_1": 1.035361,
+        "Ea1_over_R": 12002.24484,
+        "lnA2": 25.044021,
+        "cat_order_2": 0.26617,
+        "Ea2_over_R": 11554.291481,
+        "order_H2O2": 2.219002,
+        "order_TBA_main": 0.477165,
+        "order_TBA_side": 0.165632,
+        "order_TBHP_side": 0.863422
+      },
+      {
+        "lnA1": 24.89003562927246,
+        "cat_order_1": 0.9314683675765991,
+        "Ea1_over_R": 11740.3662109375,
+        "lnA2": 23.966445922851562,
+        "cat_order_2": 0.5122902393341064,
+        "Ea2_over_R": 11002.033203125,
+        "order_H2O2": 2.8969972133636475,
+        "order_TBA_main": 0.11230919510126114,
+        "order_TBA_side": 0.1723758578300476,
+        "order_TBHP_side": 1.2822033166885376,
+        "Ea1_kJ_mol": 97.60940467773437,
+        "Ea2_kJ_mol": 91.47090405078124
+      }
+    ],
+    "reference_start": {
+      "lnA1": 26.687262,
+      "cat_order_1": 1.035361,
+      "Ea1_over_R": 12002.24484,
+      "lnA2": 25.044021,
+      "cat_order_2": 0.26617,
+      "Ea2_over_R": 11554.291481,
+      "order_H2O2": 2.219002,
+      "order_TBA_main": 0.477165,
+      "order_TBA_side": 0.165632,
+      "order_TBHP_side": 0.863422
+    }
+  },
+  "tbhp_cf3": {
+    "key": "tbhp_cf3",
+    "fitted_species": [
+      "H2O2",
+      "TBA",
+      "TBHP",
+      "DTBP"
+    ],
+    "sheet_list": [
+      "1.5-0.3-70",
+      "1.5-0.4-70",
+      "1.5-0.5-70",
+      "1.5-0.6-70",
+      "1.5-0.7-70",
+      "1.5-0.8-70",
+      "1.2-1.25-70",
+      "1.4-1.25-70",
+      "1.6-1.25-70",
+      "1.8-1.25-70",
+      "2.0-1.25-70",
+      "1.9-1.25-60",
+      "1.9-1.25-65",
+      "1.9-1.25-70",
+      "1.9-1.25-75",
+      "1.9-1.25-80",
+      "1.9-1.25-85"
+    ],
+    "model_type": "two_step_tbhp_dtbp",
+    "param_names": [
+      "lnA1",
+      "cat_order_1",
+      "Ea1_over_R",
+      "lnA2",
+      "cat_order_2",
+      "Ea2_over_R",
+      "order_H2O2",
+      "order_TBA_main",
+      "order_TBA_side",
+      "order_TBHP_side"
+    ],
+    "initial_params": [
+      20.0,
+      1.0,
+      10000.0,
+      20.0,
+      1.0,
+      10000.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "route_number": 3,
+    "data_file": "data/tbhp_cf3_measurements.csv",
+    "fitted_initializations": [
+      {
+        "lnA1": 31.357936,
+        "cat_order_1": 1.442121,
+        "Ea1_over_R": 14764.398141,
+        "lnA2": 32.351871,
+        "cat_order_2": 1.528014,
+        "Ea2_over_R": 14601.432004,
+        "order_H2O2": 2.244451,
+        "order_TBA_main": 0.717197,
+        "order_TBA_side": 0.1,
+        "order_TBHP_side": 0.173538
+      },
+      {
+        "lnA1": 28.631790161132812,
+        "cat_order_1": 1.4709042310714722,
+        "Ea1_over_R": 14164.0,
+        "lnA2": 29.11166763305664,
+        "cat_order_2": 1.8118538856506348,
+        "Ea2_over_R": 13573.7333984375,
+        "order_H2O2": 2.8209614753723145,
+        "order_TBA_main": 0.5848332643508911,
+        "order_TBA_side": 0.21107512712478638,
+        "order_TBHP_side": 0.3174945116043091,
+        "Ea1_kJ_mol": 117.759496,
+        "Ea2_kJ_mol": 112.85201947460938
+      }
+    ],
+    "reference_start": {
+      "lnA1": 31.357936,
+      "cat_order_1": 1.442121,
+      "Ea1_over_R": 14764.398141,
+      "lnA2": 32.351871,
+      "cat_order_2": 1.528014,
+      "Ea2_over_R": 14601.432004,
+      "order_H2O2": 2.244451,
+      "order_TBA_main": 0.717197,
+      "order_TBA_side": 0.1,
+      "order_TBHP_side": 0.173538
+    }
+  },
+  "tbpb_benzaldehyde": {
+    "key": "tbpb_benzaldehyde",
+    "fitted_species": [
+      "Benzaldehyde",
+      "TBHP",
+      "TBPB"
+    ],
+    "sheet_list": [
+      "1.5-0.05-60",
+      "1.5-0.1-60",
+      "1.5-0.15-60",
+      "1.5-0.20-60",
+      "1.5-0.25-60",
+      "1.1-2.3-60",
+      "1.4-2.3-60",
+      "1.7-2.3-60",
+      "2.0-2.3-60",
+      "2.3-2.0-60",
+      "1.6-2.0-45",
+      "1.6-2.0-50",
+      "1.6-2.0-55",
+      "1.6-2.0-60",
+      "1.6-2.0-65"
+    ],
+    "model_type": "single_tbpb_from_benzaldehyde",
+    "param_names": [
+      "lnA1",
+      "cat_order_1",
+      "Ea1_over_R",
+      "order_benzaldehyde",
+      "order_TBHP"
+    ],
+    "initial_params": [
+      8.0,
+      1.0,
+      5000.0,
+      1.0,
+      1.0
+    ],
+    "route_number": 4,
+    "data_file": "data/tbpb_benzaldehyde_measurements.csv",
+    "fitted_initializations": [
+      {
+        "lnA1": 3.132338047027588,
+        "cat_order_1": 2.95847225189209,
+        "Ea1_over_R": 2847.281005859375,
+        "order_benzaldehyde": 2.772296190261841,
+        "order_TBHP": 2.0206711292266846,
+        "Ea1_kJ_mol": 23.672294282714844
+      }
+    ],
+    "reference_start": null
+  }
+}

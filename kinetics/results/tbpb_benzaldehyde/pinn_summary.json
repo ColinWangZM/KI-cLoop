@@ -1,0 +1,106 @@
+{
+  "method": "joint_concentration_network_PINN",
+  "seed": 20260917,
+  "warmup_source": "same-data mechanistic ODE fit, explicitly not independent",
+  "adam_epochs_executed": 10000,
+  "adam_epochs_requested": 10000,
+  "lbfgs_closure_calls": 617,
+  "best_adam_epoch": 9998,
+  "physics_weight": 1.0,
+  "ODE_teacher_weight": 1.0,
+  "physical_residual_time_quadrature": true,
+  "data_loss": 0.008242098699556308,
+  "physics_loss": 0.00037533727180937183,
+  "q": [
+    -5.828571562025473,
+    0.05625223448780123,
+    3.918912131567234,
+    3.90679434735824,
+    2.5486593427298074
+  ],
+  "parameters": {
+    "lnA1": -3.784713506327698,
+    "Ea1_over_R": 676.5965177748524,
+    "Ea1_kJ_mol": 5.6252234487801225,
+    "log_rate_ref_1": -5.828571562025473,
+    "cat_order_1": 3.918912131567234,
+    "order_benzaldehyde": 3.90679434735824,
+    "order_TBHP": 2.5486593427298074
+  },
+  "network_metrics": {
+    "Benzaldehyde_all": {
+      "rmse": 0.054385463342825374,
+      "r2": 0.9815868963860997,
+      "bias": 0.0031272688013668543
+    },
+    "Benzaldehyde_noninitial": {
+      "rmse": 0.05874301428126954,
+      "r2": 0.9723785373485136,
+      "bias": 0.003648480268261329
+    },
+    "TBHP_all": {
+      "rmse": 0.10877092668565065,
+      "r2": 0.9786208124355337,
+      "bias": 0.006254537602733872
+    },
+    "TBHP_noninitial": {
+      "rmse": 0.11748602856253897,
+      "r2": 0.9678064316960432,
+      "bias": 0.007296960536522853
+    },
+    "TBPB_all": {
+      "rmse": 0.054385463342825326,
+      "r2": 0.9659206935428243,
+      "bias": -0.0031272688013669124
+    },
+    "TBPB_noninitial": {
+      "rmse": 0.05874301428126948,
+      "r2": 0.9344517276288365,
+      "bias": -0.003648480268261398
+    },
+    "physical_checks": {
+      "min_concentration": 0.0,
+      "max_invariant_error": 5.263495645425508e-16,
+      "observed_max_invariant_error": 1.235951139131735e-15
+    }
+  },
+  "forward_ode_metrics": {
+    "Benzaldehyde_all": {
+      "rmse": 0.05705903526018478,
+      "r2": 0.9797320333925231,
+      "bias": 0.0030988200539542447
+    },
+    "Benzaldehyde_noninitial": {
+      "rmse": 0.06163080200376145,
+      "r2": 0.9695960608049057,
+      "bias": 0.0036152900629466177
+    },
+    "TBHP_all": {
+      "rmse": 0.11411807052036956,
+      "r2": 0.9764671579144063,
+      "bias": 0.006197640107908836
+    },
+    "TBHP_noninitial": {
+      "rmse": 0.1232616040075229,
+      "r2": 0.9645633793714414,
+      "bias": 0.007230580125893642
+    },
+    "TBPB_all": {
+      "rmse": 0.057059035260184736,
+      "r2": 0.9624876794394086,
+      "bias": -0.0030988200539544286
+    },
+    "TBPB_noninitial": {
+      "rmse": 0.06163080200376139,
+      "r2": 0.9278486547703115,
+      "bias": -0.003615290062946835
+    },
+    "physical_checks": {
+      "min_concentration": 0.0,
+      "max_invariant_error": 5.428665651820234e-15,
+      "observed_max_invariant_error": 1.235951139131735e-15
+    }
+  },
+  "max_network_ode_gap": 0.031087258338885704,
+  "elapsed_s": 45.3253139462322
+}

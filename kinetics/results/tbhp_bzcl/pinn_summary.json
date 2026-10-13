@@ -1,0 +1,105 @@
+{
+  "method": "joint_concentration_network_PINN",
+  "seed": 20260917,
+  "warmup_source": "same-data mechanistic ODE fit, explicitly not independent",
+  "adam_epochs_executed": 10000,
+  "adam_epochs_requested": 10000,
+  "lbfgs_closure_calls": 1,
+  "best_adam_epoch": 9865,
+  "physics_weight": 1.0,
+  "ODE_teacher_weight": 1.0,
+  "physical_residual_time_quadrature": true,
+  "data_loss": 8.561771082561833e-05,
+  "physics_loss": 3.491961328752079e-06,
+  "q": [
+    -7.045850563295954,
+    0.09062282824700457,
+    1e-05,
+    2.2394189715744726,
+    1.101916713479102
+  ],
+  "parameters": {
+    "lnA1": -10.18794910185922,
+    "Ea1_over_R": 1090.002745333228,
+    "Ea1_kJ_mol": 9.062282824700457,
+    "log_rate_ref_1": -7.045850563295954,
+    "order_H2O2": 2.2394189715744726,
+    "order_TBCL": 1.101916713479102
+  },
+  "network_metrics": {
+    "H2O2_all": {
+      "rmse": 0.03815650097296131,
+      "r2": 0.9994910683953242,
+      "bias": 4.644855136456686e-05
+    },
+    "H2O2_noninitial": {
+      "rmse": 0.041213731460718245,
+      "r2": 0.9994017213145223,
+      "bias": 5.418997659199466e-05
+    },
+    "TBCL_all": {
+      "rmse": 0.03815650097296121,
+      "r2": 0.9985695766364356,
+      "bias": 4.644855136487918e-05
+    },
+    "TBCL_noninitial": {
+      "rmse": 0.041213731460718134,
+      "r2": 0.9983476885368269,
+      "bias": 5.418997659235905e-05
+    },
+    "TBHP_all": {
+      "rmse": 0.03815650097296138,
+      "r2": 0.9893515500868717,
+      "bias": -4.644855136452385e-05
+    },
+    "TBHP_noninitial": {
+      "rmse": 0.04121373146071832,
+      "r2": 0.9874935199774768,
+      "bias": -5.418997659194485e-05
+    },
+    "physical_checks": {
+      "min_concentration": 0.0,
+      "max_invariant_error": 6.00989670513952e-16,
+      "observed_max_invariant_error": 4.20257464619343e-15
+    }
+  },
+  "forward_ode_metrics": {
+    "H2O2_all": {
+      "rmse": 0.03997838724348771,
+      "r2": 0.9994413074530836,
+      "bias": -5.018735734375478e-05
+    },
+    "H2O2_noninitial": {
+      "rmse": 0.0431815935442634,
+      "r2": 0.999343224434316,
+      "bias": -5.8551916901047244e-05
+    },
+    "TBCL_all": {
+      "rmse": 0.039978387243489524,
+      "r2": 0.9984297165575562,
+      "bias": -5.018735734537254e-05
+    },
+    "TBCL_noninitial": {
+      "rmse": 0.04318159354426537,
+      "r2": 0.9981861332816072,
+      "bias": -5.855191690293462e-05
+    },
+    "TBHP_all": {
+      "rmse": 0.03997838724348997,
+      "r2": 0.9883103946620313,
+      "bias": 5.018735734497999e-05
+    },
+    "TBHP_noninitial": {
+      "rmse": 0.043181593544265845,
+      "r2": 0.9862706950942931,
+      "bias": 5.855191690247737e-05
+    },
+    "physical_checks": {
+      "min_concentration": 0.0,
+      "max_invariant_error": 2.205141293508315e-14,
+      "observed_max_invariant_error": 4.20257464619343e-15
+    }
+  },
+  "max_network_ode_gap": 0.007950763611447753,
+  "elapsed_s": 40.00387788657099
+}

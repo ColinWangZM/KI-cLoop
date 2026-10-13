@@ -1,0 +1,271 @@
+{
+  "number": 6,
+  "case": "gwp_and_scores",
+  "question": "What do the current GWP estimates and overall route scores imply for route choice, including the distinction between emissions, productivity and product identity?",
+  "scientific_facts": [
+    {
+      "id": "F1",
+      "text": "The current five-index route scores, highest first, are Path 3 4.5594; Path 2 4.3384; Path 4 4.2865; Path 1 4.2662.",
+      "role": "comparison",
+      "required": true,
+      "evidence_ids": [
+        "RouteEvaluation:tbhp_bzcl",
+        "RouteEvaluation:tbhp_wpo4",
+        "RouteEvaluation:tbhp_cf3",
+        "RouteEvaluation:tbpb_benzaldehyde",
+        "lca:screened"
+      ]
+    },
+    {
+      "id": "F2",
+      "text": "The corresponding scenario GWP values are Path 3 3.4677 kg CO2-eq/kg product; Path 2 3.2682 kg CO2-eq/kg product; Path 4 12.3026 kg CO2-eq/kg product; Path 1 5.0746 kg CO2-eq/kg product.",
+      "role": "explanation",
+      "required": true,
+      "evidence_ids": [
+        "RouteEvaluation:tbhp_bzcl",
+        "RouteEvaluation:tbhp_wpo4",
+        "RouteEvaluation:tbhp_cf3",
+        "RouteEvaluation:tbpb_benzaldehyde",
+        "lca:screened"
+      ]
+    },
+    {
+      "id": "F3",
+      "text": "Under these definitions, Path 3 has the highest overall index and Path 2 the lowest GWP. The choice depends on the target product, metric weights and validated operation, rather than on a single universal ranking.",
+      "role": "decision",
+      "required": true,
+      "evidence_ids": [
+        "RouteEvaluation:tbhp_bzcl",
+        "RouteEvaluation:tbhp_wpo4",
+        "RouteEvaluation:tbhp_cf3",
+        "RouteEvaluation:tbpb_benzaldehyde",
+        "lca:screened"
+      ]
+    },
+    {
+      "id": "F4",
+      "text": "The LCA assumes 95% recovery of unreacted feed. Route 4 produces TBPB, whereas the other routes produce TBHP; product-mass normalization does not establish functional equivalence. These are scenario estimates rather than measured environmental impacts.",
+      "role": "boundary",
+      "required": true,
+      "evidence_ids": [
+        "RouteEvaluation:tbhp_bzcl",
+        "RouteEvaluation:tbhp_wpo4",
+        "RouteEvaluation:tbhp_cf3",
+        "RouteEvaluation:tbpb_benzaldehyde",
+        "lca:screened"
+      ]
+    }
+  ],
+  "raw_llm_output": "{\"groups\":[[\"F1\",\"F2\"],[\"F3\"],[\"F4\"]]}",
+  "generation_attempts": [
+    {
+      "raw_output": "{\"groups\":[[\"F1\",\"F2\"],[\"F3\"],[\"F4\"]]}",
+      "accepted": true
+    }
+  ],
+  "calculations": [
+    {
+      "tool": "route_evaluation",
+      "ranked_by_existing_paper_score": [
+        {
+          "DTBP_final": 0.3388289159896061,
+          "Ea1_kJ_mol": 123.43469772577352,
+          "H2O2_0": 7.323812399558706,
+          "H2O2_final": 4.159163179383856,
+          "TBA_0": 3.661906199779353,
+          "TBA_final": 0.1584280636148995,
+          "TBHP_final": 2.8258203041852408,
+          "candidate_id": 779.0,
+          "catalyst": 2.720576842683786,
+          "conversion": 0.4321040801598816,
+          "feed_ratio": 2.0,
+          "gwp_kg_CO2eq_kg": 3.467700132265582,
+          "gwp_scenario": "screened optimum; and EchoChemAI factor estimate",
+          "gwp_score": 4.955844094997003,
+          "limiting_initial": 3.661906199779353,
+          "low_Ea_score": 3.0,
+          "overall_score": 4.559395116800126,
+          "overall_status": "complete estimated GWP; matched screened conditions",
+          "product": 2.8258203041852408,
+          "productivity_mol_l_s": 0.0091221624104564,
+          "productivity_score": 5.0,
+          "route": "tbhp_cf3",
+          "route_label": "Path 3",
+          "score": 0.7680357977088716,
+          "selectivity": 0.8929331839277638,
+          "selectivity_score": 4.785866367855528,
+          "technical_score": 4.515345230333807,
+          "temperature_C": 85.0,
+          "time": 309.7752678625933,
+          "yield": 0.7716801441706808,
+          "yield_score": 4.543360288341361
+        },
+        {
+          "DTBP_final": 0.3851040362957514,
+          "Ea1_kJ_mol": 101.14221010412284,
+          "H2O2_0": 7.250483977647706,
+          "H2O2_final": 4.376420510269189,
+          "TBA_0": 3.2956745352944115,
+          "TBA_final": 0.0365070316201644,
+          "TBHP_final": 2.488959431082735,
+          "candidate_id": 608.0,
+          "catalyst": 0.1088640721789212,
+          "conversion": 0.396396085590821,
+          "feed_ratio": 2.2,
+          "gwp_kg_CO2eq_kg": 3.26823912412547,
+          "gwp_scenario": "screened optimum; and EchoChemAI factor estimate",
+          "gwp_score": 5.0,
+          "limiting_initial": 3.2956745352944115,
+          "low_Ea_score": 3.374853253124692,
+          "overall_score": 4.338402207297577,
+          "overall_status": "complete estimated GWP; matched screened conditions",
+          "product": 2.488959431082735,
+          "productivity_mol_l_s": 0.0024520414448826,
+          "productivity_score": 3.4249152984557996,
+          "route": "tbhp_wpo4",
+          "route_label": "Path 2",
+          "score": 0.7470344104007948,
+          "selectivity": 0.8660071217400722,
+          "selectivity_score": 4.732014243480144,
+          "technical_score": 4.264891341441752,
+          "temperature_C": 80.0,
+          "time": 1015.0560204751466,
+          "yield": 0.7552200329333764,
+          "yield_score": 4.510440065866753
+        },
+        {
+          "Benzaldehyde_0": 2.5714148731054265,
+          "Benzaldehyde_final": 1.537256397676398,
+          "Ea1_kJ_mol": 4.49488628849488,
+          "TBHP_0": 2.828855955962835,
+          "TBHP_final": 0.7605390051047708,
+          "TBPB_final": 1.0341584754290325,
+          "candidate_id": 41.0,
+          "catalyst": 0.3160499724501573,
+          "conversion": 0.4021748828807636,
+          "feed_ratio": 1.10011651,
+          "gwp_kg_CO2eq_kg": 12.30263704334268,
+          "gwp_scenario": "screened optimum; and EchoChemAI factor estimate",
+          "gwp_score": 3.0,
+          "limiting_initial": 1.4144279779814175,
+          "low_Ea_score": 5.0,
+          "overall_score": 4.286480234445415,
+          "overall_status": "complete estimated GWP; matched screened conditions",
+          "product": 1.0341584754290325,
+          "productivity_mol_l_s": 0.0006966798719168,
+          "productivity_score": 3.0104036016624347,
+          "route": "tbpb_benzaldehyde",
+          "route_label": "Path 4",
+          "score": 0.7385797015968725,
+          "selectivity": 1.0000000000000036,
+          "selectivity_score": 5.000000000000007,
+          "technical_score": 4.429422482717128,
+          "temperature_C": 65.0,
+          "time": 1484.409866160893,
+          "yield": 0.7311496177450605,
+          "yield_score": 4.462299235490121
+        },
+        {
+          "Ea1_kJ_mol": 9.072713254403965,
+          "H2O2_0": 13.106335166769846,
+          "H2O2_final": 11.976115117623722,
+          "TBCL_0": 2.184389194461641,
+          "TBCL_final": 1.0541691453155688,
+          "TBHP_final": 1.1302200491460694,
+          "candidate_id": 216.0,
+          "catalyst": 1.0,
+          "conversion": 0.5174078190881288,
+          "feed_ratio": 6.0,
+          "gwp_kg_CO2eq_kg": 5.074583509309145,
+          "gwp_scenario": "screened optimum; and EchoChemAI factor estimate",
+          "gwp_score": 4.600118480205223,
+          "limiting_initial": 2.184389194461641,
+          "low_Ea_score": 4.92302279765555,
+          "overall_score": 4.266240383056555,
+          "overall_status": "complete estimated GWP; matched screened conditions",
+          "product": 1.1302200491460694,
+          "productivity_mol_l_s": 0.0006526230148487,
+          "productivity_score": 3.0,
+          "route": "tbhp_bzcl",
+          "route_label": "Path 1",
+          "score": 0.6139262552704927,
+          "selectivity": 0.9999999999999524,
+          "selectivity_score": 4.999999999999905,
+          "technical_score": 4.229142816706704,
+          "temperature_C": 60.0,
+          "time": 1731.811510521042,
+          "yield": 0.5174078190881276,
+          "yield_score": 4.034815638176255
+        }
+      ],
+      "best_screened_GWP_route": "tbhp_wpo4",
+      "assumptions": [
+        "95% unreacted feed recycle",
+        "5% catalyst makeup",
+        "byproduct substitution credits",
+        "solvent coverage",
+        "no invented process energy",
+        "inferred factors retain estimate status"
+      ],
+      "factor_provenance": {
+        "external_scale_check": {
+          "acetonitrile_production_kg_CO2_per_kg": 4.7,
+          "benzaldehyde": "No accessible like-for-like primary numerical benchmark was established; the exact value remains a user-supplied prediction.",
+          "note": "Published production-stage estimate; 6.218099 is about 32% higher. This is an order-of-magnitude check, not validation of the exact predicted factor or identical system boundaries.",
+          "source": "https://doi.org/10.1021/acs.oprd.6c00025"
+        },
+        "factor_sources": {
+          "acetonitrile": "EchoChemAI output supplied and basis confirmed by user on 2026-09-17",
+          "benzaldehyde": "EchoChemAI output supplied and basis confirmed by user on 2026-09-17",
+          "waste": "Inferred estimate documented in README_KGRAG_LCA.md section 8"
+        },
+        "factors": {
+          "acetonitrile": 6.218099,
+          "benzaldehyde": 4.350186,
+          "waste": 0.046976
+        },
+        "included_items": [
+          "benzaldehyde",
+          "acetonitrile",
+          "waste"
+        ],
+        "interpretation": "Screening-level predicted supplementation; these values are estimates rather than certified database factors.",
+        "model_version": "not supplied",
+        "prediction_lcia_method": "not supplied; compatibility with EF v3.1 EN15804 not independently established",
+        "reference_amount_kg": 1.0,
+        "reference_basis_confirmed_by_user": true,
+        "source": "User-supplied EchoChemAI outputs, 2026-09-17; user confirmed reference production of 1 kg pure substance.",
+        "source_type": "EchoChemAI predicted factors, not independently verified ecoinvent factors",
+        "unit": "kg CO2-eq per kg pure substance"
+      },
+      "note": "Scores use the existing Fig. 4 definitions, not a universal objective. Path 4 makes TBPB, not TBHP; per-kg product GWP is not proof of functional equivalence.",
+      "evidence_ids": [
+        "RouteEvaluation:tbhp_bzcl",
+        "RouteEvaluation:tbhp_wpo4",
+        "RouteEvaluation:tbhp_cf3",
+        "RouteEvaluation:tbpb_benzaldehyde",
+        "lca:screened"
+      ]
+    }
+  ],
+  "llm_role": "Actual local Qwen selected paragraph groups and order; scientific wording and numerical values are fixed by deterministic English templates. This is not free-form model-authored science.",
+  "model": {
+    "name": "Qwen2-7B",
+    "adapter": null,
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "role": "Group and order immutable scientific statements"
+  },
+  "groups": [
+    [
+      "F1",
+      "F2"
+    ],
+    [
+      "F3"
+    ],
+    [
+      "F4"
+    ]
+  ]
+}

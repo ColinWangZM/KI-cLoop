@@ -1,0 +1,427 @@
+{
+  "number": 10,
+  "case": "recommend_tbhp_cf3",
+  "question": "What conditions are recommended for Route 3? Interpret the apparent activation energies and reaction orders, compare against the processed experimental point selected by the same objective, and specify validation needs.",
+  "scientific_facts": [
+    {
+      "id": "F1",
+      "text": "The finite-search recommendation for Path 3 is 85 °C, 309.78 s, H2O2/TBA = 2, and catalyst 2.7206 mol/L. Predicted yield is 77.17% and selectivity is 89.29%.",
+      "role": "comparison",
+      "required": true,
+      "evidence_ids": [
+        "ScreenedCondition:tbhp_cf3",
+        "kinetics:tbhp_cf3",
+        "source:figure4/tbhp_cf3_optimum_bootstrap_predictions.csv",
+        "source:figure4/measured_candidate_pool.csv"
+      ]
+    },
+    {
+      "id": "F2",
+      "text": "Main reaction: apparent Ea = 123.435 kJ/mol, ln A = 31.4283, orders catalyst 1.496, H₂O₂ 2.306, TBA 0.749; Side reaction: apparent Ea = 118.799 kJ/mol, ln A = 31.5161, orders catalyst 1.517, TBA 0.050, TBHP 0.079. These parameters describe the calibrated system and do not establish an elementary mechanism.",
+      "role": "parameters",
+      "required": true,
+      "evidence_ids": [
+        "ScreenedCondition:tbhp_cf3",
+        "kinetics:tbhp_cf3",
+        "source:figure4/tbhp_cf3_optimum_bootstrap_predictions.csv",
+        "source:figure4/measured_candidate_pool.csv"
+      ]
+    },
+    {
+      "id": "F3",
+      "text": "The processed experimental point selected by the same objective is at 85 °C and 1717.09 s, with yield 78.70%. The condition-screening score is 0.7818 for that observation and 0.7680 for the recommended prediction; it differs from the five-index route score. The recommended-yield conditional 95% parameter interval is [76.22%, 77.94%] and excludes uncertainty from selecting the optimum.",
+      "role": "comparison",
+      "required": true,
+      "evidence_ids": [
+        "ScreenedCondition:tbhp_cf3",
+        "kinetics:tbhp_cf3",
+        "source:figure4/tbhp_cf3_optimum_bootstrap_predictions.csv",
+        "source:figure4/measured_candidate_pool.csv"
+      ]
+    },
+    {
+      "id": "F4",
+      "text": "At otherwise fixed conditions, a 10% concentration increase multiplies the main rate by 1.153 for catalyst, 1.246 for H₂O₂, 1.074 for TBA. Feed volumes and concentrations are coupled in practice; these local rate responses are not final-yield gains.",
+      "role": "explanation",
+      "required": true,
+      "evidence_ids": [
+        "ScreenedCondition:tbhp_cf3",
+        "kinetics:tbhp_cf3",
+        "source:figure4/tbhp_cf3_optimum_bootstrap_predictions.csv",
+        "source:figure4/measured_candidate_pool.csv"
+      ]
+    },
+    {
+      "id": "F5",
+      "text": "Temperature, residence time and composition should jointly control target formation and side-reaction consumption. The predicted recommendation scores below the best processed observation, so it is a candidate trade-off for verification, not a demonstrated yield improvement.",
+      "role": "decision",
+      "required": true,
+      "evidence_ids": [
+        "ScreenedCondition:tbhp_cf3",
+        "kinetics:tbhp_cf3",
+        "source:figure4/tbhp_cf3_optimum_bootstrap_predictions.csv",
+        "source:figure4/measured_candidate_pool.csv"
+      ]
+    }
+  ],
+  "raw_llm_output": "{\"groups\":[[\"F1\",\"F3\"],[\"F2\"],[\"F4\",\"F5\"]]}",
+  "generation_attempts": [
+    {
+      "raw_output": "{\"groups\":[[\"F1\",\"F3\"],[\"F2\"],[\"F4\",\"F5\"]]}",
+      "accepted": true
+    }
+  ],
+  "calculations": [
+    {
+      "tool": "recommend_conditions",
+      "route": "tbhp_cf3",
+      "recommendation": {
+        "DTBP_final": 0.3388289159896061,
+        "H2O2_0": 7.323812399558706,
+        "H2O2_final": 4.159163179383856,
+        "TBA_0": 3.661906199779353,
+        "TBA_final": 0.15842806361489953,
+        "TBHP_final": 2.8258203041852408,
+        "candidate_id": 779.0,
+        "catalyst": 2.720576842683786,
+        "conversion": 0.43210408015988166,
+        "feed_ratio": 2.0,
+        "limiting_initial": 3.661906199779353,
+        "product": 2.8258203041852408,
+        "productivity_mol_l_s": 0.009122162410456497,
+        "route": "tbhp_cf3",
+        "route_label": "Path 3",
+        "score": 0.7680357977088716,
+        "selectivity": 0.8929331839277638,
+        "temperature_C": 85.0,
+        "time": 309.7752678625933,
+        "yield": 0.7716801441706808
+      },
+      "alternatives": [
+        {
+          "candidate_id": 779.0,
+          "feed_ratio": 2.0,
+          "catalyst": 2.720576842683786,
+          "temperature_C": 85.0,
+          "H2O2_0": 7.323812399558706,
+          "TBA_0": 3.661906199779353,
+          "time": 309.7752678625933,
+          "score": 0.7680357977088716,
+          "yield": 0.7716801441706808,
+          "selectivity": 0.8929331839277638,
+          "conversion": 0.43210408015988166,
+          "product": 2.8258203041852408,
+          "limiting_initial": 3.661906199779353,
+          "H2O2_final": 4.159163179383856,
+          "TBA_final": 0.15842806361489953,
+          "TBHP_final": 2.8258203041852408,
+          "DTBP_final": 0.3388289159896061
+        },
+        {
+          "candidate_id": 778.0,
+          "feed_ratio": 2.0,
+          "catalyst": 2.720576842683786,
+          "temperature_C": 84.0,
+          "H2O2_0": 7.323812399558706,
+          "TBA_0": 3.661906199779353,
+          "time": 347.1730878055669,
+          "score": 0.7675234029237623,
+          "yield": 0.7710399078832736,
+          "selectivity": 0.8926336734197216,
+          "conversion": 0.43189044444704033,
+          "product": 2.823475818955061,
+          "limiting_initial": 3.661906199779353,
+          "H2O2_final": 4.160727807266552,
+          "TBA_final": 0.1592128341501246,
+          "TBHP_final": 2.823475818955061,
+          "DTBP_final": 0.3396087733370856
+        },
+        {
+          "candidate_id": 777.0,
+          "feed_ratio": 2.0,
+          "catalyst": 2.720576842683786,
+          "temperature_C": 83.0,
+          "H2O2_0": 7.323812399558706,
+          "TBA_0": 3.661906199779353,
+          "time": 389.33387308840975,
+          "score": 0.7670071846286005,
+          "yield": 0.7703949243424211,
+          "selectivity": 0.8923318940751476,
+          "conversion": 0.4316751028723987,
+          "product": 2.8211139497280575,
+          "limiting_initial": 3.661906199779353,
+          "H2O2_final": 4.162304928561053,
+          "TBA_final": 0.16000520751212097,
+          "TBHP_final": 2.8211139497280575,
+          "DTBP_final": 0.3403935212695868
+        },
+        {
+          "candidate_id": 776.0,
+          "feed_ratio": 2.0,
+          "catalyst": 2.720576842683786,
+          "temperature_C": 82.0,
+          "H2O2_0": 7.323812399558706,
+          "TBA_0": 3.661906199779353,
+          "time": 436.8947085036788,
+          "score": 0.766487097299175,
+          "yield": 0.769745097338528,
+          "selectivity": 0.8920279586848754,
+          "conversion": 0.4314579435791286,
+          "product": 2.8187343441937176,
+          "limiting_initial": 3.661906199779353,
+          "H2O2_final": 4.163895362485784,
+          "TBA_final": 0.16080646982722083,
+          "TBHP_final": 2.8187343441937176,
+          "DTBP_final": 0.3411826928792038
+        },
+        {
+          "candidate_id": 775.0,
+          "feed_ratio": 2.0,
+          "catalyst": 2.720576842683786,
+          "temperature_C": 81.0,
+          "H2O2_0": 7.323812399558706,
+          "TBA_0": 3.661906199779353,
+          "time": 490.5850773489508,
+          "score": 0.7659630804967645,
+          "yield": 0.7690904779781783,
+          "selectivity": 0.8917213902584016,
+          "conversion": 0.43123922246348234,
+          "product": 2.8163371894995572,
+          "limiting_initial": 3.661906199779353,
+          "H2O2_final": 4.165497234904599,
+          "TBA_final": 0.1616130599706908,
+          "TBHP_final": 2.8163371894995572,
+          "DTBP_final": 0.34197797515455497
+        }
+      ],
+      "conditional_parameter_intervals_95pct": {
+        "yield": {
+          "low": 0.7622011078674615,
+          "median": 0.7701796821188456,
+          "high": 0.7793899541284104
+        },
+        "selectivity": {
+          "low": 0.8778681039955691,
+          "median": 0.8930783899134482,
+          "high": 0.9051270673705284
+        },
+        "score": {
+          "low": 0.7584443319753803,
+          "median": 0.7667658877857849,
+          "high": 0.774881956340153
+        },
+        "productivity_mol_l_s": {
+          "low": 0.009010109107924647,
+          "median": 0.009104425192995397,
+          "high": 0.009213301387038237
+        }
+      },
+      "bootstrap_n": 200,
+      "design_audit": {
+        "mixing_species": [
+          "H2O2",
+          "TBA",
+          "Catalyst"
+        ],
+        "mixing_weights_L_per_mol": [
+          0.05690621601271652,
+          0.10237734004310572,
+          0.07657689724647392
+        ],
+        "observed_max_mixing_closure_error": 1.1102230246251565e-15,
+        "feed_ratio_levels": [
+          1.2,
+          1.4,
+          1.5,
+          1.6,
+          1.8,
+          1.9,
+          2.0
+        ],
+        "catalyst_levels": [
+          1.423759573858026,
+          1.83177506322388,
+          2.212143571391123,
+          2.56758303911096,
+          2.720576842683786,
+          2.900466448080631,
+          3.21287486529464
+        ],
+        "temperature_grid_C": [
+          60.0,
+          61.0,
+          62.0,
+          63.0,
+          64.0,
+          65.0,
+          66.0,
+          67.0,
+          68.0,
+          69.0,
+          70.0,
+          71.0,
+          72.0,
+          73.0,
+          74.0,
+          75.0,
+          76.0,
+          77.0,
+          78.0,
+          79.0,
+          80.0,
+          81.0,
+          82.0,
+          83.0,
+          84.0,
+          85.0
+        ],
+        "candidate_count_without_time": 780,
+        "scope": "observed feed-ratio and catalyst levels; 1 C temperature grid; coupled feed mixing; marginal concentrations remain inside measured ranges",
+        "not_experimentally_validated_combinations": true,
+        "time_grid_points": 241,
+        "time_refined_candidates": 40,
+        "integration_step": 0.5,
+        "refined_step": 0.25,
+        "independent_optimum_max_gap": 4.152854576666698e-05,
+        "selection_claim": "best found within the explicitly recorded finite design grid",
+        "uncertainty_scope": "200 parameter bootstrap predictions at the selected condition; not a bootstrap of the full optimization or a measurement-noise prediction interval",
+        "selected_condition_intervals": {
+          "yield": {
+            "low": 0.7622011078674615,
+            "high": 0.7793899541284104
+          },
+          "selectivity": {
+            "low": 0.8778681039955691,
+            "high": 0.9051270673705284
+          },
+          "product": {
+            "low": 2.7911089623785488,
+            "high": 2.854052905068572
+          },
+          "score": {
+            "low": 0.7584443319753803,
+            "high": 0.774881956340153
+          },
+          "productivity_mol_l_s": {
+            "low": 0.009010109107924647,
+            "high": 0.009213301387038237
+          }
+        },
+        "measured_peak_product_condition": {
+          "condition": "1.9-1.25-85",
+          "time": 1717.092760521042,
+          "TBHP": 2.95981806596445
+        }
+      },
+      "validation": "Best found on the recorded feasible finite search; new combinations not experimentally validated; intervals do not account for selection of the optimum",
+      "model_reassessment_required": false,
+      "new_experiment_ids": [],
+      "best_observed_by_same_score": {
+        "experiment_id": 16.0,
+        "condition": "1.9-1.25-85",
+        "time": 1717.092760521042,
+        "temperature_C": 85.0,
+        "catalyst": 2.720576842683786,
+        "H2O2": 3.843115870265977,
+        "H2O2_pred": 3.8617841854235215,
+        "TBHP": 2.95981806596445,
+        "TBHP_pred": 2.806957105128035,
+        "H2O2_0": 7.14571371584024,
+        "TBHP_0": 0.0,
+        "Catalyst_0": 2.720576842683786,
+        "T_0": 85.0,
+        "point_id": 6.0,
+        "feed_ratio": 1.8999999999999997,
+        "score": 0.7818181132131025,
+        "yield": 0.7869968695871814,
+        "selectivity": 0.8962090464422835,
+        "conversion": 0.4621788637086368,
+        "product": 2.95981806596445,
+        "limiting_initial": 3.76090195570539,
+        "route": "tbhp_cf3",
+        "route_label": "Path 3",
+        "TBA": 0.1155243305213141,
+        "TBA_pred": 0.0,
+        "DTBP": 0.342779779609813,
+        "DTBP_pred": 0.4769724252886758,
+        "TBA_0": 3.76090195570539,
+        "DTBP_0": 0.0
+      },
+      "predicted_minus_observed_score": -0.013782315504230813,
+      "comparison_note": "Comparison of a model-selected new condition against an observed condition is not an experimentally verified improvement",
+      "evidence_ids": [
+        "ScreenedCondition:tbhp_cf3",
+        "kinetics:tbhp_cf3",
+        "source:figure4/tbhp_cf3_optimum_bootstrap_predictions.csv",
+        "source:figure4/measured_candidate_pool.csv"
+      ],
+      "parameter_insights": {
+        "route": "tbhp_cf3",
+        "reactions": [
+          {
+            "reaction": 1,
+            "Ea_kJ_mol": 123.43469772577353,
+            "lnA": 31.428250539792824,
+            "orders": {
+              "catalyst": 1.496083419407978,
+              "H₂O₂": 2.305937332439175,
+              "TBA": 0.7488674749622037
+            },
+            "ten_percent_increase_fixed_others": {
+              "catalyst": 1.15325915251692,
+              "H₂O₂": 1.2458017540058792,
+              "TBA": 1.073983565349848
+            },
+            "uniform_ten_percent_dilution_rate_multiplier": 0.6191028095931094,
+            "total_order": 4.550888226809357,
+            "domain_temperature_rate_multiplier": 22.437442759803762
+          },
+          {
+            "reaction": 2,
+            "Ea_kJ_mol": 118.79867000722375,
+            "lnA": 31.516137808970246,
+            "orders": {
+              "catalyst": 1.5172450380331848,
+              "TBA": 0.050000000000001724,
+              "TBHP": 0.07935701839736783
+            },
+            "ten_percent_increase_fixed_others": {
+              "catalyst": 1.1555875285688744,
+              "TBA": 1.004776882087206,
+              "TBHP": 1.007592207449092
+            },
+            "uniform_ten_percent_dilution_rate_multiplier": 0.8407282136021588,
+            "total_order": 1.6466020564305544,
+            "domain_temperature_rate_multiplier": 19.96331978263162
+          }
+        ],
+        "temperature_range_C": [
+          60.0,
+          85.0
+        ],
+        "scope": "Local apparent-rate sensitivities at fixed other variables; not a new-substrate rate law or final-yield ratio"
+      }
+    }
+  ],
+  "llm_role": "Actual local Qwen selected paragraph groups and order; scientific wording and numerical values are fixed by deterministic English templates. This is not free-form model-authored science.",
+  "model": {
+    "name": "Qwen2-7B",
+    "adapter": null,
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "role": "Group and order immutable scientific statements"
+  },
+  "groups": [
+    [
+      "F1",
+      "F3"
+    ],
+    [
+      "F2"
+    ],
+    [
+      "F4",
+      "F5"
+    ]
+  ]
+}

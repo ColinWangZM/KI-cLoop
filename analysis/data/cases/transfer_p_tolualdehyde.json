@@ -1,0 +1,291 @@
+{
+  "number": 7,
+  "case": "transfer_p_tolualdehyde",
+  "question": "For p-tolualdehyde and TBHP with TBAI in MeCN, what initial conditions and validation priorities are supported by the reference apparent parameters and literature evidence?",
+  "scientific_facts": [
+    {
+      "id": "F1",
+      "text": "The target reaction is p-tolualdehyde with TBHP to form the corresponding perester. The aldehyde-to-perester reaction class is supported by the literature record (DOI: 10.1039/C1CC14602E). Its aqueous literature conditions do not establish the kinetics of the proposed flow system.",
+      "role": "analogy",
+      "required": true,
+      "evidence_ids": [
+        "route:tbpb_benzaldehyde",
+        "kinetics:tbpb_benzaldehyde",
+        "ScreenedCondition:tbpb_benzaldehyde",
+        "literature:aldehyde_peresters_2011"
+      ]
+    },
+    {
+      "id": "F2",
+      "text": "Main reaction: apparent Ea = 4.495 kJ/mol, ln A = -4.1700, orders catalyst 3.942, benzaldehyde 3.947, TBHP 2.530. These parameters describe the calibrated system and do not establish an elementary mechanism.",
+      "role": "parameters",
+      "required": true,
+      "evidence_ids": [
+        "route:tbpb_benzaldehyde",
+        "kinetics:tbpb_benzaldehyde",
+        "ScreenedCondition:tbpb_benzaldehyde",
+        "literature:aldehyde_peresters_2011"
+      ]
+    },
+    {
+      "id": "F3",
+      "text": "In the Route 4 reference, the fixed-composition rate multiplier across its measured temperature range is 1.106. A 10% catalyst increase multiplies the rate by 1.456; uniform 10% dilution of reactants and catalyst gives 0.334. These reference sensitivities motivate concentration and mixing checks; they are not fitted values for the new substrate.",
+      "role": "explanation",
+      "required": true,
+      "evidence_ids": [
+        "route:tbpb_benzaldehyde",
+        "kinetics:tbpb_benzaldehyde",
+        "ScreenedCondition:tbpb_benzaldehyde",
+        "literature:aldehyde_peresters_2011"
+      ]
+    },
+    {
+      "id": "F4",
+      "text": "A proposed calibration grid uses temperatures 45/55/65 °C and residence times 371.10/742.20/1484.41 s (9 combinations). The reference TBHP/aldehyde ratio is 1.1 and catalyst concentration 0.3160 mol/L. Feasible concentrations and solvent compatibility must be checked for the new substrate.",
+      "role": "decision",
+      "required": true,
+      "evidence_ids": [
+        "route:tbpb_benzaldehyde",
+        "kinetics:tbpb_benzaldehyde",
+        "ScreenedCondition:tbpb_benzaldehyde",
+        "literature:aldehyde_peresters_2011"
+      ]
+    },
+    {
+      "id": "F5",
+      "text": "The para-methyl substituent may alter reactivity, but no substituent effect is calibrated. Measure target perester, residual aldehyde/TBHP and possible by-products before fitting the new system. Reference bootstrap intervals are not new-substrate confidence intervals.",
+      "role": "boundary",
+      "required": true,
+      "evidence_ids": [
+        "route:tbpb_benzaldehyde",
+        "kinetics:tbpb_benzaldehyde",
+        "ScreenedCondition:tbpb_benzaldehyde",
+        "literature:aldehyde_peresters_2011"
+      ]
+    }
+  ],
+  "raw_llm_output": "{\"groups\":[[\"F2\",\"F3\"],[\"F1\"],[\"F4\",\"F5\"]]}",
+  "generation_attempts": [
+    {
+      "raw_output": "{\"groups\":[[\"F2\",\"F3\"],[\"F1\"],[\"F4\",\"F5\"]]}",
+      "accepted": true
+    }
+  ],
+  "calculations": [
+    {
+      "tool": "structural_transfer",
+      "route": "tbpb_benzaldehyde",
+      "target_substrate_smiles": "Cc1ccc(C=O)cc1",
+      "target_product_smiles": "Cc1ccc(C(=O)OOC(C)(C)C)cc1",
+      "reference_substrate_smiles": "O=Cc1ccccc1",
+      "candidates": [
+        {
+          "route": "tbpb_benzaldehyde",
+          "transformation": "aromatic_aldehyde_to_peroxyester",
+          "transformation_site_count": 1,
+          "Morgan_radius2_Tanimoto": 0.5
+        },
+        {
+          "route": "tbhp_bzcl",
+          "transformation": "tertiary_chloride_to_hydroperoxide",
+          "transformation_site_count": 0,
+          "Morgan_radius2_Tanimoto": 0.047619047619047616
+        },
+        {
+          "route": "tbhp_wpo4",
+          "transformation": "tertiary_alcohol_to_hydroperoxide",
+          "transformation_site_count": 0,
+          "Morgan_radius2_Tanimoto": 0.047619047619047616
+        },
+        {
+          "route": "tbhp_cf3",
+          "transformation": "tertiary_alcohol_to_hydroperoxide",
+          "transformation_site_count": 0,
+          "Morgan_radius2_Tanimoto": 0.047619047619047616
+        }
+      ],
+      "compatibility": {
+        "blockers": [],
+        "missing": [],
+        "additional_functional_groups": {}
+      },
+      "evidence_ids": [
+        "route:tbpb_benzaldehyde",
+        "kinetics:tbpb_benzaldehyde",
+        "ScreenedCondition:tbpb_benzaldehyde",
+        "literature:aldehyde_peresters_2011"
+      ],
+      "validation": "Fingerprint/SMARTS matching is a heuristic applicability screen, not proof of reactivity, mechanism or kinetic transferability",
+      "status": "conditional_analogy_for_experiment_design",
+      "reference_screened_condition": {
+        "Benzaldehyde_0": 2.5714148731054265,
+        "Benzaldehyde_final": 1.537256397676398,
+        "TBHP_0": 2.828855955962835,
+        "TBHP_final": 0.7605390051047708,
+        "TBPB_final": 1.0341584754290323,
+        "candidate_id": 41.0,
+        "catalyst": 0.3160499724501573,
+        "conversion": 0.4021748828807636,
+        "feed_ratio": 1.10011651,
+        "limiting_initial": 1.4144279779814175,
+        "product": 1.0341584754290323,
+        "productivity_mol_l_s": 0.0006966798719168182,
+        "route": "tbpb_benzaldehyde",
+        "route_label": "Path 4",
+        "score": 0.7385797015968725,
+        "selectivity": 1.0000000000000036,
+        "temperature_C": 65.0,
+        "time": 1484.409866160893,
+        "yield": 0.7311496177450605
+      },
+      "proposed_calibration_design": [
+        {
+          "temperature_C": 45.0,
+          "residence_time_s": 371.10246654022325,
+          "feed_ratio": 1.10011651,
+          "catalyst_mol_L": 0.3160499724501573,
+          "status": "proposed_calibration_not_measured"
+        },
+        {
+          "temperature_C": 45.0,
+          "residence_time_s": 742.2049330804465,
+          "feed_ratio": 1.10011651,
+          "catalyst_mol_L": 0.3160499724501573,
+          "status": "proposed_calibration_not_measured"
+        },
+        {
+          "temperature_C": 45.0,
+          "residence_time_s": 1484.409866160893,
+          "feed_ratio": 1.10011651,
+          "catalyst_mol_L": 0.3160499724501573,
+          "status": "proposed_calibration_not_measured"
+        },
+        {
+          "temperature_C": 55.0,
+          "residence_time_s": 371.10246654022325,
+          "feed_ratio": 1.10011651,
+          "catalyst_mol_L": 0.3160499724501573,
+          "status": "proposed_calibration_not_measured"
+        },
+        {
+          "temperature_C": 55.0,
+          "residence_time_s": 742.2049330804465,
+          "feed_ratio": 1.10011651,
+          "catalyst_mol_L": 0.3160499724501573,
+          "status": "proposed_calibration_not_measured"
+        },
+        {
+          "temperature_C": 55.0,
+          "residence_time_s": 1484.409866160893,
+          "feed_ratio": 1.10011651,
+          "catalyst_mol_L": 0.3160499724501573,
+          "status": "proposed_calibration_not_measured"
+        },
+        {
+          "temperature_C": 65.0,
+          "residence_time_s": 371.10246654022325,
+          "feed_ratio": 1.10011651,
+          "catalyst_mol_L": 0.3160499724501573,
+          "status": "proposed_calibration_not_measured"
+        },
+        {
+          "temperature_C": 65.0,
+          "residence_time_s": 742.2049330804465,
+          "feed_ratio": 1.10011651,
+          "catalyst_mol_L": 0.3160499724501573,
+          "status": "proposed_calibration_not_measured"
+        },
+        {
+          "temperature_C": 65.0,
+          "residence_time_s": 1484.409866160893,
+          "feed_ratio": 1.10011651,
+          "catalyst_mol_L": 0.3160499724501573,
+          "status": "proposed_calibration_not_measured"
+        }
+      ],
+      "transfer_limits": [],
+      "borrowed_kinetics_scenarios": {
+        "cases": [
+          {
+            "assumed_rate_multiplier": 0.5,
+            "yield_fraction": 0.659251298894587,
+            "selectivity_fraction": 0.9999999999999954,
+            "conversion_fraction": 0.36262661907644167,
+            "conversion_species": "Benzaldehyde",
+            "product_mol_L": 0.9324634816770938,
+            "screening_score": 0.6807011360785834
+          },
+          {
+            "assumed_rate_multiplier": 1.0,
+            "yield_fraction": 0.7311496177450605,
+            "selectivity_fraction": 1.0000000000000033,
+            "conversion_fraction": 0.4021748828807637,
+            "conversion_species": "Benzaldehyde",
+            "product_mol_L": 1.0341584754290323,
+            "screening_score": 0.7385797015968725
+          },
+          {
+            "assumed_rate_multiplier": 2.0,
+            "yield_fraction": 0.7918223743387766,
+            "selectivity_fraction": 0.9999999999999996,
+            "conversion_fraction": 0.43554843349874445,
+            "conversion_species": "Benzaldehyde",
+            "product_mol_L": 1.1199757198564408,
+            "screening_score": 0.7874216241039568
+          }
+        ],
+        "concentration_basis": "Reference initial molar recipe, not verified feasible for target substrate",
+        "interpretation": "User-selected sensitivity scenarios (0.5×, 1×, 2×); not fitted target kinetics, confidence interval or validated target prediction"
+      },
+      "parameter_insights": {
+        "route": "tbpb_benzaldehyde",
+        "reactions": [
+          {
+            "reaction": 1,
+            "Ea_kJ_mol": 4.49488628849488,
+            "lnA": -4.170026011595212,
+            "orders": {
+              "catalyst": 3.9420830308854633,
+              "benzaldehyde": 3.9474663180293232,
+              "TBHP": 2.52964458431447
+            },
+            "ten_percent_increase_fixed_others": {
+              "catalyst": 1.456040321133542,
+              "benzaldehyde": 1.4567875809955582,
+              "TBHP": 1.2726494139245266
+            },
+            "uniform_ten_percent_dilution_rate_multiplier": 0.3336136655212144,
+            "total_order": 10.419193933229256,
+            "domain_temperature_rate_multiplier": 1.1057316519015077
+          }
+        ],
+        "temperature_range_C": [
+          45.0,
+          65.0
+        ],
+        "scope": "Local apparent-rate sensitivities at fixed other variables; not a new-substrate rate law or final-yield ratio"
+      }
+    }
+  ],
+  "llm_role": "Actual local Qwen selected paragraph groups and order; scientific wording and numerical values are fixed by deterministic English templates. This is not free-form model-authored science.",
+  "model": {
+    "name": "Qwen2-7B",
+    "adapter": null,
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "role": "Group and order immutable scientific statements"
+  },
+  "groups": [
+    [
+      "F2",
+      "F3"
+    ],
+    [
+      "F1"
+    ],
+    [
+      "F4",
+      "F5"
+    ]
+  ]
+}

@@ -1,0 +1,12 @@
+class_id,reaction_class,display_name,color,candidate_n,plotted_n,organic_peroxide_product_n
+1,Heteroatom Alkylation and Arylation,Heteroatom alkylation / arylation,#3B75AF,7167,1200,10
+2,Acylation,Acylation and related reactions,#E68A2E,4583,1200,11
+3,C-C Coupling,C–C bond formation,#009E73,2837,1200,0
+4,Aromatic Heterocycle Formation,Aromatic heterocycle formation,#8E62A8,1291,1200,0
+5,Protection,Protection,#CC79A7,781,781,0
+6,Deprotection,Deprotection,#8C5B3F,1300,1200,0
+7,Reduction,Reduction,#56A9D0,3031,1200,2
+8,Oxidation,Oxidation,#D55E50,3644,1200,3
+9,Functional Group Interconversion,Functional-group interconversion,#C3A02D,2127,1200,0
+10,Functional Group Addition,Functional-group addition,#64813C,607,607,0
+11,Miscellaneous,Unclassified / other,#B7BDC4,2715,1200,0

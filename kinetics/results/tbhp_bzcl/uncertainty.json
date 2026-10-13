@@ -1,0 +1,52 @@
+{
+  "method": "whole-condition wild residual bootstrap",
+  "estimator": "final conservative ODE refinement, conditional on model and observed conditions",
+  "not_full_neural_network_bootstrap": true,
+  "requested": 200,
+  "converged": 200,
+  "sufficient_replicate_count": true,
+  "seed": 20261617,
+  "intervals": {
+    "lnA1": {
+      "estimate": -10.248574879273582,
+      "low": -12.472873646004851,
+      "high": -8.185814786310313,
+      "sd": 1.12630727192381
+    },
+    "Ea1_over_R": {
+      "estimate": 1091.2573074818335,
+      "low": 548.3376556021868,
+      "high": 1564.6683879105412,
+      "sd": 281.5847342174579
+    },
+    "Ea1_kJ_mol": {
+      "estimate": 9.072713254403965,
+      "low": 4.5588792686765816,
+      "high": 13.00865297708824,
+      "sd": 2.3410954802839448
+    },
+    "log_rate_ref_1": {
+      "estimate": -7.04356288658095,
+      "low": -7.079704269543767,
+      "high": -7.00664458814557,
+      "sd": 0.019483671411152044
+    },
+    "order_H2O2": {
+      "estimate": 2.261441582664439,
+      "low": 2.0111047023079207,
+      "high": 2.4936106528784276,
+      "sd": 0.136314912085559
+    },
+    "order_TBCL": {
+      "estimate": 1.1146420973364324,
+      "low": 0.8712211395442814,
+      "high": 1.322613943104328,
+      "sd": 0.11932429193056071
+    }
+  },
+  "notes": [
+    "No independent-error assumption across derived species or times in one condition.",
+    "Intervals do not cover model-form error, initial-concentration error or extrapolation.",
+    "Reported percentiles are conditional estimates; bound contacts must be inspected."
+  ]
+}

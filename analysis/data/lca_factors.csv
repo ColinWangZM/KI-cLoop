@@ -1,0 +1,12 @@
+item,factor,unit,source,notes
+tert-Butanol (TBA),2.896479,kg CO2-Eq/kg,EchoChemAI prediction,Used as missing raw material supplement and Route 4 byproduct credit.
+tert-Butyl chloride (TBCL),3.553676,kg CO2-Eq/kg,EchoChemAI prediction,Used as Route 1 missing raw material supplement.
+tert-Butyl hydroperoxide (TBHP),5.079284,kg CO2-Eq/kg,EchoChemAI prediction,Used as Route 4 missing raw material supplement.
+Tetrabutylammonium iodide (TBAI),12.750663,kg CO2-Eq/kg,EchoChemAI prediction,Used as Route 4 missing raw material supplement.
+Di-tert-butyl peroxide (DTBP),5.174243,kg CO2-Eq/kg,EchoChemAI prediction,Used as Route 2 and Route 3 byproduct credit.
+Phosphotungstic acid hydrate catalyst,6.0006,kg CO2-Eq/kg,PTA_proxy_calculation,0.931 x WO3 + 0.033 x H3PO4 + 0.036 x H2O.
+Trifluoroacetic acid catalyst,8.920466241434154,kg CO2-Eq/kg,Inferred from EasyLCA route balance,Used only for Route 3 catalyst recycling credit; TFA was already included in EasyLCA at full charge.
+"Hydrogen peroxide (H2O2, pure equivalent)",2.152228,kg CO2-Eq/kg,Inferred from reported EasyLCA route balance,Rounded inferred factor estimate.
+Reaction waste treatment,0.046976,kg CO2-Eq/kg,Inferred from reported EasyLCA route balance,Rounded inferred factor estimate.
+Benzaldehyde,4.350186,kg CO2-Eq/kg,EchoChemAI prediction; 1 kg pure-substance reference basis,"EchoChemAI predicted factors, not independently verified ecoinvent factors"
+Acetonitrile,6.218099,kg CO2-Eq/kg,EchoChemAI prediction; 1 kg pure-substance reference basis,"EchoChemAI predicted factors, not independently verified ecoinvent factors"
